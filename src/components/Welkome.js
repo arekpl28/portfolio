@@ -16,7 +16,9 @@ export default function Welkome() {
       <Wrapper>
         <Name>Arkadiusz Plumbaum</Name>
         <Profession>Junior front-end Developer</Profession>
-        <SocialMedia></SocialMedia>
+        <div>
+          <SocialMedia></SocialMedia>
+        </div>
       </Wrapper>
       <DivProfileImg>
         <img src="./images/arek.jpg" alt="Pictuer of Arkadiusz Plumbaum" />

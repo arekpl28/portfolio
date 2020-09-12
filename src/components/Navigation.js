@@ -1,34 +1,18 @@
 import React from "react";
 
-import {
-  Nav,
-  LogoNavLink,
-  NavUl,
-  NavItem,
-  NavItemLink,
-} from "./style/Navigation.css";
+import NavigationList from "./NavigationListItem";
+
+import { Nav, NavUl } from "./style/Navigation.css";
+import { Logo } from "./style/Logo.css";
 
 export default function Navigation() {
   return (
     <Nav>
-      <LogoNavLink className="logo" exact to="/">
+      <Logo exact to="/">
         Logo
-      </LogoNavLink>
+      </Logo>
       <NavUl>
-        <NavItem>
-          <NavItemLink exact to="/">
-            Home
-          </NavItemLink>
-        </NavItem>
-        <NavItem>
-          <NavItemLink to="/about">About</NavItemLink>
-        </NavItem>
-        <NavItem>
-          <NavItemLink to="/projects">Projects</NavItemLink>
-        </NavItem>
-        <NavItem>
-          <NavItemLink to="/contact">Contact</NavItemLink>
-        </NavItem>
+        <NavigationList></NavigationList>
       </NavUl>
     </Nav>
   );

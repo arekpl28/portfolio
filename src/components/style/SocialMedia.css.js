@@ -1,21 +1,24 @@
 import styled from "styled-components";
 
-export const Social = styled.div`
-  margin: 40px 0 0 0;
+export const SocialIcons = styled.a`
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  margin: 0 10px;
   i {
-    width: 43px;
-    height: 43px;
-    margin: 0 10px;
+    display: grid;
+    width: 100%;
+    height: 100%;
     font-size: 1.8rem;
-    line-height: 38px;
+    place-content: center;
     border: 2px solid;
     border-radius: 50%;
-    transition: 0.2s;
+    transition: 0.3s;
     color: white;
     &:hover {
       cursor: pointer;
-      color: #2dfa67;
-      box-shadow: 0px 0px 10px #2dfa67;
+      color: ${({ theme }) => theme.colors.green};
+      box-shadow: 0px 0px 10px ${({ theme }) => theme.colors.green};
     }
   }
 `;

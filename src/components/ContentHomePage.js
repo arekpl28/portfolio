@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 
 const Paragraph = styled.p`
-  height: 200vh;
   background-color: #f2f2f2;
 `;
 

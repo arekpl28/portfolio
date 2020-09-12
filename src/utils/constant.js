@@ -7,6 +7,16 @@ export const SOCIAL_MEDIA = {
   TELEFON: "tel:+4798860889",
 };
 
+export const ICONS = {
+  FACEBOOK: "fab fa-facebook-f",
+  INSTAGRAM: "fab fa-instagram",
+  TWITTER: "fab fa-twitter",
+  LINKEDIN: "fab fa-linkedin-in",
+  MAP: "fas fa-map-signs",
+  PHONE: "fas fa-phone",
+  EMAIL: "far fa-envelope",
+};
+
 // const XXL = "3840 x 2160";
 // const XL = "2048 x 1536";
 // const L = "1920 x 1080";
