@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import Navigation from "./Navigation";
 
-import { BgImg, Wrapper, Dark } from "./style/Header.css";
 import Welkome from "./Welkome";
+import BackGroundImage from "./BackGroundImage";
+import { Wrapper, Dark } from "./style/Header.css";
 export default function Header() {
   useEffect(() => {
     window.addEventListener("scroll", handleSticky);
@@ -15,10 +16,9 @@ export default function Header() {
   return (
     <>
       <Wrapper>
-        <BgImg>
-          <div className="dark"></div>
-        </BgImg>
+        <BackGroundImage></BackGroundImage>
         <Dark></Dark>
+
         <Navigation onScroll={(e) => handleSticky(e)}></Navigation>
 
         <Welkome></Welkome>

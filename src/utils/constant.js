@@ -5,6 +5,8 @@ export const SOCIAL_MEDIA = {
   LINKEDIN: "https://www.linkedin.com/in/arkadiusz-plumbaum-487a1013a/",
   EMAIL: "mailto:arekpl28@wp.pl",
   TELEFON: "tel:+4798860889",
+  MAP:
+    "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d810.4014753740695!2d10.465370366245734!3d61.11595477738036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2sno!4v1599910418102!5m2!1spl!2sno",
 };
 
 export const ICONS = {
@@ -15,6 +17,8 @@ export const ICONS = {
   MAP: "fas fa-map-signs",
   PHONE: "fas fa-phone",
   EMAIL: "far fa-envelope",
+  USER: "fas fa-user",
+  PENCIL: "fas fa-pencil-alt",
 };
 
 // const XXL = "3840 x 2160";
