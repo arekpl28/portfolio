@@ -2,10 +2,22 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-row: 200px 1fr;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #f8f9fa;
+`;
+
+export const Section = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: space-around;
   width: 100%;
   height: 70vh;
-  background-color: #f8f9fa;
+`;
+export const DivContentWrapper = styled.div`
+  width: 100%;
+  height: 100%;
 `;
 
 export const Map = styled.iframe`

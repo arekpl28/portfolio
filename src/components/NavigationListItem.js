@@ -1,6 +1,6 @@
 import React from "react";
 
-import { NavItem, NavItemLink } from "./style/NavigationListItem";
+import { NavItem, NavItemLink } from "./NavigationListItem.css";
 
 export default function NavigationListItem() {
   return (

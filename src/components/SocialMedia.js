@@ -1,6 +1,6 @@
 import React from "react";
 import { SOCIAL_MEDIA, ICONS } from "../utils/constant";
-import { SocialIcons } from "./style/SocialMedia.css";
+import { SocialIcons } from "./SocialMedia.css";
 
 const social = [
   {
@@ -41,7 +41,7 @@ const social = [
 
 export default function SocialMedia() {
   const socialList = social.map((item) => (
-    <SocialIcons target={item.target} href={item.href}>
+    <SocialIcons key={item.id} target={item.target} href={item.href}>
       <i className={item.iconName}></i>
     </SocialIcons>
   ));

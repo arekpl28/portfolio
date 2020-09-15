@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   color: white;
   text-transform: uppercase;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
 `;
 
 export const Name = styled.h1`
@@ -34,10 +35,4 @@ export const DivProfileImg = styled.div`
   img {
     width: 100%;
   }
-`;
-
-export const Padding = styled.div`
-  width: 100%;
-  height: 15vh;
-  background-color: #f2f2f2;
 `;

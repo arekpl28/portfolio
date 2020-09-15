@@ -2,8 +2,8 @@ import React from "react";
 
 import NavigationList from "./NavigationListItem";
 
-import { Nav, NavUl } from "./style/Navigation.css";
-import { Logo } from "./style/Logo.css";
+import { Nav, NavUl } from "./Navigation.css";
+import { Logo } from "./Logo.css";
 
 export default function Navigation() {
   return (

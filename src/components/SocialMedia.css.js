@@ -5,6 +5,7 @@ export const SocialIcons = styled.a`
   width: 43px;
   height: 43px;
   margin: 0 10px;
+  text-decoration: none;
   i {
     display: grid;
     width: 100%;

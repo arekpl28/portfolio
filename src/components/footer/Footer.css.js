@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Logo } from "./Logo.css";
-import { Button } from "./Button.css";
+import { Logo } from "../Logo.css";
+import { Button } from "../Button.css";
 
 export const H4 = styled.h4`
   font-size: 1.5rem;
@@ -28,18 +28,18 @@ export const LogoFooter = styled(Logo)`
 
 export const Content = styled.div`
   display: grid;
-  width: 80%;
+  max-width: 1000px;
   margin: 0 auto;
-  grid-template-columns: 250px 200px 250px;
-  grid-template-rows: auto auto;
-  grid-template-areas: "contact menu email" "social social social";
-  padding: 20px 50px;
-  justify-content: space-between;
-  row-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+`;
+export const DivContentWrapper = styled.div`
+  margin: 0 auto;
+  padding-bottom: 30px;
 `;
 
 export const Contact = styled.div`
-  grid-area: contact;
   width: 100%;
   height: 100%;
   text-transform: uppercase;
@@ -72,7 +72,6 @@ export const Info = styled.a`
 `;
 
 export const Menu = styled.div`
-  grid-area: menu;
   justify-self: center;
 `;
 
@@ -105,9 +104,8 @@ export const ButtonFooter = styled(Button)`
 `;
 
 export const DivWrapperSocialMedia = styled.div`
-  grid-area: social;
   padding: 20px 0;
-  border-top: 1px solid rgba(250, 250, 250, 0.2);
+
   text-align: center;
   a {
     width: 30px;

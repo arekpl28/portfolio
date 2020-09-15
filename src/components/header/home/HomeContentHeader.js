@@ -5,12 +5,11 @@ import {
   Name,
   Profession,
   DivProfileImg,
-  Padding,
-} from "./style/Welkome.css";
+} from "./HomeContentHeader.css";
 
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "../../SocialMedia";
 
-export default function Welkome() {
+export default function HomeContentHeader() {
   return (
     <>
       <Wrapper>
@@ -19,11 +18,10 @@ export default function Welkome() {
         <div>
           <SocialMedia></SocialMedia>
         </div>
+        <DivProfileImg>
+          <img src="images/arek.jpg" alt="Pictuer of Arkadiusz Plumbaum" />
+        </DivProfileImg>
       </Wrapper>
-      <DivProfileImg>
-        <img src="./images/arek.jpg" alt="Pictuer of Arkadiusz Plumbaum" />
-      </DivProfileImg>
-      <Padding></Padding>
     </>
   );
 }

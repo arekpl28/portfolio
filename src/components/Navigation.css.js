@@ -15,6 +15,7 @@ export const Nav = styled.nav`
   &.sticky {
     padding: 5px 100px;
     background-color: #fff;
+    box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
   }
   &.sticky ul li a {
     color: #000;
