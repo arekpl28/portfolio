@@ -9,4 +9,5 @@ export const Logo = styled(NavLink)`
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+  transition: 0.6s;
 `;

@@ -8,5 +8,5 @@ export const BigWrapperHeader = styled.header`
 export const SmallWrapperHeader = styled.header`
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 40vh;
 `;

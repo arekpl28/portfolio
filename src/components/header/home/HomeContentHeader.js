@@ -4,6 +4,7 @@ import {
   Wrapper,
   Name,
   Profession,
+  DivMedia,
   DivProfileImg,
 } from "./HomeContentHeader.css";
 
@@ -15,9 +16,9 @@ export default function HomeContentHeader() {
       <Wrapper>
         <Name>Arkadiusz Plumbaum</Name>
         <Profession>Junior front-end Developer</Profession>
-        <div>
+        <DivMedia>
           <SocialMedia></SocialMedia>
-        </div>
+        </DivMedia>
         <DivProfileImg>
           <img src="images/arek.jpg" alt="Pictuer of Arkadiusz Plumbaum" />
         </DivProfileImg>

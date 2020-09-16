@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     z-index: -10;
+    overflow-x: hidden;
   }
 `;
 

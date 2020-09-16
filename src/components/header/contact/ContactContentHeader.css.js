@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   height: 100%;
   top: 0%;
   left: 0%;
-  padding-top: 100px;
   color: white;
   text-transform: uppercase;
   text-align: center;
@@ -13,11 +12,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Name = styled.h1`
-  font-size: 8rem;
+  position: absolute;
+  width: 100%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7vw;
   font-weight: 600;
-`;
-
-export const Profession = styled.p`
-  font-size: 3.5rem;
-  font-weight: 200;
 `;

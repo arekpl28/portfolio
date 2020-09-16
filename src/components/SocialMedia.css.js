@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const SocialIcons = styled.a`
   display: inline-block;
-  width: 43px;
-  height: 43px;
-  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
   text-decoration: none;
   i {
     display: grid;
     width: 100%;
     height: 100%;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     place-content: center;
     border: 2px solid;
     border-radius: 50%;

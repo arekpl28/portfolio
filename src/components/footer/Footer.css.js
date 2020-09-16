@@ -15,27 +15,29 @@ export const H5 = styled.h5`
 
 export const Wrapper = styled.footer`
   width: 100%;
-  background-color: #000;
+  background-color: rgb(30, 30, 30);
   color: white;
+  padding: 20px;
 `;
 
 export const LogoFooter = styled(Logo)`
   display: inline-block;
   grid-area: logo;
   font-size: 2rem;
-  padding: 20px 0 0 100px;
+  padding-bottom: 10px;
 `;
 
 export const Content = styled.div`
-  display: grid;
-  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-  justify-content: space-around;
+  // grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+  // justify-content: space-around;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 `;
+
 export const DivContentWrapper = styled.div`
   margin: 0 auto;
+  width: 100%;
   padding-bottom: 30px;
 `;
 
@@ -54,7 +56,6 @@ export const Info = styled.a`
   grid-template-columns: 50px 1fr;
   padding: 0 0 5px 0;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  cursor: pointer;
   color: white;
   list-style: none;
   text-decoration: none;
@@ -66,9 +67,9 @@ export const Info = styled.a`
     font-size: 1rem;
     font-weight: normal;
   }
-  &:hover i {
-    color: ${({ theme }) => theme.colors.green};
-  }
+  // &:hover i {
+  //   color: ${({ theme }) => theme.colors.green};
+  // }
 `;
 
 export const Menu = styled.div`
@@ -77,10 +78,11 @@ export const Menu = styled.div`
 
 export const NavFooter = styled.ul`
   li {
-    padding: 0 0 10px 0;
+    padding: 10px 0 10px 0;
     a {
-      margin: 0;
       font-size: 1.2rem;
+      margin: 0;
+      color: white;
     }
   }
 `;
@@ -105,7 +107,6 @@ export const ButtonFooter = styled(Button)`
 
 export const DivWrapperSocialMedia = styled.div`
   padding: 20px 0;
-
   text-align: center;
   a {
     width: 30px;

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  position: absolute;
   width: 100%;
   height: 85vh;
   top: 0%;
   left: 0%;
-  padding-top: 100px;
   color: white;
   text-transform: uppercase;
   text-align: center;
@@ -13,13 +13,27 @@ export const Wrapper = styled.div`
 `;
 
 export const Name = styled.h1`
-  font-size: 8rem;
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  bottom: 45vh;
+  font-size: 8vw;
+  padding: 0 10px;
   font-weight: 600;
 `;
 
 export const Profession = styled.p`
-  font-size: 3.5rem;
+  position: absolute;
+  width: 100%;
+  bottom: 40vh;
+  left: 0%;
+  font-size: 4vw;
   font-weight: 200;
+`;
+export const DivMedia = styled.div`
+  position: absolute;
+  width: 100%;
+  bottom: 30vh;
 `;
 
 export const DivProfileImg = styled.div`
@@ -28,8 +42,8 @@ export const DivProfileImg = styled.div`
   max-height: 300px;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
-  border: 15px solid rgba(250, 250, 250, 0.5);
+  transform: translate(-50%, 15vh);
+  border: 10px solid rgba(250, 250, 250, 0.5);
   border-radius: 50%;
   overflow: hidden;
   img {
