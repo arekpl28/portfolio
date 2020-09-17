@@ -7,40 +7,45 @@ export const H4 = styled.h4`
   text-transform: uppercase;
   padding-bottom: 20px;
 `;
-
 export const H5 = styled.h5`
   font-size: 1.2rem;
   font-weight: bold;
 `;
-
+export const Div = styled.div`
+  font-size: 1.2rem;
+  font-weight: bold;
+`;
 export const Wrapper = styled.footer`
   width: 100%;
   background-color: rgb(30, 30, 30);
   color: white;
   padding: 20px;
+  ${Div} {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
 `;
-
 export const LogoFooter = styled(Logo)`
   display: inline-block;
   grid-area: logo;
   font-size: 2rem;
   padding-bottom: 10px;
 `;
-
 export const Content = styled.div`
   width: 100%;
   margin: 0 auto;
-  // grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-  // justify-content: space-around;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  @media screen and (min-width: 700px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+    justify-content: space-around;
+  }
 `;
-
 export const DivContentWrapper = styled.div`
   margin: 0 auto;
   width: 100%;
   padding-bottom: 30px;
 `;
-
 export const Contact = styled.div`
   width: 100%;
   height: 100%;
@@ -50,7 +55,6 @@ export const Contact = styled.div`
     padding-top: 5px;
   }
 `;
-
 export const Info = styled.a`
   display: grid;
   grid-template-columns: 50px 1fr;
@@ -67,18 +71,22 @@ export const Info = styled.a`
     font-size: 1rem;
     font-weight: normal;
   }
-  // &:hover i {
-  //   color: ${({ theme }) => theme.colors.green};
-  // }
 `;
-
 export const Menu = styled.div`
   justify-self: center;
+  @media screen and (min-width: 700px) and (orientation: portrait) {
+    width: min-content;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 700px) and (orientation: landscape) {
+    width: min-content;
+    margin: 0 auto;
+  }
 `;
-
 export const NavFooter = styled.ul`
   li {
     padding: 10px 0 10px 0;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     a {
       font-size: 1.2rem;
       margin: 0;
@@ -86,7 +94,6 @@ export const NavFooter = styled.ul`
     }
   }
 `;
-
 export const Subscribe = styled.div`
   input {
     width: 100%;
@@ -100,11 +107,9 @@ export const Subscribe = styled.div`
     }
   }
 `;
-
 export const ButtonFooter = styled(Button)`
   margin-top: 15px;
 `;
-
 export const DivWrapperSocialMedia = styled.div`
   padding: 20px 0;
   text-align: center;

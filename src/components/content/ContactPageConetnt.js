@@ -31,7 +31,7 @@ export default function ContactPage() {
             <Icon className={ICONS.SMARTPHONE}></Icon>
             <DviMedia>
               <H5Title>Phone</H5Title>
-              <Description>Call customer service 0n 0800 123 456</Description>
+              <Description>Call customer service 0800 123 456</Description>
             </DviMedia>
           </DivInfo>
           <DivInfo>

@@ -19,4 +19,7 @@ export const Name = styled.h1`
   transform: translate(-50%, -50%);
   font-size: 7vw;
   font-weight: 600;
+  @media screen and (orientation: landscape) {
+    font-size: 6vw;
+  }
 `;

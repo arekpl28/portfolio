@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../utils/variables";
 
 export const BigWrapperHeader = styled.header`
   position: relative;
@@ -8,5 +9,11 @@ export const BigWrapperHeader = styled.header`
 export const SmallWrapperHeader = styled.header`
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 60vh;
+  @media screen and (orientation: portrait) {
+    height: 40vh;
+  }
+  @media screen and ${device.laptop} {
+    height: 40vh;
+  }
 `;

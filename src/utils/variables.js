@@ -11,8 +11,7 @@ const size = {
   desktop: "1920px",
   desktopM: "2560px",
 };
-// and (orientation: portrait);
-// and (orientation: landscape);
+
 export const device = {
   fold: `(min-width: ${size.fold})`,
   mobileS: `(min-width: ${size.mobileS})`,
@@ -26,11 +25,3 @@ export const device = {
   desktop: `(min-width: ${size.desktop})`,
   desktopM: `(min-width: ${size.desktopM})`,
 };
-
-// const XXL = "3840 x 2160";
-// const XL = "2048 x 1536";
-// const L = "1920 x 1080";
-// const M = "1768 x 992";
-// const S = "1280 x 720";
-// const XS = "1176 x 664";
-// const XXS = "720 x 576";
