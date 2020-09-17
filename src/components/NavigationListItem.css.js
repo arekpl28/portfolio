@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
+import { device } from "../utils/variables";
 
 const navLinkFade = keyframes`
   from {
@@ -11,7 +12,6 @@ const navLinkFade = keyframes`
     transform: translateX(0px);
   }
 `;
-
 export const NavItem = styled.li`
   display: grid;
   width: 100%;
@@ -30,8 +30,19 @@ export const NavItem = styled.li`
   &.navLinkFade:nth-child(4) a {
     animation: ${navLinkFade} 1.25s ease;
   }
+  @media screen and ${device.tablet} {
+    animation: none;
+    border-bottom: none;
+    display: block;
+    align-content: unset;
+  }
+  @media screen and ${device.laptopM} {
+    padding: 0 15px;
+  }
+  @media screen and ${device.laptopM} {
+    padding: 0 35px;
+  }
 `;
-
 export const NavItemLink = styled(NavLink)`
   dispaly: block;
   width: 100%;
@@ -45,15 +56,22 @@ export const NavItemLink = styled(NavLink)`
   &.active {
     color: ${({ theme }) => theme.colors.green};
   }
-  // @media (min-width: 768px) {
-  //   margin: 0 15px;
-  //   color: white;
-  //   transition: 0.3s;
-  //   &:hover {
-  //     color: red;
-  //   }
-  //   &.active {
-  //     color: ${({ theme }) => theme.colors.green};
-  //   }
-  // }
+  @media screen and ${device.tablet} {
+    margin: 0 15px;
+    font-size: 1.8rem;
+    color: white;
+    transition: 0.3s;
+    &:hover {
+      color: red;
+    }
+    &.active {
+      color: ${({ theme }) => theme.colors.green};
+    }
+  }
+  @media screen and ${device.desktop} {
+    font-size: 2.3rem;
+  }
+  @media screen and ${device.desktopM} {
+    font-size: 3rem;
+  }
 `;

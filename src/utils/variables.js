@@ -1,22 +1,30 @@
 const size = {
+  fold: "279px",
   mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  tablet: "768px",
+  mobileM: "360px",
+  mobileL: "410px",
+  surface: "539px",
+  tablet: "767px",
   laptop: "1024px",
+  laptopM: "1279px",
   laptopL: "1440px",
-  desktop: "2560px",
+  desktop: "1920px",
+  desktopM: "2560px",
 };
-
+// and (orientation: portrait);
+// and (orientation: landscape);
 export const device = {
+  fold: `(min-width: ${size.fold})`,
   mobileS: `(min-width: ${size.mobileS})`,
   mobileM: `(min-width: ${size.mobileM})`,
   mobileL: `(min-width: ${size.mobileL})`,
+  surface: `(min-width: ${size.surface})`,
   tablet: `(min-width: ${size.tablet})`,
   laptop: `(min-width: ${size.laptop})`,
+  laptopM: `(min-width: ${size.laptopM})`,
   laptopL: `(min-width: ${size.laptopL})`,
   desktop: `(min-width: ${size.desktop})`,
-  desktopL: `(min-width: ${size.desktop})`,
+  desktopM: `(min-width: ${size.desktopM})`,
 };
 
 // const XXL = "3840 x 2160";

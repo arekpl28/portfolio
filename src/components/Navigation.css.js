@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Logo } from "./Logo.css";
+import { device } from "../utils/variables";
 
 export const Line = styled.div``;
 
@@ -28,8 +29,10 @@ export const Burger = styled.div`
       transform: rotate(45deg);
     }
   }
+  @media screen and ${device.tablet} {
+    display: none;
+  }
 `;
-
 export const Nav = styled.nav`
   display: flex;
   position: fixed;
@@ -47,10 +50,46 @@ export const Nav = styled.nav`
     padding: 10px 20px;
     background-color: ${({ theme }) => theme.colors.bgcNav};
     box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
-    & ul {
-      top: 50px;
-      height: calc(100vh - 50px);
-      padding-top: 30px;
+    @media screen and ${device.laptopM} {
+      padding: 10px 40px;
+    }
+    @media screen and ${device.laptopL} {
+      padding: 10px 60px;
+    }
+    @media screen and ${device.desktop} {
+      padding: 30px 80px;
+    }
+    @media screen and ${device.desktopM} {
+      padding: 40px 90px;
+    }
+    @media screen and ${device.tablet} {
+      ul li a {
+        color: rgb(30, 30, 30);
+        font-size: 1.6rem;
+        &:hover {
+          color: green;
+        }
+        &.active {
+          color: red;
+        }
+      }
+    }
+    @media screen and ${device.desktop} {
+      ul li a {
+        font-size: 2rem;
+      }
+    }
+    @media screen and ${device.desktopM} {
+      ul li a {
+        font-size: 3rem;
+      }
+    }
+    @media screen and (max-width: 767) {
+      & ul {
+        top: 50px;
+        height: calc(100vh - 50px);
+        padding-top: 30px;
+      }
     }
     & ${Burger} ${Line} {
       width: 20px;
@@ -72,14 +111,24 @@ export const Nav = styled.nav`
     }
     & ${Logo} {
       font-size: 2rem;
+      @media screen and ${device.desktopM} {
+        font-size: 4rem;
+      }
     }
   }
+  @media screen and ${device.mobileS} {
+    padding: 20px 30px;
+  }
+  @media screen and ${device.tablet} {
+    display: flex;
+    position: fixed;
+    padding: 60px;
+  }
+  @media screen and ${device.laptopL} {
+    padding: 60px 100px;
+  }
 `;
-
 export const NavUl = styled.ul`
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   position: absolute;
   display: grid;
   grid-template-columns: 1fr;
@@ -96,5 +145,19 @@ export const NavUl = styled.ul`
   &.navActive {
     transition: 0.6s;
     transform: translateX(0);
+  }
+  @media screen and ${device.tablet} {
+    display: flex;
+    transform: translateX(0%);
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 100%;
+    width: unset;
+    padding-top: unset;
+    padding-right: 50px;
+  }
+  @media screen and ${device.laptopM} {
+    padding-right: 100px;
   }
 `;
