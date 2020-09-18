@@ -23,11 +23,12 @@ export const Name = styled.h1`
   @media screen and ${device.laptopM} and (orientation: portrait) {
     font-size: 6vw;
   }
-  @media screen and ${device.mobileL} and (orientation: landscape) {
+  @media screen and ${device.mobileL} and (max-height: 500px) {
     font-size: 6vw;
+    bottom: 40vh;
   }
-  @media screen and ${device.tablet} {
-    border-width: 15px;
+  @media screen and ${device.desktop} {
+    font-size: 5vw;
   }
 `;
 export const Profession = styled.p`
@@ -40,14 +41,21 @@ export const Profession = styled.p`
   @media screen and ${device.laptopM} {
     font-size: 3vw;
   }
-  @media screen and ${device.mobileL} and (orientation: landscape) {
+  @media screen and ${device.mobileL} and (max-height: 500px) {
     font-size: 3vw;
+    bottom: 30vh;
+  }
+  @media screen and ${device.desktop} {
+    font-size: 2vw;
   }
 `;
 export const DivMedia = styled.div`
   position: absolute;
   width: 100%;
   bottom: 30vh;
+  @media screen and ${device.mobileL} and (max-height: 500px) {
+    bottom: 20vh;
+  }
 `;
 export const DivProfileImg = styled.div`
   position: absolute;

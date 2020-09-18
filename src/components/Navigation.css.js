@@ -54,13 +54,19 @@ export const Nav = styled.nav`
       padding: 10px 40px;
     }
     @media screen and ${device.laptopL} {
-      padding: 10px 60px;
+      padding: 10px 50px;
     }
     @media screen and ${device.desktop} {
-      padding: 30px 80px;
+      padding: 20px 60px;
+      ul li a {
+        font-size: 2rem;
+      }
     }
     @media screen and ${device.desktopM} {
       padding: 40px 90px;
+      ul li a {
+        font-size: 3rem;
+      }
     }
     @media screen and ${device.tablet} {
       ul li a {
@@ -74,16 +80,7 @@ export const Nav = styled.nav`
         }
       }
     }
-    @media screen and ${device.desktop} {
-      ul li a {
-        font-size: 2rem;
-      }
-    }
-    @media screen and ${device.desktopM} {
-      ul li a {
-        font-size: 3rem;
-      }
-    }
+
     @media screen and (max-width: 767) {
       & ul {
         top: 50px;
@@ -119,7 +116,8 @@ export const Nav = styled.nav`
   @media screen and ${device.mobileS} {
     padding: 20px 30px;
   }
-  @media screen and ${device.tablet} {
+
+  @media screen and ${device.tablet} and (orientation: portrait) {
     display: flex;
     position: fixed;
     padding: 60px;

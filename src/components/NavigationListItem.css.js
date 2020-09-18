@@ -42,6 +42,9 @@ export const NavItem = styled.li`
   @media screen and ${device.laptopM} {
     padding: 0 35px;
   }
+  @media screen and ${device.desktop} {
+    padding: 0 10px;
+  }
 `;
 export const NavItemLink = styled(NavLink)`
   dispaly: block;
@@ -69,7 +72,7 @@ export const NavItemLink = styled(NavLink)`
     }
   }
   @media screen and ${device.desktop} {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   @media screen and ${device.desktopM} {
     font-size: 3rem;

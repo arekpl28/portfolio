@@ -11,9 +11,9 @@ export const SmallWrapperHeader = styled.header`
   width: 100%;
   height: 60vh;
   @media screen and (orientation: portrait) {
-    height: 40vh;
+    height: 45vh;
   }
   @media screen and ${device.laptop} {
-    height: 40vh;
+    height: 45vh;
   }
 `;

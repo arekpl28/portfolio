@@ -11,6 +11,9 @@ export const Logo = styled(NavLink)`
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.6s;
+  @media screen and ${device.mobileL} and (max-height: 500px) {
+    font-size: 2.5rem;
+  }
   @media screen and ${device.desktopM} {
     font-size: 6rem;
   }

@@ -86,13 +86,6 @@ export const SocialIcons = styled.a`
       font-size: 2rem;
     }
   }
-  @media screen and ${device.desktop} {
-    width: 70px;
-    height: 70px;
-    i {
-      font-size: 3rem;
-    }
-  }
   @media screen and ${device.desktopM} {
     width: 100px;
     height: 100px;

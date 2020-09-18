@@ -33,7 +33,7 @@ export default function Footer() {
           <Content>
             <DivContentWrapper>
               <Contact>
-                <H4>Contact Informacion</H4>
+                <H4>Contact Information</H4>
                 <Info
                   target="blank"
                   href="https://www.google.com/maps/place/Lillehammer/@61.1153437,10.4618682,15.75z/data=!4m5!3m4!1s0x466a62a7f7b5288d:0x32273ad34a5bed34!8m2!3d61.1152713!4d10.4662306"
