@@ -8,8 +8,9 @@ const size = {
   laptop: "1024px",
   laptopM: "1279px",
   laptopL: "1440px",
-  desktop: "1920px",
-  desktopM: "2560px",
+  desktop: "1919px",
+  desktopM: "2432px",
+  // desktopM: "2560px",
 };
 
 export const device = {

@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { device } from "../../utils/variables";
+import { Button } from "../Button.css";
 
 export const Wrapper = styled.div`
   display: grid;
   width: 100%;
-  background-color: #f8f9fa;
+  background-color: #e6e7ee;
 `;
 export const WrapperInfo = styled.div`
   display: grid;
@@ -83,9 +84,11 @@ export const Section = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 50vh 1fr;
   width: 100%;
+
   @media screen and (min-width: 720px) {
     grid-template-columns: 50vw 1fr;
     grid-template-rows: 1fr;
+    min-height: 50vh;
   }
   @media screen and ${device.tablet} and (orientation: portrait) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -95,71 +98,61 @@ export const Section = styled.div`
 export const DivContentWrapper = styled.div`
   width: 100%;
   height: 100%;
+  padding: 20px;
 `;
 export const Map = styled.iframe`
   width: 100%;
   height: 100%;
   border: none;
+  border-radius: 10px;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 9px #fff;
   @media screen and ${device.laptop} {
-    padding: 20px 40px;
   }
 `;
 export const Contact = styled.div`
-  max-width: 600px;
+  max-width: 500px;
   align-content: center;
+  // background: #ddd;
+  // box-shadow: 6px 6px 12px #b8b9be, -6px -6px 9px #fff;
+  // border-radius: 10px;
 `;
 export const Form = styled.form`
   padding: 20px;
 `;
 export const Div = styled.div`
   display: grid;
-  grid-template-columns: 1fr 30px;
+  font-size: 0.875rem;
   width: 100%;
   padding-top: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  i {
-    font-size: 1.2rem;
-    justify-self: right;
-    align-self: center;
-  }
+  margin-bottom: 1rem;
+
+  line-height: 1.5;
+  font-weight: 300;
 `;
-export const Input = styled.input`
-  height: 50px;
-  font-size: 1.5rem;
-  border: none;
-  background-color: transparent;
-  outline: none;
+
+export const Label = styled.label`
+  margin-bottom: 0.25rem;
 `;
+export const DivInput = styled.div``;
 export const TextArea = styled.textarea`
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
+  width: 100%;
   min-height: 100px;
-  font-size: 1.5rem;
-  background-color: transparent;
+  resize: vertical;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.6rem 0.75rem;
   outline: none;
-  overflow: auto;
-  resize: none;
+  background-color: transparent;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
   border: none;
+  border-radius: 10px;
 `;
 export const DivTextArea = styled(Div)`
   i {
     align-self: flex-start;
   }
 `;
-export const Button = styled.button`
-  font-family: "Poppins", sans-serif;
+export const BtnSubmit = styled(Button)`
   margin-top: 30px;
-  padding: 5px 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  border: 1px solid black;
-  border-radius: 2px;
-  color: black;
-  cursor: pointer;
-  background-color: transparent;
-  transition: 0.2s;
-  &:hover {
-    background-color: #000;
-    color: white;
-  }
 `;

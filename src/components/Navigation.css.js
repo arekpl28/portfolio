@@ -15,6 +15,9 @@ export const Burger = styled.div`
     transform-origin: center right;
     background-color: ${({ theme }) => theme.colors.bgcBurger};
     transition: all 0.6s ease;
+    &:nth-child(3) {
+      margin-bottom: 0px;
+    }
   }
   &.burgerActive ${Line} {
     background-color: ${({ theme }) => theme.colors.bgcBurgerActive};
@@ -29,7 +32,7 @@ export const Burger = styled.div`
       transform: rotate(45deg);
     }
   }
-  @media screen and ${device.tablet} {
+  @media screen and (min-width: 710px) {
     display: none;
   }
 `;
@@ -45,33 +48,38 @@ export const Nav = styled.nav`
   align-items: center;
   transition: 0.6s;
   z-index: 10000;
+  @media screen and ${device.tablet} and (orientation: portrait) {
+    padding: 30px;
+    height: unset;
+  }
+  @media screen and ${device.laptop} {
+    padding: 30px;
+  }
+  @media screen and ${device.laptop} and (orientation: portrait) {
+    padding: 30px 40px;
+  }
+  @media screen and ${device.laptopM} {
+    padding: 40px;
+  }
+  @media screen and ${device.desktop} {
+    padding: 50px;
+  }
   &.sticky {
     height: 50px;
     padding: 10px 20px;
     background-color: ${({ theme }) => theme.colors.bgcNav};
     box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
-    @media screen and ${device.laptopM} {
-      padding: 10px 40px;
-    }
-    @media screen and ${device.laptopL} {
-      padding: 10px 50px;
-    }
-    @media screen and ${device.desktop} {
-      padding: 20px 60px;
-      ul li a {
-        font-size: 2rem;
+    @media screen and (max-width: 710px) {
+      & ul {
+        top: 50px;
+        height: calc(100vh - 50px);
+        padding-top: 30px;
       }
     }
-    @media screen and ${device.desktopM} {
-      padding: 40px 90px;
-      ul li a {
-        font-size: 3rem;
-      }
-    }
-    @media screen and ${device.tablet} {
+    @media screen and (min-width: 710px) {
       ul li a {
         color: rgb(30, 30, 30);
-        font-size: 1.6rem;
+        font-size: 0.9rem;
         &:hover {
           color: green;
         }
@@ -80,18 +88,20 @@ export const Nav = styled.nav`
         }
       }
     }
-
-    @media screen and (max-width: 767) {
-      & ul {
-        top: 50px;
-        height: calc(100vh - 50px);
-        padding-top: 30px;
-      }
+    @media screen and ${device.tablet} and (orientation: portrait) {
+      height: unset;
     }
+    @media screen and ${device.laptopM} {
+      padding: 30px 40px;
+    }
+
     & ${Burger} ${Line} {
       width: 20px;
       margin-bottom: 5px;
       background-color: ${({ theme }) => theme.colors.bgcBurgerSticky};
+      &:nth-child(3) {
+        margin-bottom: 0px;
+      }
     }
     & ${Burger}.burgerActive ${Line} {
       background-color: ${({ theme }) => theme.colors.bgcBurgerActive};
@@ -107,25 +117,29 @@ export const Nav = styled.nav`
       }
     }
     & ${Logo} {
-      font-size: 2rem;
-      @media screen and ${device.desktopM} {
-        font-size: 4rem;
+      font-size: 7vw;
+      @media screen and (max-height: 500px) and (orientation: landscape) {
+        font-size: 6vh;
+      }
+      @media screen and ${device.surface} and (orientation: portrait) {
+        font-size: 4vw;
+      }
+      @media screen and (min-width: 710px) and (min-height: 530px) {
+        font-size: 3vw;
+      }
+      @media screen and ${device.tablet} and (orientation: portrait) {
+        font-size: 4vw;
+      }
+      @media screen and ${device.laptopM} {
+        font-size: 2vw;
+      }
+      @media screen and ${device.desktop} {
+        font-size: 1.5vw;
       }
     }
   }
-  @media screen and ${device.mobileS} {
-    padding: 20px 30px;
-  }
-
-  @media screen and ${device.tablet} and (orientation: portrait) {
-    display: flex;
-    position: fixed;
-    padding: 60px;
-  }
-  @media screen and ${device.laptopL} {
-    padding: 60px 100px;
-  }
 `;
+
 export const NavUl = styled.ul`
   position: absolute;
   display: grid;
@@ -144,8 +158,9 @@ export const NavUl = styled.ul`
     transition: 0.6s;
     transform: translateX(0);
   }
-  @media screen and ${device.tablet} {
+  @media screen and (min-width: 710px) {
     display: flex;
+    position: relative;
     transform: translateX(0%);
     justify-content: center;
     align-items: center;
@@ -153,9 +168,5 @@ export const NavUl = styled.ul`
     height: 100%;
     width: unset;
     padding-top: unset;
-    padding-right: 50px;
-  }
-  @media screen and ${device.laptopM} {
-    padding-right: 100px;
   }
 `;

@@ -16,44 +16,56 @@ export const Name = styled.h1`
   position: absolute;
   width: 100%;
   left: 0%;
-  bottom: 45vh;
-  font-size: 8vw;
-  padding: 0 10px;
-  font-weight: 600;
-  @media screen and ${device.laptopM} and (orientation: portrait) {
-    font-size: 6vw;
-  }
-  @media screen and ${device.mobileL} and (max-height: 500px) {
-    font-size: 6vw;
+  bottom: 40vh;
+  font-size: 7.5vw;
+  @media screen and (max-height: 500px) and (orientation: landscape) {
     bottom: 40vh;
+    font-size: 6vw;
   }
-  @media screen and ${device.desktop} {
+  @media screen and (min-width: 710px) and (min-height: 530px) {
+    bottom: 45vh;
+    font-size: 6vw;
+  }
+  @media screen and ${device.laptopM} {
+    bottom: 45vh;
     font-size: 5vw;
   }
+  // @media screen and ${device.laptopM} and (orientation: portrait) {
+  //   font-size: 6vw;
+  // }
+  // @media screen and ${device.mobileL} and (max-height: 500px) {
+  //   font-size: 6vw;
+  //   bottom: 40vh;
+  // }
+  // @media screen and ${device.desktop} {
+  //   font-size: 5vw;
+  // }
 `;
-export const Profession = styled.p`
+export const Profession = styled.h2`
   position: absolute;
   width: 100%;
-  bottom: 40vh;
+  bottom: 35vh;
   left: 0%;
   font-size: 4vw;
   font-weight: 200;
+  @media screen and (max-height: 500px) and (orientation: landscape) {
+    bottom: 35vh;
+    font-size: 3vw;
+  }
+  @media screen and (min-width: 710px) and (min-height: 530px) {
+    bottom: 38vh;
+    font-size: 3vw;
+  }
   @media screen and ${device.laptopM} {
-    font-size: 3vw;
-  }
-  @media screen and ${device.mobileL} and (max-height: 500px) {
-    font-size: 3vw;
-    bottom: 30vh;
-  }
-  @media screen and ${device.desktop} {
-    font-size: 2vw;
+    bottom: 38vh;
+    font-size: 2.2vw;
   }
 `;
 export const DivMedia = styled.div`
   position: absolute;
   width: 100%;
-  bottom: 30vh;
-  @media screen and ${device.mobileL} and (max-height: 500px) {
+  bottom: 25vh;
+  @media screen and (max-height: 500px) and (orientation: landscape) {
     bottom: 20vh;
   }
 `;
@@ -91,8 +103,6 @@ export const DivProfileImg = styled.div`
     border-width: 20px;
   }
   @media screen and ${device.desktopM} and (orientation: landscape) {
-    width: 550px;
-    height: 550px;
-    border-width: 25px;
+    border-width: 20px;
   }
 `;

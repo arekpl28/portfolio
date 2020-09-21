@@ -3,95 +3,58 @@ import { device } from "../utils/variables";
 
 export const SocialIcons = styled.a`
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: 0 5px;
+  width: 10vw;
+  height: 10vw;
+  margin: 0 2vw;
   text-decoration: none;
   i {
     display: grid;
     width: 100%;
     height: 100%;
-    font-size: 1.5rem;
+    font-size: 4vw;
     place-content: center;
     border: 1px solid;
     border-radius: 50%;
     transition: 0.3s;
     color: white;
-    &:hover {
-      cursor: pointer;
-      color: ${({ theme }) => theme.colors.green};
-      box-shadow: 0px 0px 10px ${({ theme }) => theme.colors.green};
+  }
+  @media screen and (max-height: 500px) and (orientation: landscape) {
+    width: 6vw;
+    height: 6vw;
+    margin: 0 1vw;
+    i {
+      font-size: 2vw;
     }
   }
-  @media screen and ${device.mobileL} {
-    width: 35px;
-    height: 35px;
+  @media screen and ${device.surface} and (orientation: portrait) {
+    width: 7vw;
+    height: 7vw;
+    margin: 0 2vw;
     i {
-      font-size: 1.8rem;
-    }
-  }
-  @media screen and ${device.surface} {
-    width: 45px;
-    height: 45px;
-    i {
-      font-size: 2rem;
+      font-size: 2.5vw;
       border: 2px solid;
     }
   }
-  @media screen and ${device.tablet} {
-    width: 60px;
-    height: 60px;
-    margin: 0 10px;
+  @media screen and (min-width: 710px) and (min-height: 530px) {
+    width: 6vw;
+    height: 6vw;
+    margin: 0 2vw;
     i {
-      font-size: 2.5rem;
-    }
-  }
-  @media screen and ${device.laptop} and (orientation: portrait) {
-    width: 80px;
-    height: 80px;
-    margin: 0 15px;
-    i {
-      font-size: 3rem;
-    }
-  }
-  @media screen and ${device.mobileL} and (orientation: landscape) {
-    width: 25px;
-    height: 25px;
-    margin: 0px 5px;
-    i {
-      font-size: 1.2rem;
-    }
-  }
-  @media screen and ${device.surface} and (orientation: landscape) {
-    width: 30px;
-    height: 30px;
-    i {
-      font-size: 1.4rem;
-      border: 1px solid;
-    }
-  }
-  @media screen and ${device.laptop} and (orientation: landscape) {
-    width: 40px;
-    height: 40px;
-    margin: 0px 10px;
-    i {
-      font-size: 1.8rem;
+      font-size: 2.5vw;
       border: 2px solid;
     }
   }
   @media screen and ${device.laptopM} {
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    height: 3vw;
+    margin: 0 1vw;
     i {
-      font-size: 2rem;
-    }
-  }
-  @media screen and ${device.desktopM} {
-    width: 100px;
-    height: 100px;
-    margin: 0 25px;
-    i {
-      font-size: 4rem;
+      font-size: 1vw;
+      &:hover {
+        cursor: pointer;
+        color: ${({ theme }) => theme.colors.green};
+        box-shadow: 0px 0px 10px ${({ theme }) => theme.colors.green};
+      }
     }
   }
 `;

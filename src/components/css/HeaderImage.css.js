@@ -18,6 +18,9 @@ export const HomeImage = styled(Image)`
   bottom: 15vh;
 `;
 
+export const ProjectImage = styled(Image)`
+  background-image: url("images/map.jpg");
+`;
 export const ContactImage = styled(Image)`
   background-image: url("images/map.jpg");
 `;

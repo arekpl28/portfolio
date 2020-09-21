@@ -1,7 +1,7 @@
 import React from "react";
 
 import { SOCIAL_MEDIA, ICONS } from "../../utils/constant";
-
+import { Input } from "../Input.css";
 import {
   Wrapper,
   WrapperInfo,
@@ -16,10 +16,11 @@ import {
   DivContentWrapper,
   Form,
   Div,
-  Input,
+  Label,
+  DivInput,
   TextArea,
   DivTextArea,
-  Button,
+  BtnSubmit,
 } from "./ContactPage.css";
 
 export default function ContactPage() {
@@ -57,22 +58,30 @@ export default function ContactPage() {
             <Contact>
               <Form>
                 <Div>
-                  <Input placeholder="Name" type="text" />
-                  <i className={ICONS.USER}></i>
+                  <Label htmlFor="name">Name</Label>
+                  <DivInput>
+                    <Input id="name" type="text" />
+                  </DivInput>
                 </Div>
                 <Div>
-                  <Input placeholder="Email" type="email" />
-                  <i className={ICONS.EMAIL}></i>
+                  <Label htmlFor="email">Email address</Label>
+                  <DivInput>
+                    <Input id="email" type="email" />
+                  </DivInput>
                 </Div>
                 <Div>
-                  <Input placeholder="Phone" type="text" />
-                  <i className={ICONS.PHONE}></i>
+                  <Label htmlFor="phone">Phone number</Label>
+                  <DivInput>
+                    <Input id="phone" type="text" />
+                  </DivInput>
                 </Div>
                 <DivTextArea>
-                  <TextArea placeholder="Message"></TextArea>
-                  <i className={ICONS.PENCIL}></i>
+                  <Label htmlFor="message">Message</Label>
+                  <DivInput>
+                    <TextArea></TextArea>
+                  </DivInput>
                 </DivTextArea>
-                <Button>Submit</Button>
+                <BtnSubmit>Submit</BtnSubmit>
               </Form>
             </Contact>
           </DivContentWrapper>

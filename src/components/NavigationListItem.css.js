@@ -30,38 +30,25 @@ export const NavItem = styled.li`
   &.navLinkFade:nth-child(4) a {
     animation: ${navLinkFade} 1.25s ease;
   }
-  @media screen and ${device.tablet} {
+  @media screen and (min-width: 710px) {
     animation: none;
     border-bottom: none;
     display: block;
     align-content: unset;
   }
-  @media screen and ${device.laptopM} {
-    padding: 0 15px;
-  }
-  @media screen and ${device.laptopM} {
-    padding: 0 35px;
-  }
-  @media screen and ${device.desktop} {
-    padding: 0 10px;
-  }
 `;
 export const NavItemLink = styled(NavLink)`
   dispaly: block;
   width: 100%;
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 2px;
   text-decoration: none;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: white;
   transition: 0.6s;
   &.active {
     color: ${({ theme }) => theme.colors.green};
   }
-  @media screen and ${device.tablet} {
+  @media screen and (min-width: 710px) {
     margin: 0 15px;
-    font-size: 1.8rem;
     color: white;
     transition: 0.3s;
     &:hover {
@@ -71,10 +58,16 @@ export const NavItemLink = styled(NavLink)`
       color: ${({ theme }) => theme.colors.green};
     }
   }
+  @media screen and ${device.tablet} and (orientation: portrait) {
+    font-size: 1.1rem;
+  }
+  @media screen and ${device.laptop} {
+    font-size: 1.1rem;
+  }
   @media screen and ${device.desktop} {
-    font-size: 2rem;
+    // font-size: 2rem;
   }
   @media screen and ${device.desktopM} {
-    font-size: 3rem;
+    // font-size: 3rem;
   }
 `;

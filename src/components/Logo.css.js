@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { device } from "../utils/variables";
 
 export const Logo = styled(NavLink)`
-  font-size: 3rem;
+  font-size: 9vw;
   font-weight: 700;
   letter-spacing: 2px;
   color: red;
@@ -11,10 +11,22 @@ export const Logo = styled(NavLink)`
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.6s;
-  @media screen and ${device.mobileL} and (max-height: 500px) {
-    font-size: 2.5rem;
+  @media screen and (max-height: 500px) and (orientation: landscape) {
+    font-size: 8vh;
   }
-  @media screen and ${device.desktopM} {
-    font-size: 6rem;
+  @media screen and ${device.surface} and (orientation: portrait) {
+    font-size: 6vw;
+  }
+  @media screen and (min-width: 710px) and (min-height: 530px) {
+    font-size: 4vw;
+  }
+  @media screen and ${device.tablet} and (orientation: portrait) {
+    font-size: 5vw;
+  }
+  @media screen and ${device.laptopM} {
+    font-size: 3vw;
+  }
+  @media screen and ${device.desktop} {
+    font-size: 2vw;
   }
 `;
