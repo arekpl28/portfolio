@@ -4,16 +4,20 @@ import { SOCIAL_MEDIA, ICONS } from "../../utils/constant";
 import { Input } from "../Input.css";
 import {
   Wrapper,
-  WrapperInfo,
-  DivInfo,
+  Container,
+  Card,
   Icon,
-  DviMedia,
+  ImgBox,
+  ContentBox,
   H5Title,
   Description,
+  DivLink,
+  LinkCard,
   Section,
   Map,
   Contact,
   DivContentWrapper,
+  MapWrapper,
   Form,
   Div,
   Label,
@@ -27,33 +31,48 @@ export default function ContactPage() {
   return (
     <>
       <Wrapper>
-        <WrapperInfo>
-          <DivInfo>
-            <Icon className={ICONS.SMARTPHONE}></Icon>
-            <DviMedia>
+        <Container>
+          <Card>
+            <ImgBox>
+              <Icon className={ICONS.SMARTPHONE}></Icon>
+            </ImgBox>
+            <ContentBox>
               <H5Title>Phone</H5Title>
               <Description>Call customer service 0800 123 456</Description>
-            </DviMedia>
-          </DivInfo>
-          <DivInfo>
-            <Icon className={ICONS.MAP}></Icon>
-            <DviMedia>
+            </ContentBox>
+            <DivLink>
+              <LinkCard>Call</LinkCard>
+            </DivLink>
+          </Card>
+          <Card>
+            <ImgBox>
+              <Icon className={ICONS.MAP}></Icon>
+            </ImgBox>
+            <ContentBox>
               <H5Title>Address</H5Title>
               <Description>2246 Cambrige Court springdale</Description>
-            </DviMedia>
-          </DivInfo>
-          <DivInfo>
-            <Icon className={ICONS.EMAIL}></Icon>
-            <DviMedia>
+            </ContentBox>
+            <DivLink>
+              <LinkCard>Map</LinkCard>
+            </DivLink>
+          </Card>
+          <Card>
+            <ImgBox>
+              <Icon className={ICONS.EMAIL}></Icon>
+            </ImgBox>
+            <ContentBox>
               <H5Title>Email </H5Title>
               <Description>arekpl28@wp.pl</Description>
-            </DviMedia>
-          </DivInfo>
-        </WrapperInfo>
+            </ContentBox>
+            <DivLink>
+              <LinkCard>Message</LinkCard>
+            </DivLink>
+          </Card>
+        </Container>
         <Section>
-          <DivContentWrapper>
+          <MapWrapper>
             <Map src={SOCIAL_MEDIA.MAP} title="google maps"></Map>
-          </DivContentWrapper>
+          </MapWrapper>
           <DivContentWrapper>
             <Contact>
               <Form>

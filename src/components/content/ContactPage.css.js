@@ -1,98 +1,102 @@
 import styled from "styled-components";
 import { device } from "../../utils/variables";
-import { Button } from "../Button.css";
+import { Button, A } from "../Button.css";
 
 export const Wrapper = styled.div`
   display: grid;
+  grid-template-rows: 1fr;
   width: 100%;
   background-color: #e6e7ee;
 `;
-export const WrapperInfo = styled.div`
+export const Container = styled.div`
+  position: relative;
   display: grid;
-  width: 100%;
-  justify-content: space-around;
-  background-color: white;
-  padding: 15px 15px 0 15px;
-  @media screen and (min-width: 540px) and (orientation: portrait) {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 166px));
-    padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 70vw));
+  justify-content: center;
+  @media screen and (min-width: 500px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-  @media screen and ${device.tablet} and (orientation: portrait) {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-    padding: 20px;
+  @media screen and ${device.tablet} {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
   }
-  @media screen and (min-width: 550px) and (orientation: landscape) {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 170px));
-    padding: 20px;
+  @media screen and ${device.laptop} {
+    width: 80vw;
+    margin: 0 auto;
+    justify-content: space-between;
   }
-  @media screen and ${device.tablet} and (orientation: landscape) {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-  }
-  @media screen and ${device.laptopM} and (orientation: landscape) {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
-  }
-  @media screen and ${device.desktopM} and (orientation: landscape) {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
+  @media screen and ${device.laptopM} {
+    width: 60vw;
   }
 `;
-export const DivInfo = styled.div`
+export const Card = styled.div`
+  border: 1px solid rgba(50, 163, 177, 0.2);
+  margin: 20px;
+  height: 280px;
   display: grid;
-  grid-template-columns: auto 1fr;
-  width: 100%;
-  padding-bottom: 10px;
+  grid-template-rows: max-content max-content 1fr;
+
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px #b8b9be, -6px -6px 14px #fff;
+  @media screen and (orientation: portrait) {
+    height: unset;
+  }
+`;
+export const ImgBox = styled.div`
+  position: relative;
+  text-align: center;
 `;
 export const Icon = styled.i`
-  font-size: 2rem;
-  padding-top: 5px;
-  color: green;
-  @media screen and ${device.laptopM} {
-    font-size: 2.5rem;
-  }
-  @media screen and ${device.desktopM} {
-    font-size: 4rem;
-  }
+  font-size: 80px;
+  color: #32a3b1;
 `;
-export const DviMedia = styled.div`
-  padding-left: 10px;
+export const ContentBox = styled.div`
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  color: #32a3b1;
 `;
 export const H5Title = styled.h5`
-  font-size: 1.5rem;
-  @media screen and ${device.tablet} {
-    font-size: 2rem;
-  }
-  @media screen and ${device.laptopM} {
-    font-size: 2.5rem;
-  }
-  @media screen and ${device.desktopM} {
-    font-size: 4rem;
-  }
+  font-weight: 700;
+  font-size: 1.2rem;
+  list-style: 2px;
 `;
 export const Description = styled.p`
-  font-size: 1.4rem;
-  @media screen and ${device.tablet} {
-    font-size: 1.6rem;
+  font-size: 0.8rem;
+`;
+export const DivLink = styled.div`
+  display: grid;
+  @media screen and (orientation: portrait) {
+    margin-top: 20px;
   }
-  @media screen and ${device.laptopM} {
-    font-size: 2rem;
-  }
-  @media screen and ${device.desktopM} {
-    font-size: 3rem;
-  }
+`;
+export const LinkCard = styled(A)`
+  justify-self: center;
+  align-self: end;
+  color: #32a3b1;
+  border-color: rgba(50, 163, 177, 0.2);
 `;
 export const Section = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50vh 1fr;
   width: 100%;
-
+  @media screen and (max-height: 500px) and (orientation: landscape) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50vw 1fr;
+  }
   @media screen and (min-width: 720px) {
-    grid-template-columns: 50vw 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     min-height: 50vh;
   }
-  @media screen and ${device.tablet} and (orientation: portrait) {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: 1fr;
+`;
+export const MapWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  @media screen and ${device.laptopM} {
+    display: grid;
   }
 `;
 export const DivContentWrapper = styled.div`
@@ -106,18 +110,26 @@ export const Map = styled.iframe`
   border: none;
   border-radius: 10px;
   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 9px #fff;
-  @media screen and ${device.laptop} {
+  @media screen and ${device.laptopM} {
+    width: 500px;
+    justify-self: right;
+  }
+  @media screen and ${device.laptopL} {
+    width: 30vw;
   }
 `;
 export const Contact = styled.div`
   max-width: 500px;
   align-content: center;
-  // background: #ddd;
-  // box-shadow: 6px 6px 12px #b8b9be, -6px -6px 9px #fff;
-  // border-radius: 10px;
+  @media screen and ${device.laptopL} {
+    max-width: 30vw;
+  }
 `;
 export const Form = styled.form`
   padding: 20px;
+  @media screen and ${device.laptopL} {
+    padding: 0px;
+  }
 `;
 export const Div = styled.div`
   display: grid;
@@ -125,7 +137,6 @@ export const Div = styled.div`
   width: 100%;
   padding-top: 10px;
   margin-bottom: 1rem;
-
   line-height: 1.5;
   font-weight: 300;
 `;

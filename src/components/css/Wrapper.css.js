@@ -9,11 +9,11 @@ export const BigWrapperHeader = styled.header`
 export const SmallWrapperHeader = styled.header`
   position: relative;
   width: 100%;
-  height: 60vh;
-  @media screen and (orientation: portrait) {
-    height: 45vh;
+  height: 45vh;
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    height: 60vh;
   }
-  @media screen and ${device.laptop} {
-    height: 45vh;
+  @media screen and ${device.tablet} and (orientation: portrait) {
+    height: 35vh;
   }
 `;
