@@ -3,13 +3,8 @@ import styled from "styled-components";
 import FormTodo from "./FormTodo";
 import TodoList from "./TodoList";
 
-const DivWrapper = styled.div`
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-  color: white;
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
-  text-align: center;
-`;
+import { DivWrapper } from "./TodoApp.css";
+
 const H2 = styled.h2``;
 
 export default function TodoApp() {
