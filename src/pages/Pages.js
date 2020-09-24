@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import HomePageContent from "../components/content/HomePageContent";
 import ProjectsPage from "../components/content/ProjectsPage";
-import ContactPageConetnt from "../components/content/ContactPageConetnt";
+import ContactPageConetnt from "../components/content/contact/ContactPageConetnt";
 // import AboutPageContent from "../components/content/AboutPageContent";
 import TodoApp from "../components/content/projects/todo/TodoApp";
 

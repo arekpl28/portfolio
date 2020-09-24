@@ -1,8 +1,15 @@
 import React from "react";
 
-import { Form, Input, Button, Select, DivSelect } from "./FormTodo.css";
+import {
+  Form,
+  DivInput,
+  InputTodo,
+  ButtonTodo,
+  DivSelect,
+  Label,
+  Select,
+} from "./FormTodo.css";
 
-let idNumer = 0;
 export default function FormTodo({
   inputText,
   setInputText,
@@ -19,9 +26,11 @@ export default function FormTodo({
     if (inputText === "") {
       return;
     } else {
-      setTodos([...todos, { id: idNumer, text: inputText, completed: false }]);
+      setTodos([
+        ...todos,
+        { id: todos.length, text: inputText, completed: false },
+      ]);
       setInputText("");
-      idNumer++;
     }
   };
 
@@ -32,12 +41,19 @@ export default function FormTodo({
   return (
     <>
       <Form>
-        <Input value={inputText} onChange={handlerInputText} type="text" />
-        <Button onClick={handlerClickAddTodo} type="submit">
-          <i className="fas fa-plus-square"></i>
-        </Button>
+        <DivInput>
+          <InputTodo
+            value={inputText}
+            onChange={handlerInputText}
+            type="text"
+          />
+          <ButtonTodo onClick={handlerClickAddTodo} type="submit">
+            Create
+          </ButtonTodo>
+        </DivInput>
         <DivSelect>
-          <Select onChange={handlerSelect} name="todos">
+          <Label htmlFor="select">Select</Label>
+          <Select name="select" onChange={handlerSelect}>
             <option value="all">All</option>
             <option value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>

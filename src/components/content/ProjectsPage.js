@@ -216,7 +216,7 @@ export default function ProjectsPage() {
                 <ClockApp></ClockApp>
               </Middle>
               <Close onClick={() => setActive(false)}>
-                <i class="far fa-times-circle"></i>
+                <i className="far fa-times-circle"></i>
               </Close>
             </Modal>
           </ModalWrapper>

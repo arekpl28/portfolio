@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
 import FormTodo from "./FormTodo";
 import TodoList from "./TodoList";
 
-import { DivWrapper } from "./TodoApp.css";
-
-const H2 = styled.h2``;
+import { DivTodoApp, DivWrapper, H2 } from "./TodoApp.css";
 
 export default function TodoApp() {
   const [inputText, setInputText] = useState("");
@@ -32,7 +29,9 @@ export default function TodoApp() {
 
   useEffect(() => {
     const todoStore = JSON.parse(localStorage.getItem("todoStore"));
-    if (todoStore) setTodos(todoStore);
+    if (todoStore) {
+      setTodos(todoStore);
+    }
   }, []);
 
   useEffect(() => {
@@ -41,21 +40,23 @@ export default function TodoApp() {
 
   return (
     <>
-      <DivWrapper>
-        <H2>TODO List</H2>
-        <FormTodo
-          inputText={inputText}
-          setInputText={setInputText}
-          setTodos={setTodos}
-          todos={todos}
-          setStatus={setStatus}
-        ></FormTodo>
-        <TodoList
-          todos={todos}
-          filteredTodos={filteredTodos}
-          setTodos={setTodos}
-        ></TodoList>
-      </DivWrapper>
+      <DivTodoApp>
+        <DivWrapper>
+          <H2>Todo App</H2>
+          <FormTodo
+            inputText={inputText}
+            setInputText={setInputText}
+            setTodos={setTodos}
+            todos={todos}
+            setStatus={setStatus}
+          ></FormTodo>
+          <TodoList
+            todos={todos}
+            filteredTodos={filteredTodos}
+            setTodos={setTodos}
+          ></TodoList>
+        </DivWrapper>
+      </DivTodoApp>
     </>
   );
 }

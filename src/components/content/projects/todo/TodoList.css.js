@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const DivTodoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 80%;
+  margin: 0 auto;
 `;
 
 export const UlTodoList = styled.ul`
-  min-width: 30%;
   list-style: none;
   border: none;
   li.completed {

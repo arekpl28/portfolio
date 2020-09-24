@@ -1,60 +1,73 @@
 import styled from "styled-components";
 
+import { Input } from "../../../Input.css";
+
+import { Button } from "../../../Button.css";
+
 export const Form = styled.form`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
   min-height: 20vh;
-  display: flex;
   justify-content: center;
   align-items: center;
 `;
-
-export const Input = styled.input`
-  padding: 0.5rem;
-  font-size: 2rem;
-  border: none;
-  background: white;
+export const DivInput = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
 `;
 
-export const Button = styled.button`
-  padding: 0.5rem;
-  font-size: 2rem;
-  border: none;
-  background: white;
-  color: #ff6f47;
-  background: #f7fffe;
-  cursor: pointer;
-  transition: all 0.3s ease;
+export const InputTodo = styled(Input)``;
+
+export const ButtonTodo = styled(Button)`
   &:hover {
-    background: #ff6f47;
-    color: white;
+    color: red;
   }
+`;
+
+export const DivSelect = styled.div`
+  display: grid;
+  font-size: 0.875rem;
+  width: 100%;
+  padding-top: 10px;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+`;
+export const Label = styled.label`
+  justify-self: start;
+  margin-bottom: 0.25rem;
 `;
 
 export const Select = styled.select`
   appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
-  background-image: none;
-  color: #ff6f47;
-  font-family: "Poppins", sans-serif;
-  cursor: pointer;
-  width: 12rem;
-  padding: 1rem;
-`;
-
-export const DivSelect = styled.div`
-  margin: 1rem;
-  position: relative;
-  overflow: hidden;
-  &:after {
-    content: "↓";
-    position: absolute;
-    top: -15px;
-    right: 0;
-    padding: 1rem;
-    font-size: 30px;
-    background: #ff6f47;
-    cursor: pointer;
-    pointer-events: none;
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6rem 0.75rem;
+  font-weight: 300;
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+  background-image: linear-gradient(45deg, transparent 50%, #31344b 50%),
+    linear-gradient(135deg, #31344b 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  &:focus {
+    box-shadow: 2px 2px 5px #b8b9be, -3px -3px 7px #fff;
+    background-image: linear-gradient(45deg, green 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, green 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em,
+      calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+    border-color: green;
+    outline: 0;
   }
 `;
