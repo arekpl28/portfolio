@@ -37,7 +37,6 @@ export default function TodoApp() {
   useEffect(() => {
     localStorage.setItem("todoStore", JSON.stringify(todos));
   }, [todos]);
-
   return (
     <>
       <DivTodoApp>

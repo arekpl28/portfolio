@@ -7,17 +7,15 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
-    // font-family: 'Poppins', sans-serif;
     font-family: "Nunito", sans-serif;
-
-    // font-size: 10px;
   }
   body {
     font-size: 1rem;
-
+    color: ${({ theme }) => theme.text.color};
     z-index: -10;
     overflow-x: hidden;
   }
+
 `;
 
 export default GlobalStyle;

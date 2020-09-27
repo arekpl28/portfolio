@@ -11,8 +11,8 @@ export const Logo = styled(NavLink)`
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.6s;
-  @media screen and (max-height: 500px) and (orientation: landscape) {
-    font-size: 8vh;
+  @media screen and (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
+    font-size: 5vw;
   }
   @media screen and ${device.surface} and (orientation: portrait) {
     font-size: 6vw;

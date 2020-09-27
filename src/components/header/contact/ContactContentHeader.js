@@ -6,7 +6,7 @@ export default function ContactContentHeader() {
   return (
     <>
       <Wrapper>
-        <Name>Get in touch with me</Name>
+        <Name>Contact</Name>
       </Wrapper>
     </>
   );

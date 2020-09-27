@@ -37,7 +37,7 @@ export default function ContactSection() {
               </DivInput>
             </DivLabel>
             <DivLabel>
-              <Label htmlFor="email">Email address</Label>
+              <Label htmlFor="email">Email</Label>
               <DivInput>
                 <InputContact id="email" type="email" />
                 <DivIcon>
@@ -46,7 +46,7 @@ export default function ContactSection() {
               </DivInput>
             </DivLabel>
             <DivLabel>
-              <Label htmlFor="phone">Phone number</Label>
+              <Label htmlFor="phone">Phone</Label>
               <DivInput>
                 <InputContact id="phone" type="text" />
                 <DivIcon>

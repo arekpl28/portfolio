@@ -16,9 +16,9 @@ export const H5 = styled.h5`
 
 export const Wrapper = styled.footer`
   width: 100%;
-  background-color: rgb(30, 30, 30);
-  color: white;
+  background-color: ${({ theme }) => theme.colors.bgc_footer};
   padding: 20px;
+  box-shadow: ${({ theme }) => theme.box_shadow_out.small};
 `;
 export const Div = styled.div`
   font-size: 1.2rem;
@@ -29,8 +29,9 @@ export const LogoFooter = styled(Logo)`
   font-size: 7vw;
   grid-area: logo;
   padding-bottom: 10px;
-  @media screen and (max-height: 500px) and (orientation: landscape) {
-    font-size: 6vh;
+  color: ${({ theme }) => theme.logo.color};
+  @media screen and (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
+    font-size: 4vw;
   }
   @media screen and ${device.surface} and (orientation: portrait) {
     font-size: 4vw;
@@ -55,7 +56,7 @@ export const Content = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 20px;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  border-bottom: ${({ theme }) => theme.border_bottom.small};
   @media screen and (min-width: 700px) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
@@ -85,7 +86,7 @@ export const Info = styled.a`
   grid-template-columns: 2rem 1fr;
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  color: white;
+  color: ${({ theme }) => theme.text.color};
   list-style: none;
   text-decoration: none;
   p {
@@ -110,23 +111,25 @@ export const NavFooter = styled.ul`
   li {
     a {
       font-size: 1rem;
-      margin: 0;
-      color: white;
+      margin: 10px 0 10px 30px;
     }
   }
 `;
-export const Subscribe = styled.div``;
+export const Subscribe = styled.div`
+  margin-top: 20px;
+`;
 export const InputFooter = styled(Input)`
-  color: white;
-  box-shadow: inset 5px 5px 10px #0c0c0c, inset -5px -5px 10px #303030;
+  color: ${({ theme }) => theme.text.color};
+  border-radius: 10px;
+  box-shadow: ${({ theme }) => theme.box_shadow_in.small};
 `;
 export const ButtonFooter = styled(Button)`
   margin-top: 1.5rem;
-  color: #dde1f7;
-  border: none;
-  box-shadow: 5px 5px 10px #0c0c0c, -5px -5px 10px #303030;
+  color: ${({ theme }) => theme.text.color};
+  box-shadow: ${({ theme }) => theme.box_shadow_out.small};
   &:hover {
-    box-shadow: inset 5px 5px 10px #0c0c0c, inset -5px -5px 10px #303030;
+    box-shadow: ${({ theme }) => theme.box_shadow_in.small};
+    color: ${({ theme }) => theme.text.color_hover};
   }
 `;
 export const DivWrapperSocialMedia = styled.div`

@@ -5,5 +5,5 @@ export const Wrapper = styled.div`
   grid-template-rows: auto auto;
   width: 100%;
   padding: 1rem;
-  background-color: #e6e7ee;
+  background-color: ${({ theme }) => theme.colors.bgc};
 `;

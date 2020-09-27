@@ -1,8 +1,8 @@
 import React from "react";
 
-import { DivTodo, Li, BtnComplete, BtnTrash } from "./Todo.css";
+import { DivTodo, Number, Li, BtnComplete, BtnTrash } from "./Todo.css";
 
-export default function Todo({ text, id, completed, list, setTodos }) {
+export default function Todo({ text, id, index, completed, list, setTodos }) {
   const handlerComplete = () => {
     setTodos(
       list.map((todo) => {
@@ -24,11 +24,18 @@ export default function Todo({ text, id, completed, list, setTodos }) {
     }
     setTodos(todoList);
   };
+  console.log(index);
   return (
     <DivTodo>
+      <Number className={completed ? "completed" : ""}>{`No. ${
+        index + 1
+      }`}</Number>
       <Li className={completed ? "completed" : ""}>{text}</Li>
       <BtnComplete onClick={handlerComplete}>
-        <i className="fas fa-check"></i>
+        <i
+          className={completed ? "completed fas fa-check" : "fas fa-check"}
+          // className="fas fa-check"
+        ></i>
       </BtnComplete>
       <BtnTrash onClick={handlerDelete}>
         <i className="fas fa-trash"></i>

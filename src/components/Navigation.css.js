@@ -2,6 +2,20 @@ import styled from "styled-components";
 import { Logo } from "./Logo.css";
 import { device } from "../utils/variables";
 
+export const DivDark = styled.div`
+  &.darkActive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: blur(20px);
+    z-index: 0;
+    transition: 0.6s;
+  }
+`;
+
 export const Line = styled.div``;
 
 export const Burger = styled.div`
@@ -118,8 +132,8 @@ export const Nav = styled.nav`
     }
     & ${Logo} {
       font-size: 7vw;
-      @media screen and (max-height: 500px) and (orientation: landscape) {
-        font-size: 6vh;
+      @media screen and (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
+        font-size: 4vw;
       }
       @media screen and ${device.surface} and (orientation: portrait) {
         font-size: 4vw;

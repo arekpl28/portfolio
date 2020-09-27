@@ -42,20 +42,20 @@ export const NavItemLink = styled(NavLink)`
   width: 100%;
   text-decoration: none;
   // text-transform: uppercase;
-  color: white;
+  color: ${({ theme }) => theme.text.color};
   transition: 0.6s;
   &.active {
-    color: ${({ theme }) => theme.colors.green};
+    color: orange;
   }
   @media screen and (min-width: 710px) {
     margin: 0 15px;
     color: white;
     transition: 0.3s;
     &:hover {
-      color: red;
+      color: orange;
     }
     &.active {
-      color: ${({ theme }) => theme.colors.green};
+      color: orange;
     }
   }
   @media screen and ${device.tablet} and (orientation: portrait) {

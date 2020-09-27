@@ -10,9 +10,9 @@ export const DivCard = styled.div`
   padding: 20px 10px;
   justify-items: center;
   align-items: center;
-  border: 1px solid rgba(77, 77, 77, 0.1);
-  border-radius: 20px;
-  box-shadow: 4px 4px 10px #b8b9be, -6px -6px 14px #fff;
+  border: 1px solid rgba(77, 77, 77, 0.3);
+  border-radius: 10px;
+  box-shadow: ${({ theme }) => theme.box_shadow_out.small};
 
   @media screen and (orientation: landscape) {
     grid-template-columns: 1fr;
@@ -28,6 +28,10 @@ export const DivCard = styled.div`
   }
   @media screen and ${device.laptop} {
     grid-template-columns: 6rem 1fr;
+    grid-template-rows: 1fr;
+  }
+  @media screen and ${device.laptopM} {
+    grid-template-columns: 40% 1fr;
     grid-template-rows: 1fr;
   }
 `;
@@ -54,7 +58,7 @@ export const ImgBox = styled.div`
 `;
 export const Icon = styled.i`
   font-size: 4.3rem;
-  color: rgb(77, 144, 254);
+  color: ${({ theme }) => theme.icon.color};
 
   @media screen and (orientation: landscape) {
     font-size: 3rem;
@@ -75,7 +79,6 @@ export const Icon = styled.i`
 export const ContentBox = styled.div`
   position: relative;
   text-align: center;
-  color: rgb(77, 77, 77);
 `;
 export const H5Title = styled.h5`
   font-weight: 700;
@@ -107,6 +110,5 @@ export const DivLink = styled.div`
 export const LinkCard = styled(A)`
   width: 100%;
   text-align: center;
-  color: rgb(77, 77, 77);
-  border-color: rgba(77, 77, 77, 0.1);
+  color: ${({ theme }) => theme.text.color};
 `;

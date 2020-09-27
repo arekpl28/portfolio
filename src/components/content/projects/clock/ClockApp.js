@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import {
   DivWrapper,
+  DivClock,
   Clock,
   Hour,
   Hr,
@@ -34,17 +35,21 @@ export default function ClockApp() {
   return (
     <>
       <DivWrapper>
-        <Clock>
-          <Hour>
-            <Hr style={{ transform: `rotateZ(${hour + minute / 12}deg)` }}></Hr>
-          </Hour>
-          <Minute>
-            <Min style={{ transform: `rotateZ(${minute}deg)` }}></Min>
-          </Minute>
-          <Second>
-            <Sec style={{ transform: `rotateZ(${second}deg)` }}></Sec>
-          </Second>
-        </Clock>
+        <DivClock>
+          <Clock>
+            <Hour>
+              <Hr
+                style={{ transform: `rotateZ(${hour + minute / 12}deg)` }}
+              ></Hr>
+            </Hour>
+            <Minute>
+              <Min style={{ transform: `rotateZ(${minute}deg)` }}></Min>
+            </Minute>
+            <Second>
+              <Sec style={{ transform: `rotateZ(${second}deg)` }}></Sec>
+            </Second>
+          </Clock>
+        </DivClock>
       </DivWrapper>
     </>
   );

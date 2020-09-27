@@ -8,5 +8,8 @@ export const Input = styled.input`
   font-weight: 300;
   background-color: transparent;
   border: none;
+  border-radius: 10px;
   outline: none;
+  box-shadow: ${({ theme }) => theme.box_shadow_in.small};
+  color: ${({ theme }) => theme.text.color};
 `;

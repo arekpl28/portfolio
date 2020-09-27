@@ -10,7 +10,7 @@ export const Contact = styled.div`
   column-gap: 20px;
   padding-top: 20px;
 
-  @media screen and (orientation: landscape) {
+  @media screen and (min-width: 500px) and (orientation: landscape) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
@@ -23,6 +23,7 @@ export const Contact = styled.div`
   }
 `;
 export const MapWrapper = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
 `;
@@ -35,8 +36,9 @@ export const Map = styled.iframe`
   height: 100%;
   border: none;
   border-radius: 10px;
-  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 9px #fff;
+  box-shadow: ${({ theme }) => theme.box_shadow_out.large};
 `;
+
 export const Form = styled.form`
   @media screen and (orientation: portrait) {
     padding-top: 30px;
@@ -60,9 +62,7 @@ export const Label = styled.label`
 `;
 export const DivInput = styled.div`
   display: grid;
-  grid-template-columns: 1fr 40px;
-  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
-  border-radius: 10px;
+  grid-template-columns: 1fr max-content;
 `;
 export const InputContact = styled(Input)`
   border-top-right-radius: 0px;
@@ -81,29 +81,27 @@ export const InputContact = styled(Input)`
 export const DivIcon = styled.div`
   display: grid;
   width: 100%;
+  padding: 0 10px;
   justify-content: center;
   align-content: center;
-  justify-self: right;
-  font-family: "Nunito", sans-serif;
   font-size: 1rem;
-  color: rgb(77, 77, 77);
-  border: 0.06rem solid rgba(30, 30, 30, 0.1);
+  color: ${({ theme }) => theme.text.color};
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: #e6e7ee;
+  background: ${({ theme }) => theme.colors.bgc_icon};
 `;
 export const DivTextArea = styled(DivLabel)``;
 export const TextArea = styled.textarea`
+  font-family: "Nunito", sans-serif;
   width: 100%;
   min-height: 100px;
   resize: vertical;
   font-size: 1rem;
   font-weight: 300;
   padding: 0.6rem 0.75rem;
-  font-family: "Nunito", sans-serif;
   border: none;
   outline: none;
-  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+  box-shadow: ${({ theme }) => theme.box_shadow_in.small};
   border-radius: 10px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -111,4 +109,9 @@ export const TextArea = styled.textarea`
 `;
 export const BtnSubmit = styled(Button)`
   margin-top: 10px;
+  color: ${({ theme }) => theme.text.color};
+  &:hover {
+    box-shadow: ${({ theme }) => theme.box_shadow_in.small};
+    color: ${({ theme }) => theme.text.color_hover};
+  }
 `;

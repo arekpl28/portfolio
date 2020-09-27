@@ -12,6 +12,7 @@ export default function Header() {
         <Route path="/" exact component={HeaderHome}></Route>
         <Route path="/about" component={HeaderHome}></Route>
         <Route path="/projects" component={HeaderProjects}></Route>
+        <Route path="/project/:id" component={HeaderProjects}></Route>
         <Route path="/contact" component={HeaderContact}></Route>
       </Switch>
     </>
