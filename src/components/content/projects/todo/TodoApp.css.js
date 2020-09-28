@@ -1,13 +1,4 @@
 import styled from "styled-components";
-import { device } from "../../../../utils/variables";
-//  @media screen and (min-width: 700px) and (orientation: landscape) {
-//     width: min-content;
-//     margin: 0 auto;
-//   }
-
-//  @media screen and ${device.tablet} and (orientation: portrait) {
-//     font-size: 4vw;
-//   }
 
 export const DivTodoApp = styled.div`
   padding: 1rem;

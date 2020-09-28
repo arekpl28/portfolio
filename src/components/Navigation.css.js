@@ -15,9 +15,7 @@ export const DivDark = styled.div`
     transition: 0.6s;
   }
 `;
-
 export const Line = styled.div``;
-
 export const Burger = styled.div`
   cursor: pointer;
   transition: 0.6s;
@@ -81,7 +79,7 @@ export const Nav = styled.nav`
   &.sticky {
     height: 50px;
     padding: 10px 20px;
-    background-color: ${({ theme }) => theme.colors.bgcNav};
+    background-color: #eee;
     box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
     @media screen and (max-width: 710px) {
       & ul {

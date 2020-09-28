@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+import { device } from "../utils/variables";
+
 export const Button = styled.button`
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
@@ -13,9 +16,15 @@ export const Button = styled.button`
   box-shadow: ${({ theme }) => theme.box_shadow_out.small};
   transition: 0.2s;
   color: ${({ theme }) => theme.text.color_hover};
+  @media screen and ${device.laptopM} {
+    cursor: pointer;
+    &:hover {
+      box-shadow: ${({ theme }) => theme.box_shadow_in.small};
+      color: ${({ theme }) => theme.text.color_hover};
+    }
+  }
 `;
-
-export const A = styled(Link)`
+export const A = styled.a`
   font-family: "Nunito", sans-serif;
   display: block;
   width: min-content;
@@ -28,9 +37,13 @@ export const A = styled(Link)`
   border-radius: 0.55rem;
   box-shadow: 2px 2px 5px #0c0c0c, -3px -3px 7px #303030;
   transition: 0.2s;
-  // &:hover {
-  //   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
-  // }
+  @media screen and ${device.laptopM} {
+    cursor: pointer;
+    &:hover {
+      box-shadow: ${({ theme }) => theme.box_shadow_in.small};
+      color: ${({ theme }) => theme.text.color_hover};
+    }
+  }
 `;
 export const NavA = styled(NavLink)`
   font-family: "Nunito", sans-serif;
@@ -45,8 +58,11 @@ export const NavA = styled(NavLink)`
   border-radius: 0.55rem;
   box-shadow: 2px 2px 5px #0c0c0c, -3px -3px 7px #303030;
   transition: 0.2s;
-  // &:hover {
-  //   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
-  //   border-color: transparent;
-  // }
+  @media screen and ${device.laptopM} {
+    cursor: pointer;
+    &:hover {
+      box-shadow: ${({ theme }) => theme.box_shadow_in.small};
+      color: ${({ theme }) => theme.text.color_hover};
+    }
+  }
 `;

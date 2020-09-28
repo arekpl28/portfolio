@@ -12,7 +12,7 @@ import {
   DivBox,
 } from "./Card.css";
 
-export default function Card({ icon, title, description, linkTitle }) {
+export default function Card({ icon, title, description, linkTitle, href }) {
   return (
     <>
       <DivCard>
@@ -25,7 +25,7 @@ export default function Card({ icon, title, description, linkTitle }) {
             <Description>{description}</Description>
           </ContentBox>
           <DivLink>
-            <LinkCard>{linkTitle}</LinkCard>
+            <LinkCard href={href}>{linkTitle}</LinkCard>
           </DivLink>
         </DivBox>
       </DivCard>

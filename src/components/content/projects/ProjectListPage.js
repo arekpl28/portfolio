@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { DataContext } from "../../../context/DataProvider";
 
 import {
   Wrapper,
@@ -9,7 +10,11 @@ import {
   LinkClock,
 } from "./ProjectListPage.css";
 
-export default function ProjectListPage() {
+export default function ProjectListPage(props) {
+  const { setProjectName } = useContext(DataContext);
+  useEffect(() => {
+    setProjectName("My projects");
+  }, [setProjectName]);
   return (
     <>
       <Wrapper>

@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { device } from "../../utils/variables";
 
 const Image = styled.div`
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   height: 100%;
@@ -19,7 +20,14 @@ export const HomeImage = styled(Image)`
 `;
 
 export const ProjectImage = styled(Image)`
-  background-image: url("images/map.jpg");
+  background-image: url("images/project.jpg");
+  position: absolute;
+  background-attachment: initial;
+  background-size: cover;
+  background-position: top left;
+  @media screen and ${device.tablet} {
+    background-position: left 30%;
+  }
 `;
 export const ContactImage = styled(Image)`
   background-image: url("images/map.jpg");

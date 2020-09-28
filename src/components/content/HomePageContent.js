@@ -3,7 +3,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Paragraph = styled.p`
-  // background-color: #f2f2f2;
+  background-color: #f2f2f2;
+  padding-top: 15vh;
 `;
 
 const HomePageContent = () => {

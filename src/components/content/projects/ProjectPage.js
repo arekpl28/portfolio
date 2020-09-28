@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import ClockApp from "./clock/ClockApp";
 import TodoApp from "./todo/TodoApp";
+
+import { DataContext } from "../../../context/DataProvider";
 
 import {
   Wrapper,
@@ -13,12 +15,16 @@ import {
 } from "./ProjectPage.css";
 
 export default function ProjectPage(props) {
-  // console.log(props.match.params.id);
+  const { setProjectName } = useContext(DataContext);
   const pathPage = props.match.params.id;
+
+  useEffect(() => {
+    setProjectName(pathPage);
+  }, [pathPage, setProjectName]);
+
   return (
     <>
       <Wrapper>
-        <h1>Project {pathPage}</h1>
         <DivConetnt>
           <DivMenu>
             <LinkProjects exact to="/projects">

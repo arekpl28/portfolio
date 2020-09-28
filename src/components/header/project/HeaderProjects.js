@@ -5,7 +5,7 @@ import ProjectsContentHeader from "./ProjectsContentHeader";
 
 import { SmallWrapperHeader } from "../../css/Wrapper.css";
 
-import { ContactImage } from "../../css/HeaderImage.css";
+import { ProjectImage } from "../../css/HeaderImage.css";
 
 export default function HeaderProjects() {
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function HeaderProjects() {
   return (
     <>
       <SmallWrapperHeader>
-        <ContactImage></ContactImage>
+        <ProjectImage></ProjectImage>
         <Navigation></Navigation>
         <ProjectsContentHeader></ProjectsContentHeader>
       </SmallWrapperHeader>

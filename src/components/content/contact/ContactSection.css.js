@@ -110,8 +110,4 @@ export const TextArea = styled.textarea`
 export const BtnSubmit = styled(Button)`
   margin-top: 10px;
   color: ${({ theme }) => theme.text.color};
-  &:hover {
-    box-shadow: ${({ theme }) => theme.box_shadow_in.small};
-    color: ${({ theme }) => theme.text.color_hover};
-  }
 `;

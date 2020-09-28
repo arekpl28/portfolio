@@ -4,7 +4,7 @@ import { device } from "../../utils/variables";
 export const BigWrapperHeader = styled.header`
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 85vh;
 `;
 export const SmallWrapperHeader = styled.header`
   position: relative;

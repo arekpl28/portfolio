@@ -1,11 +1,13 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { DataContext } from "../../../../context/DataProvider";
 import { DivTodo, Number, Li, BtnComplete, BtnTrash } from "./Todo.css";
 
-export default function Todo({ text, id, index, completed, list, setTodos }) {
+export default function Todo({ text, id, index, completed }) {
+  const { setTodos, todos } = useContext(DataContext);
+
   const handlerComplete = () => {
     setTodos(
-      list.map((todo) => {
+      todos.map((todo) => {
         if (todo.id === id) {
           return {
             ...todo,
@@ -17,14 +19,13 @@ export default function Todo({ text, id, index, completed, list, setTodos }) {
     );
   };
   const handlerDelete = () => {
-    let todoList = [...list];
+    let todoList = [...todos];
     todoList.splice(id, 1);
     for (let i = 0; i < todoList.length; i++) {
       todoList[i].id = i;
     }
     setTodos(todoList);
   };
-  console.log(index);
   return (
     <DivTodo>
       <Number className={completed ? "completed" : ""}>{`No. ${
@@ -34,7 +35,6 @@ export default function Todo({ text, id, index, completed, list, setTodos }) {
       <BtnComplete onClick={handlerComplete}>
         <i
           className={completed ? "completed fas fa-check" : "fas fa-check"}
-          // className="fas fa-check"
         ></i>
       </BtnComplete>
       <BtnTrash onClick={handlerDelete}>

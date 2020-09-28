@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 
+import { DataContext } from "../../../../context/DataProvider";
 import {
   Form,
   DivInput,
@@ -10,13 +11,11 @@ import {
   Select,
 } from "./FormTodo.css";
 
-export default function FormTodo({
-  inputText,
-  setInputText,
-  todos,
-  setTodos,
-  setStatus,
-}) {
+export default function FormTodo() {
+  const { todos, setTodos, inputText, setInputText, setStatus } = useContext(
+    DataContext
+  );
+
   const handlerInputText = (e) => {
     setInputText(e.target.value);
   };

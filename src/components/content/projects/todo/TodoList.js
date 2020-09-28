@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import Todo from "./Todo";
+
+import { DataContext } from "../../../../context/DataProvider";
 
 import { DivTodoContainer, UlTodoList, Bar } from "./TodoList.css";
 
-export default function TodoList({ todos, filteredTodos, setTodos }) {
+export default function TodoList() {
+  const { filteredTodos } = useContext(DataContext);
+
   const todosList = filteredTodos.map((todo, index) => (
     <Todo
       key={todo.id}
       id={todo.id}
       completed={todo.completed}
-      setTodos={setTodos}
       text={todo.text}
-      list={todos}
       index={index}
     ></Todo>
   ));

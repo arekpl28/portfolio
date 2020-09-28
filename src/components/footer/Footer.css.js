@@ -57,7 +57,7 @@ export const Content = styled.div`
   margin: 0 auto;
   padding: 20px;
   border-bottom: ${({ theme }) => theme.border_bottom.small};
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 710px) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
     justify-content: space-between;
@@ -94,14 +94,15 @@ export const Info = styled.a`
     font-size: 1rem;
     font-weight: normal;
   }
+  @media screen and ${device.laptopL} {
+    &:hover {
+      color: ${({ theme }) => theme.text.color_hover};
+    }
+  }
 `;
 export const Menu = styled.div`
   justify-self: center;
-  @media screen and (min-width: 700px) and (orientation: portrait) {
-    width: min-content;
-    margin: 0 auto;
-  }
-  @media screen and (min-width: 700px) and (orientation: landscape) {
+  @media screen and (min-width: 710px) {
     width: min-content;
     margin: 0 auto;
   }
@@ -112,6 +113,9 @@ export const NavFooter = styled.ul`
     a {
       font-size: 1rem;
       margin: 10px 0 10px 30px;
+      @media screen and (min-width: 710px) {
+        margin: 0 auto;
+      }
     }
   }
 `;
@@ -127,9 +131,12 @@ export const ButtonFooter = styled(Button)`
   margin-top: 1.5rem;
   color: ${({ theme }) => theme.text.color};
   box-shadow: ${({ theme }) => theme.box_shadow_out.small};
-  &:hover {
-    box-shadow: ${({ theme }) => theme.box_shadow_in.small};
-    color: ${({ theme }) => theme.text.color_hover};
+  @media screen and ${device.laptopL} {
+    cursor: pointer;
+    &:hover {
+      box-shadow: ${({ theme }) => theme.box_shadow_in.small};
+      color: ${({ theme }) => theme.text.color_hover};
+    }
   }
 `;
 export const DivWrapperSocialMedia = styled.div`
