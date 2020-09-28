@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
-import { device } from "../utils/variables";
+import { device } from "../../utils/variables";
 
 const navLinkFade = keyframes`
   from {

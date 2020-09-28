@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Logo } from "../Logo.css";
+import { Logo } from "../navigation/Logo.css";
 import { Button } from "../Button.css";
 import { Input } from "../Input.css";
 import { device } from "../../utils/variables";

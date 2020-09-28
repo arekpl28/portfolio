@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 
-import Navigation from "../../Navigation";
 import ContactContentHeader from "./ContactContentHeader";
 
 import { SmallWrapperHeader } from "../../css/Wrapper.css";
@@ -21,7 +20,6 @@ export default function HeaderContact() {
     <>
       <SmallWrapperHeader>
         <ContactImage></ContactImage>
-        <Navigation></Navigation>
         <ContactContentHeader></ContactContentHeader>
       </SmallWrapperHeader>
     </>

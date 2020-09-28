@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 
-import Navigation from "../../Navigation";
 import AboutContentHeader from "./AboutContentHeader";
 
 import { BigWrapperHeaderAbout } from "../../css/Wrapper.css";
@@ -35,7 +34,6 @@ export default function HeaderAbout() {
           <img src={img5} alt="" />
           <img src={img3} alt="" />
         </Clouds>
-        <Navigation></Navigation>
         <AboutContentHeader></AboutContentHeader>
       </BigWrapperHeaderAbout>
     </>

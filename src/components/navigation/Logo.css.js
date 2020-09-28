@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { device } from "../utils/variables";
+import { device } from "../../utils/variables";
 
 export const Logo = styled(NavLink)`
   font-size: 9vw;

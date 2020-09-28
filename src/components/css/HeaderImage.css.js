@@ -19,7 +19,7 @@ export const HomeImage = styled(Image)`
   bottom: 15vh;
 `;
 export const AboutImage = styled(Image)`
-  background-image: url("images/about3.jpeg");
+  background-image: url("images/about.jpeg");
   background-attachment: initial;
   background-size: cover;
   background-position: left top;

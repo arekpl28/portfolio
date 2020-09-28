@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 
-import Navigation from "../../Navigation";
 import ProjectsContentHeader from "./ProjectsContentHeader";
 
 import { SmallWrapperHeader } from "../../css/Wrapper.css";
-
 import { ProjectImage } from "../../css/HeaderImage.css";
 
 export default function HeaderProjects() {
@@ -21,7 +19,6 @@ export default function HeaderProjects() {
     <>
       <SmallWrapperHeader>
         <ProjectImage></ProjectImage>
-        <Navigation></Navigation>
         <ProjectsContentHeader></ProjectsContentHeader>
       </SmallWrapperHeader>
     </>

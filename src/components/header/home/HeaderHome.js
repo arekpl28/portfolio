@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 
-import Navigation from "../../Navigation";
 import HomeContentHeader from "./HomeContentHeader";
 
 import { BigWrapperHeader } from "../../css/Wrapper.css";
@@ -20,7 +19,6 @@ export default function HeaderHome() {
     <>
       <BigWrapperHeader>
         <HomeImage></HomeImage>
-        <Navigation></Navigation>
         <HomeContentHeader></HomeContentHeader>
       </BigWrapperHeader>
     </>

@@ -1,9 +1,9 @@
 import React from "react";
 
-import { SOCIAL_MEDIA, ICONS } from "../../utils/constant";
-
-import NavigationList from "../NavigationListItem";
+import NavigationList from "../navigation/NavigationListItem";
 import SocialMedia from "../SocialMedia";
+
+import { SOCIAL_MEDIA, ICONS } from "../../utils/constant";
 
 import {
   H4,

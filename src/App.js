@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import Pages from "./pages/Pages";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
+import Navigation from "./components/navigation/Navigation";
 
 import { DataProvider } from "./context/DataProvider";
 import theme from "./utils/theme";
@@ -18,6 +19,7 @@ function App() {
         <ThemeProvider theme={theme}>
           <DataProvider>
             <GlobalStyle></GlobalStyle>
+            <Navigation></Navigation>
             <Header></Header>
             <Pages></Pages>
             <Footer></Footer>

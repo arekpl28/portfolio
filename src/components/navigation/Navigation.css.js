@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Logo } from "./Logo.css";
-import { device } from "../utils/variables";
+import { device } from "../../utils/variables";
 
 export const DivDark = styled.div`
   &.darkActive {
