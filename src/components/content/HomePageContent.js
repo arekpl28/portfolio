@@ -7,7 +7,8 @@ const Paragraph = styled.p`
   padding-top: 15vh;
 `;
 
-const HomePageContent = () => {
+const HomePageContent = (props) => {
+  console.log(props);
   return (
     <>
       <Paragraph>
