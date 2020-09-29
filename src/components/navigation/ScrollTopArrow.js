@@ -3,8 +3,7 @@ import { DataContext } from "../../context/DataProvider";
 import { ScrollTop } from "./ScrollTopArrow.css";
 
 export default function ScrollTopArrow() {
-  const { scrollTop } = useContext(DataContext);
-  const [showScroll, setShowScroll] = useState(false);
+  const { scrollTop, showScroll, setShowScroll } = useContext(DataContext);
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 200) {

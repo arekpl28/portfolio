@@ -53,6 +53,7 @@ export const DataProvider = (props) => {
   });
 
   //Scroll top
+  const [showScroll, setShowScroll] = useState(false);
   useEffect(() => {
     setViewportWidth(window.innerWidth);
   }, [setViewportWidth]);
@@ -81,6 +82,8 @@ export const DataProvider = (props) => {
     viewportWidth,
     setViewportWidth,
     scrollTop,
+    showScroll,
+    setShowScroll,
   };
 
   // console.log(path);
