@@ -16,12 +16,13 @@ export const DivInput = styled.div`
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
   @media screen and ${device.laptop} {
-    grid-template-columns: 500px min-content;
+    grid-template-columns: 1fr min-content;
     grid-template-rows: 1fr;
   }
 `;
 export const InputTodo = styled(Input)`
   border-radius: 0.55rem;
+  width: 100%;
 `;
 export const ButtonTodo = styled(Button)`
   outline: none;

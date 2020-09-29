@@ -1,14 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import NavigationList from "./NavigationListItem";
+import ScrollTopArrow from "./ScrollTopArrow";
 
 import { DataContext } from "../../context/DataProvider";
 
 import { DivDark, Nav, Burger, Line, NavUl } from "./Navigation.css";
 import { Logo } from "./Logo.css";
-
-// const handleClickBurger = () => {
-
-// };
 
 export default function Navigation() {
   const { burgerActive, setBurgerAcive, viewportWidth } = useContext(
@@ -29,27 +26,31 @@ export default function Navigation() {
       setBurgerAcive(true);
     }
   };
-  return (
-    <Nav>
-      <Logo exact to="/">
-        Logo
-      </Logo>
-      {burgerActive ? <DivDark onClick={handleClickBurger}></DivDark> : null}
 
-      <Burger
-        className={burgerActive ? "burgerActive" : ""}
-        onClick={handleClickBurger}
-      >
-        <Line></Line>
-        <Line></Line>
-        <Line></Line>
-      </Burger>
-      <NavUl className={burgerActive ? "navActive" : ""}>
-        <NavigationList
-          className={burgerActive ? "navLinkFade" : ""}
-          handleClickBurger={burgerActive ? handleClickBurger : null}
-        ></NavigationList>
-      </NavUl>
-    </Nav>
+  return (
+    <>
+      <Nav>
+        <Logo exact to="/">
+          Logo
+        </Logo>
+        {burgerActive ? <DivDark onClick={handleClickBurger}></DivDark> : null}
+
+        <Burger
+          className={burgerActive ? "burgerActive" : ""}
+          onClick={handleClickBurger}
+        >
+          <Line></Line>
+          <Line></Line>
+          <Line></Line>
+        </Burger>
+        <NavUl className={burgerActive ? "navActive" : ""}>
+          <NavigationList
+            className={burgerActive ? "navLinkFade" : ""}
+            handleClickBurger={burgerActive ? handleClickBurger : null}
+          ></NavigationList>
+        </NavUl>
+      </Nav>
+      <ScrollTopArrow />
+    </>
   );
 }

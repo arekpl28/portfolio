@@ -10,7 +10,7 @@ export const DivTodoApp = styled.div`
 `;
 export const DivWrapper = styled.div`
   text-align: center;
-  // width: 100%;
+  width: 100%;
 `;
 export const H2 = styled.h2`
   font-size: 1.5rem;

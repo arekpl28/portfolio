@@ -21,6 +21,7 @@ export const DivConetnt = styled.div`
   }
   @media screen and ${device.laptop} {
     grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;
   }
 `;
 export const DivMenu = styled.div`

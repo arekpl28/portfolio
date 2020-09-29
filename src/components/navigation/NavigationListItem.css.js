@@ -40,8 +40,8 @@ export const NavItem = styled.li`
 export const NavItemLink = styled(NavLink)`
   dispaly: block;
   width: 100%;
+  line-height: 2.5;
   text-decoration: none;
-  // text-transform: uppercase;
   color: ${({ theme }) => theme.text.color};
   transition: 0.6s;
   &.active {

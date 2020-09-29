@@ -127,24 +127,14 @@ export const Nav = styled.nav`
       }
     }
     & ${Logo} {
-      font-size: 7vw;
-      @media screen and (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
-        font-size: 4vw;
+      @media screen and (orientation: portrait) {
+        font-size: 1.5rem;
       }
-      @media screen and ${device.surface} and (orientation: portrait) {
-        font-size: 4vw;
+      @media screen and (orientation: landscape) and (max-height: 500px) {
+        font-size: 1.3rem;
       }
-      @media screen and (min-width: 710px) and (min-height: 530px) {
-        font-size: 3vw;
-      }
-      @media screen and ${device.tablet} and (orientation: portrait) {
-        font-size: 4vw;
-      }
-      @media screen and ${device.laptopM} {
-        font-size: 2vw;
-      }
-      @media screen and ${device.desktop} {
-        font-size: 1.5vw;
+      @media screen and (orientation: landscape) {
+        font-size: 1.5rem;
       }
     }
   }

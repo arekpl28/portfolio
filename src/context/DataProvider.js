@@ -52,9 +52,14 @@ export const DataProvider = (props) => {
     setViewportWidth(window.innerWidth);
   });
 
+  //Scroll top
   useEffect(() => {
     setViewportWidth(window.innerWidth);
   }, [setViewportWidth]);
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const defaultContext = {
     inputText,
@@ -75,6 +80,7 @@ export const DataProvider = (props) => {
     setBurgerAcive,
     viewportWidth,
     setViewportWidth,
+    scrollTop,
   };
 
   // console.log(path);
