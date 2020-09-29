@@ -1,17 +1,17 @@
-import React from "react";
-import { Route } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
 
-export default function AboutPageContent() {
-  // console.log(props);
+import { DataContext } from "../../context/DataProvider";
+
+export default function AboutPageContent(props) {
+  const { setPath } = useContext(DataContext);
+
+  useEffect(() => {
+    setPath(props.match.path);
+  }, [props.match.path, setPath]);
+
   return (
     <>
       <p>about </p>
-      <Route
-        path="/:page"
-        render={(props) => {
-          console.log(props.match.params);
-        }}
-      ></Route>
     </>
   );
 }

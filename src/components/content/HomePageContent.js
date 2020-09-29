@@ -1,6 +1,7 @@
-import React from "react";
-
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
+
+import { DataContext } from "../../context/DataProvider";
 
 const Paragraph = styled.p`
   background-color: #f2f2f2;
@@ -8,7 +9,11 @@ const Paragraph = styled.p`
 `;
 
 const HomePageContent = (props) => {
-  console.log(props);
+  const { setPath } = useContext(DataContext);
+
+  useEffect(() => {
+    setPath(props.match.path);
+  }, [props.match.path, setPath]);
   return (
     <>
       <Paragraph>

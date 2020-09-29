@@ -16,7 +16,7 @@ export const DivInput = styled.div`
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
   @media screen and ${device.laptop} {
-    grid-template-columns: 300px min-content;
+    grid-template-columns: 500px min-content;
     grid-template-rows: 1fr;
   }
 `;

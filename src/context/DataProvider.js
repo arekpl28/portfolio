@@ -8,7 +8,6 @@ export const DataProvider = (props) => {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
-
   useEffect(() => {
     switch (status) {
       case "completed":
@@ -25,14 +24,12 @@ export const DataProvider = (props) => {
         break;
     }
   }, [todos, status]);
-
   useEffect(() => {
     const todoStore = JSON.parse(localStorage.getItem("todoStore"));
     if (todoStore) {
       setTodos(todoStore);
     }
   }, []);
-
   useEffect(() => {
     localStorage.setItem("todoStore", JSON.stringify(todos));
   }, [todos]);
@@ -40,6 +37,24 @@ export const DataProvider = (props) => {
   //ProjectPage set Header project name
 
   const [projectName, setProjectName] = useState("My projects");
+
+  //Path name
+
+  const [path, setPath] = useState("");
+
+  //Navigation
+
+  const [navSticky, setNavSticky] = useState("");
+  const [burgerActive, setBurgerAcive] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState();
+
+  window.addEventListener("resize", function () {
+    setViewportWidth(window.innerWidth);
+  });
+
+  useEffect(() => {
+    setViewportWidth(window.innerWidth);
+  }, [setViewportWidth]);
 
   const defaultContext = {
     inputText,
@@ -52,7 +67,17 @@ export const DataProvider = (props) => {
     setFilteredTodos,
     projectName,
     setProjectName,
+    path,
+    setPath,
+    navSticky,
+    setNavSticky,
+    burgerActive,
+    setBurgerAcive,
+    viewportWidth,
+    setViewportWidth,
   };
+
+  // console.log(path);
   return (
     <>
       <DataContext.Provider value={defaultContext}>

@@ -1,23 +1,31 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { DataContext } from "../../context/DataProvider";
 import { NavItem, NavItemLink } from "./NavigationListItem.css";
 
-export default function NavigationListItem() {
+export default function NavigationListItem({ handleClickBurger, className }) {
+  const { burgerActive } = useContext(DataContext);
+
   return (
     <>
-      <NavItem>
-        <NavItemLink exact to="/">
+      <NavItem className={className}>
+        <NavItemLink onClick={handleClickBurger} exact to="/">
           Home
         </NavItemLink>
       </NavItem>
-      <NavItem>
-        <NavItemLink to="/about">About</NavItemLink>
+      <NavItem className={className}>
+        <NavItemLink onClick={handleClickBurger} to="/about">
+          About
+        </NavItemLink>
       </NavItem>
-      <NavItem>
-        <NavItemLink to="/projects">Projects</NavItemLink>
+      <NavItem className={className}>
+        <NavItemLink onClick={handleClickBurger} to="/projects">
+          Projects
+        </NavItemLink>
       </NavItem>
-      <NavItem>
-        <NavItemLink to="/contact">Contact</NavItemLink>
+      <NavItem className={className}>
+        <NavItemLink onClick={handleClickBurger} to="/contact">
+          Contact
+        </NavItemLink>
       </NavItem>
     </>
   );

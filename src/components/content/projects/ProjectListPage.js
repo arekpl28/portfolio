@@ -11,10 +11,11 @@ import {
 } from "./ProjectListPage.css";
 
 export default function ProjectListPage(props) {
-  const { setProjectName } = useContext(DataContext);
+  const { setProjectName, setPath } = useContext(DataContext);
   useEffect(() => {
     setProjectName("My projects");
-  }, [setProjectName]);
+    setPath(props.match.path);
+  }, [props.match.path, setPath, setProjectName]);
   return (
     <>
       <Wrapper>

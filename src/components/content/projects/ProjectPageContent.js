@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Route } from "react-router-dom";
 import ClockApp from "./clock/ClockApp";
 import TodoApp from "./todo/TodoApp";
 
@@ -12,7 +13,7 @@ import {
   LinkProjects,
   LinkMenu,
   DivProject,
-} from "./ProjectPage.css";
+} from "./ProjectPageContent.css";
 
 export default function ProjectPage(props) {
   const { setProjectName } = useContext(DataContext);
@@ -36,7 +37,8 @@ export default function ProjectPage(props) {
             </DivRest>
           </DivMenu>
           <DivProject>
-            {pathPage === "clock" ? <ClockApp></ClockApp> : <TodoApp></TodoApp>}
+            <Route path="/project/clock" component={ClockApp}></Route>
+            <Route path="/project/todo" component={TodoApp}></Route>
           </DivProject>
         </DivConetnt>
       </Wrapper>

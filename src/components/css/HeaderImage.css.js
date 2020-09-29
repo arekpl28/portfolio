@@ -11,6 +11,7 @@ const Image = styled.div`
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
   z-index: -9;
 `;
 

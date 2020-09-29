@@ -3,20 +3,17 @@ import { device } from "../../../utils/variables";
 import { NavA } from "../../Button.css";
 
 export const Wrapper = styled.div`
-  display: grid;
-  grid-template-rows: min-content 1fr;
-  width: 100%;
+  width: 100vw;
   padding: 20px 2vw;
   background: ${({ theme }) => theme.colors.bgc};
-  h1 {
-    text-align: center;
-  }
+  overflow: hidden;
   @media screen and ${device.laptop} {
     padding: 20px 50px;
   }
 `;
 export const DivConetnt = styled.div`
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr;
   @media screen and ${device.tablet} {
     grid-template-columns: 200px 1fr;
@@ -60,7 +57,7 @@ export const DivProject = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 16px;
   @media screen and ${device.laptop} {
     justify-content: center;
   }

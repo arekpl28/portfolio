@@ -3,17 +3,15 @@ import { Logo } from "./Logo.css";
 import { device } from "../../utils/variables";
 
 export const DivDark = styled.div`
-  &.darkActive {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    filter: blur(20px);
-    z-index: 0;
-    transition: 0.6s;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: blur(20px);
+  z-index: 0;
+  transition: 0.6s;
 `;
 export const Line = styled.div``;
 export const Burger = styled.div`
