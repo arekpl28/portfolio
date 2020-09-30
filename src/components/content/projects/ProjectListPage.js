@@ -51,12 +51,12 @@ export default function ProjectListPage(props) {
               <img src="images/clock.jpg" alt="" />
             </ImgBox>
             <ContentBox>
-              <h2>Clock</h2>
+              <h2>Calculator</h2>
               <p>
                 A clock inspired by Neumorphism design, fully responsive with
                 the current time.
               </p>
-              <LinkClock to={`/project/clock`}>See More</LinkClock>
+              <LinkClock to={`/project/alculator`}>See More</LinkClock>
             </ContentBox>
           </Box>
           <Box>

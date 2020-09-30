@@ -14,7 +14,7 @@ export default function NavigationListItem({ handleClickBurger, className }) {
 
   const navListitem = navItems.map((item) => {
     return (
-      <NavItem onClick={scrollTop} className={className}>
+      <NavItem key={item.id} onClick={scrollTop} className={className}>
         <NavItemLink
           onClick={handleClickBurger}
           exact={item.exact}

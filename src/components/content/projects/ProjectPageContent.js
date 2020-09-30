@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Route } from "react-router-dom";
 import ClockApp from "./clock/ClockApp";
 import TodoApp from "./todo/TodoApp";
+import Calculator from "./calculator/Calculator";
 
 import { DataContext } from "../../../context/DataProvider";
 
@@ -34,11 +35,13 @@ export default function ProjectPage(props) {
             <DivRest>
               <LinkMenu to="/project/clock">Clock</LinkMenu>
               <LinkMenu to="/project/todo">Todo</LinkMenu>
+              <LinkMenu to="/project/calculator">Calculator</LinkMenu>
             </DivRest>
           </DivMenu>
           <DivProject>
             <Route path="/project/clock" component={ClockApp}></Route>
             <Route path="/project/todo" component={TodoApp}></Route>
+            <Route path="/project/calculator" component={Calculator}></Route>
           </DivProject>
         </DivConetnt>
       </Wrapper>

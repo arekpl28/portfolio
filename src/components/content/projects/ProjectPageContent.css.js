@@ -3,7 +3,7 @@ import { device } from "../../../utils/variables";
 import { NavA } from "../../Button.css";
 
 export const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   padding: 20px 2vw;
   background: ${({ theme }) => theme.colors.bgc};
   overflow: hidden;
