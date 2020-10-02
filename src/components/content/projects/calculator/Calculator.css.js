@@ -43,7 +43,7 @@ export const ButtonAll = styled.div`
   background-color: transparent;
   outline: none;
   font-size: 1rem;
-  &:hover {
+  &:focus {
     box-shadow: ${({ theme }) => theme.box_shadow_in.small};
   }
 `;
