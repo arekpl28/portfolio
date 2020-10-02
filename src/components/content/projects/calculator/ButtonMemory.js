@@ -3,14 +3,12 @@ import React from "react";
 import styled from "styled-components";
 import { ButtonAll } from "./Calculator.css";
 
-const BtnMemo = styled(ButtonAll)``;
+const ButtonMemoryStyle = styled(ButtonAll)``;
 
-export default function ButtonMemory({ content, type, click }) {
+export default function ButtonMemory({ content, click }) {
   return (
     <>
-      <BtnMemo onClick={click(content)} type={type || ""}>
-        {content}
-      </BtnMemo>
+      <ButtonMemoryStyle onClick={click(content)}>{content}</ButtonMemoryStyle>
     </>
   );
 }

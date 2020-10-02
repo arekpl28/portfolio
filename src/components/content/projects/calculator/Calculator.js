@@ -1,19 +1,12 @@
 import React, { useState } from "react";
 
-import {
-  BtnNumbers,
-  BtnLogic,
-  Memory,
-  Display,
-  Calc,
-  CalculatorWrapper,
-  BtnFunctions,
-} from "./Calculator.css";
+import { Calc, CalculatorWrapper } from "./Calculator.css";
 
-import ButtonNumber from "./ButtonNumber";
-import ButtonFunction from "./ButtonFunction";
-import ButtonMemory from "./ButtonMemory";
-import ButtonLogic from "./ButtonLogic";
+import Display from "./Dispaly";
+import BtnMemory from "./BtnMemory";
+import BtnLogic from "./BtnLogic";
+import BtnFunctions from "./BtnFunctions";
+import BtnNumbers from "./BtnNumbers";
 
 export default function Calculator() {
   const [value, setValue] = useState("0");
@@ -171,97 +164,11 @@ export default function Calculator() {
     <>
       <CalculatorWrapper>
         <Calc>
-          <Display>{value}</Display>
-          <Memory>
-            <ButtonMemory
-              click={handlerButtonPress}
-              content="MC"
-            ></ButtonMemory>
-            <ButtonMemory
-              click={handlerButtonPress}
-              content="MR"
-            ></ButtonMemory>
-            <ButtonMemory
-              click={handlerButtonPress}
-              content="M+"
-            ></ButtonMemory>
-            <ButtonMemory
-              click={handlerButtonPress}
-              content="M-"
-            ></ButtonMemory>
-            <ButtonMemory
-              click={handlerButtonPress}
-              content="MS"
-            ></ButtonMemory>
-          </Memory>
-          <BtnLogic>
-            <ButtonLogic
-              click={handlerButtonPress}
-              content="%"
-              type="function"
-            ></ButtonLogic>
-            <ButtonLogic click={handlerButtonPress} content="CE"></ButtonLogic>
-            <ButtonLogic click={handlerButtonPress} content="C"></ButtonLogic>
-            <ButtonLogic click={handlerButtonPress} content="1/x"></ButtonLogic>
-            <ButtonLogic
-              click={handlerButtonPress}
-              content="&#x207F;"
-            ></ButtonLogic>
-            <ButtonLogic
-              click={handlerButtonPress}
-              content="&#8730;"
-            ></ButtonLogic>
-          </BtnLogic>
-          <BtnNumbers>
-            <ButtonNumber click={handlerButtonPress} content="7"></ButtonNumber>
-            <ButtonNumber click={handlerButtonPress} content="8"></ButtonNumber>
-            <ButtonNumber click={handlerButtonPress} content="9"></ButtonNumber>
-            <ButtonNumber click={handlerButtonPress} content="4"></ButtonNumber>
-            <ButtonNumber click={handlerButtonPress} content="5"></ButtonNumber>
-            <ButtonNumber click={handlerButtonPress} content="6"></ButtonNumber>
-            <ButtonNumber click={handlerButtonPress} content="1"></ButtonNumber>
-            <ButtonNumber click={handlerButtonPress} content="2"></ButtonNumber>
-            <ButtonNumber click={handlerButtonPress} content="3"></ButtonNumber>
-            <ButtonNumber
-              click={handlerButtonPress}
-              content="-/+"
-              type="function"
-            ></ButtonNumber>
-            <ButtonNumber click={handlerButtonPress} content="0"></ButtonNumber>
-            <ButtonNumber click={handlerButtonPress} content="."></ButtonNumber>
-          </BtnNumbers>
-          <BtnFunctions>
-            <ButtonFunction
-              click={handlerButtonPress}
-              content="&#8656;"
-              type="function"
-            ></ButtonFunction>
-            <ButtonFunction
-              click={handlerButtonPress}
-              content="/"
-              type="operator"
-            ></ButtonFunction>
-            <ButtonFunction
-              click={handlerButtonPress}
-              content="x"
-              type="operator"
-            ></ButtonFunction>
-            <ButtonFunction
-              click={handlerButtonPress}
-              content="-"
-              type="operator"
-            ></ButtonFunction>
-            <ButtonFunction
-              click={handlerButtonPress}
-              content="+"
-              type="operator"
-            ></ButtonFunction>
-            <ButtonFunction
-              click={handlerButtonPress}
-              content="="
-              type="operator"
-            ></ButtonFunction>
-          </BtnFunctions>
+          <Display value={value}></Display>
+          <BtnMemory click={handlerButtonPress}></BtnMemory>
+          <BtnLogic click={handlerButtonPress}></BtnLogic>
+          <BtnNumbers click={handlerButtonPress}></BtnNumbers>
+          <BtnFunctions click={handlerButtonPress}></BtnFunctions>
         </Calc>
       </CalculatorWrapper>
     </>

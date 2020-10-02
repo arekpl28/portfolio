@@ -3,14 +3,12 @@ import React from "react";
 import styled from "styled-components";
 import { ButtonAll } from "./Calculator.css";
 
-const BtnLogic = styled(ButtonAll)``;
+const ButtonLogicStyle = styled(ButtonAll)``;
 
-export default function ButtonLogic({ content, type, click }) {
+export default function ButtonLogic({ content, click }) {
   return (
     <>
-      <BtnLogic onClick={click(content)} type={type || ""}>
-        {content}
-      </BtnLogic>
+      <ButtonLogicStyle onClick={click(content)}>{content}</ButtonLogicStyle>
     </>
   );
 }
