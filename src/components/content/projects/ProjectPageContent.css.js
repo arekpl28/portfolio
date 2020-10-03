@@ -37,7 +37,9 @@ export const DivMenu = styled.div`
 export const DivRest = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5vw;
+  column-gap: 5vw;
+  padding-bottom: 20px;
+
   @media screen and ${device.tablet} {
     grid-template-columns: 80%;
     grid-template-rows: min-content min-content;

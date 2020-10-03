@@ -19,6 +19,12 @@ export const Container = styled.div`
     align-content: center;
     width: 100%;
   }
+  @media screen and ${device.laptopM} {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
 `;
 export const Box = styled.div`
   display: grid;
@@ -52,7 +58,7 @@ export const ContentBox = styled.div`
     text-align: center;
   }
 `;
-export const LinkClock = styled(NavA)`
+export const LinkApp = styled(NavA)`
   width: max-content;
   text-align: center;
   color: ${({ theme }) => theme.text.color};

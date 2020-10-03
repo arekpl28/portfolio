@@ -5,10 +5,12 @@ import { ScrollTop } from "./ScrollTopArrow.css";
 export default function ScrollTopArrow() {
   const { scrollTop, showScroll, setShowScroll } = useContext(DataContext);
 
+  const offset = 500;
+
   const checkScrollTop = () => {
-    if (!showScroll && window.pageYOffset > 200) {
+    if (!showScroll && window.pageYOffset > offset) {
       setShowScroll(true);
-    } else if (showScroll && window.pageYOffset <= 200) {
+    } else if (showScroll && window.pageYOffset <= offset) {
       setShowScroll(false);
     }
   };

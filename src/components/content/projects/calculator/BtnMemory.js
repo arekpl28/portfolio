@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../../../../utils/variables";
 
 import ButtonMemory from "./ButtonMemory";
 
@@ -8,6 +9,11 @@ export const BtnMemoryStyle = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   color: green;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  @media screen and ${device.laptop} {
+    padding-bottom: 10px;
+  }
 `;
 
 const btns = [

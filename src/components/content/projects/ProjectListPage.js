@@ -7,7 +7,7 @@ import {
   Box,
   ImgBox,
   ContentBox,
-  LinkClock,
+  LinkApp,
 } from "./ProjectListPage.css";
 
 export default function ProjectListPage(props) {
@@ -30,7 +30,7 @@ export default function ProjectListPage(props) {
                 A clock inspired by Neumorphism design, fully responsive with
                 the current time.
               </p>
-              <LinkClock to={`/project/clock`}>See More</LinkClock>
+              <LinkApp to={`/project/clock`}>See More</LinkApp>
             </ContentBox>
           </Box>
           <Box>
@@ -43,12 +43,12 @@ export default function ProjectListPage(props) {
                 A clock inspired by Neumorphism design, fully responsive with
                 the current time.
               </p>
-              <LinkClock to={`/project/todo`}>See More</LinkClock>
+              <LinkApp to={`/project/todo`}>See More</LinkApp>
             </ContentBox>
           </Box>
           <Box>
             <ImgBox>
-              <img src="images/clock.jpg" alt="" />
+              <img src="images/calculator.jpg" alt="" />
             </ImgBox>
             <ContentBox>
               <h2>Calculator</h2>
@@ -56,33 +56,7 @@ export default function ProjectListPage(props) {
                 A clock inspired by Neumorphism design, fully responsive with
                 the current time.
               </p>
-              <LinkClock to={`/project/alculator`}>See More</LinkClock>
-            </ContentBox>
-          </Box>
-          <Box>
-            <ImgBox>
-              <img src="images/todo.jpg" alt="" />
-            </ImgBox>
-            <ContentBox>
-              <h2>Todo</h2>
-              <p>
-                A clock inspired by Neumorphism design, fully responsive with
-                the current time.
-              </p>
-              <LinkClock to={`/project/todo`}>See More</LinkClock>
-            </ContentBox>
-          </Box>
-          <Box>
-            <ImgBox>
-              <img src="images/todo.jpg" alt="" />
-            </ImgBox>
-            <ContentBox>
-              <h2>Todo</h2>
-              <p>
-                A clock inspired by Neumorphism design, fully responsive with
-                the current time.
-              </p>
-              <LinkClock to={`/project/todo`}>See More</LinkClock>
+              <LinkApp to={`/project/calculator`}>See More</LinkApp>
             </ContentBox>
           </Box>
         </Container>

@@ -9,6 +9,10 @@ export const BtnLogicStyle = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   color: #868686;
+  @media screen and (orientation: landscape) and (max-height: 540px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 `;
 
 const btns = [
