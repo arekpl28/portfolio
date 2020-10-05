@@ -8,9 +8,10 @@ import { DivDark, Nav, Burger, Line, NavUl } from "./Navigation.css";
 import { Logo } from "./Logo.css";
 
 export default function Navigation() {
-  const { burgerActive, setBurgerAcive, viewportWidth } = useContext(
+  const { burgerActive, setBurgerAcive, viewportWidth, path } = useContext(
     DataContext
   );
+  console.log(path);
 
   useEffect(() => {
     if (setBurgerAcive && viewportWidth > 710) {
@@ -29,7 +30,7 @@ export default function Navigation() {
 
   return (
     <>
-      <Nav>
+      <Nav className={path === "/about" ? "about" : ""}>
         <Logo exact to="/">
           Logo
         </Logo>

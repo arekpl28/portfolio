@@ -45,17 +45,17 @@ export const NavItemLink = styled(NavLink)`
   color: ${({ theme }) => theme.text.color};
   transition: 0.6s;
   &.active {
-    color: orange;
+    color: red;
   }
   @media screen and (min-width: 710px) {
     margin: 0 15px;
     color: white;
     transition: 0.3s;
     &:hover {
-      color: orange;
+      color: green;
     }
     &.active {
-      color: orange;
+      color: red;
     }
   }
   @media screen and ${device.tablet} and (orientation: portrait) {

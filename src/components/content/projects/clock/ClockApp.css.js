@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import img_clock_png from "../../../img/clock_png.png";
+
 export const DivWrapper = styled.div`
   padding: 1rem;
   height: 30vw;
@@ -29,7 +31,7 @@ export const Clock = styled.div`
   height: 20vw;
   justify-content: center;
   align-items: center;
-  background: url("images/clock.png");
+  background: url("${img_clock_png}");
   background-size: cover;
   border: 4px solid ${({ theme }) => theme.colors.bgc};
   box-shadow: 0 -1vw 1vw rgba(255, 255, 255, 0.05),

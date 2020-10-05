@@ -1,12 +1,17 @@
 import styled, { keyframes } from "styled-components";
 import { device } from "../../utils/variables";
 
+import img_home from "../img/home.jpg";
+import img_about from "../img/about.jpeg";
+import img_project from "../img/project.jpg";
+import img_contact from "../img/contact.jpg";
+
 const Image = styled.div`
   position: fixed;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("images/home.jpg");
+  // background-image: url("images/home.jpg");
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -16,11 +21,11 @@ const Image = styled.div`
 `;
 
 export const HomeImage = styled(Image)`
-  background-image: url("images/home.jpg");
+  background-image: url("${img_home}");
   bottom: 15vh;
 `;
 export const AboutImage = styled(Image)`
-  background-image: url("images/about.jpeg");
+  background-image: url("${img_about}");
   background-attachment: initial;
   background-size: cover;
   background-position: left top;
@@ -28,7 +33,7 @@ export const AboutImage = styled(Image)`
 `;
 
 export const ProjectImage = styled(Image)`
-  background-image: url("images/project.jpg");
+  background-image: url("${img_project}");
   position: absolute;
   background-attachment: initial;
   background-size: cover;
@@ -38,7 +43,7 @@ export const ProjectImage = styled(Image)`
   }
 `;
 export const ContactImage = styled(Image)`
-  background-image: url("images/map.jpg");
+  background-image: url("${img_contact}");
 `;
 
 const Cloud1 = keyframes`

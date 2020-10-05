@@ -1,6 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { DataContext } from "../../../context/DataProvider";
 
+import img_clock from "../../img/clock.jpg";
+import img_todo from "../../img/todo.jpg";
+import img_calculator from "../../img/calculator.jpg";
+
 import {
   Wrapper,
   Container,
@@ -22,7 +26,7 @@ export default function ProjectListPage(props) {
         <Container>
           <Box>
             <ImgBox>
-              <img src="images/clock.jpg" alt="" />
+              <img src={img_clock} alt="" />
             </ImgBox>
             <ContentBox>
               <h2>Clock</h2>
@@ -35,7 +39,7 @@ export default function ProjectListPage(props) {
           </Box>
           <Box>
             <ImgBox>
-              <img src="images/todo.jpg" alt="" />
+              <img src={img_todo} alt="" />
             </ImgBox>
             <ContentBox>
               <h2>Todo</h2>
@@ -48,7 +52,7 @@ export default function ProjectListPage(props) {
           </Box>
           <Box>
             <ImgBox>
-              <img src="images/calculator.jpg" alt="" />
+              <img src={img_calculator} alt="" />
             </ImgBox>
             <ContentBox>
               <h2>Calculator</h2>
