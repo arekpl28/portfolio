@@ -11,7 +11,6 @@ export default function Navigation() {
   const { burgerActive, setBurgerAcive, viewportWidth, path } = useContext(
     DataContext
   );
-  console.log(path);
 
   useEffect(() => {
     if (setBurgerAcive && viewportWidth > 710) {
