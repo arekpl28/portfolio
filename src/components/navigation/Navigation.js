@@ -40,9 +40,9 @@ export default function Navigation() {
           className={burgerActive ? "burgerActive" : ""}
           onClick={handleClickBurger}
         >
-          <Line></Line>
-          <Line></Line>
-          <Line></Line>
+          <Line className={path === "/about" ? "about" : ""}></Line>
+          <Line className={path === "/about" ? "about" : ""}></Line>
+          <Line className={path === "/about" ? "about" : ""}></Line>
         </Burger>
         <NavUl className={burgerActive ? "navActive" : ""}>
           <NavigationList

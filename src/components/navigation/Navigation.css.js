@@ -25,6 +25,9 @@ export const Burger = styled.div`
     transform-origin: center right;
     background-color: ${({ theme }) => theme.colors.bgcBurger};
     transition: all 0.6s ease;
+    &.about {
+      background-color: ${({ theme }) => theme.colors.bgcBurgerSticky};
+    }
     &:nth-child(3) {
       margin-bottom: 0px;
     }
@@ -58,16 +61,14 @@ export const Nav = styled.nav`
   align-items: center;
   transition: 0.6s;
   z-index: 10000;
-  &.about {
-    background-color: #eee;
-    box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
-    & ul a {
+  @media screen and (min-width: 710px) {
+    &.about ul li a {
       color: black;
-      &.active {
-        color: red;
-      }
       &:hover {
         color: green;
+      }
+      &.active {
+        color: red;
       }
     }
   }
@@ -100,6 +101,15 @@ export const Nav = styled.nav`
       }
     }
     @media screen and (min-width: 710px) {
+      &.about ul li a {
+        color: black;
+        &:hover {
+          color: green;
+        }
+        &.active {
+          color: red;
+        }
+      }
       ul li a {
         color: rgb(30, 30, 30);
         font-size: 0.9rem;
