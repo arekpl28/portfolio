@@ -101,6 +101,7 @@ export const TextArea = styled.textarea`
   padding: 0.6rem 0.75rem;
   border: none;
   outline: none;
+  color: ${({ theme }) => theme.text.color};
   box-shadow: ${({ theme }) => theme.box_shadow_in.small};
   border-radius: 10px;
   border-top-right-radius: 0px;

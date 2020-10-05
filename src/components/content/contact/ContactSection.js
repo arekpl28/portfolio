@@ -1,4 +1,5 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 import { SOCIAL_MEDIA, ICONS } from "../../../utils/constant";
 
@@ -19,6 +20,8 @@ import {
 } from "./ContactSection.css";
 
 export default function ContactSection() {
+  const { register, handleSubmit, watch, errors } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <>
       <Contact>
@@ -26,11 +29,17 @@ export default function ContactSection() {
           <Map src={SOCIAL_MEDIA.MAP} title="google maps"></Map>
         </MapWrapper>
         <DivContentWrapper>
-          <Form>
+          <Form onSubmit={handleSubmit(onSubmit)}>
             <DivLabel>
+              {/* {errors.name && <span>This field is required</span>} */}
               <Label htmlFor="name">Name</Label>
               <DivInput>
-                <InputContact id="name" type="text" />
+                <InputContact
+                  ref={register({ required: true })}
+                  id="name"
+                  name="name"
+                  type="text"
+                />
                 <DivIcon>
                   <i className={ICONS.USER}></i>
                 </DivIcon>
