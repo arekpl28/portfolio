@@ -1,5 +1,8 @@
 import React from "react";
 
+import SocialMedia from "../../SocialMedia";
+import arekImg from "../../img/arek.jpg";
+
 import {
   Wrapper,
   Name,
@@ -7,8 +10,6 @@ import {
   DivMedia,
   DivProfileImg,
 } from "./HomeContentHeader.css";
-
-import SocialMedia from "../../SocialMedia";
 
 export default function HomeContentHeader() {
   return (
@@ -20,7 +21,7 @@ export default function HomeContentHeader() {
           <SocialMedia></SocialMedia>
         </DivMedia>
         <DivProfileImg>
-          <img src="images/arek.jpg" alt="Pictuer of Arkadiusz Plumbaum" />
+          <img src={arekImg} alt="Pictuer of Arkadiusz Plumbaum" />
         </DivProfileImg>
       </Wrapper>
     </>
