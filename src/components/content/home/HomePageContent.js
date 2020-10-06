@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { device } from "../../../utils/variables";
+
 import { MdPhoneIphone } from "react-icons/md";
 import { GiFishingHook } from "react-icons/gi";
 import {
@@ -21,21 +23,24 @@ const Wrapper = styled.div`
   justify-content: center;
   width: 100%;
   // height: 100vh;
-  padding: 25vh 50px;
+  padding: 25vh 5px 5vh;
   background-color: ${({ theme }) => theme.colors.bgc};
 `;
 
 const H3Style = styled.h3`
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-align: center;
   padding-bottom: 5rem;
 `;
 const MainStyle = styled.main`
   display: grid;
-  grid-template-columns: 30vw 30vw;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    grid-template-columns: 30vw 30vw;
+  }
 `;
 const ArticleStyle = styled.article`
   display: grid;
@@ -49,7 +54,7 @@ const ArticleStyle = styled.article`
   box-shadow: ${({ theme }) => theme.box_shadow_out.small};
 `;
 const IconBox = styled.div`
-  font-size: 4.8rem;
+  font-size: 4rem;
   display: grid;
   color: rgb(255, 199, 96);
 `;
