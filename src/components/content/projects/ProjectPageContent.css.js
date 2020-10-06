@@ -54,6 +54,13 @@ export const LinkProjects = styled(NavA)`
   justify-self: center;
   margin-top: 10px;
   font-size: 0.8rem;
+  &.active {
+    box-shadow: ${({ theme }) => theme.box_shadow_in.small};
+    color: orange;
+  }
+  &:hover {
+    color: orange;
+  }
 `;
 export const LinkMenu = styled(LinkProjects)``;
 export const DivProject = styled.div`

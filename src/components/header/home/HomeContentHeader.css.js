@@ -30,16 +30,6 @@ export const Name = styled.h1`
     bottom: 45vh;
     font-size: 5vw;
   }
-  // @media screen and ${device.laptopM} and (orientation: portrait) {
-  //   font-size: 6vw;
-  // }
-  // @media screen and ${device.mobileL} and (max-height: 500px) {
-  //   font-size: 6vw;
-  //   bottom: 40vh;
-  // }
-  // @media screen and ${device.desktop} {
-  //   font-size: 5vw;
-  // }
 `;
 export const Profession = styled.h2`
   position: absolute;
@@ -76,7 +66,7 @@ export const DivProfileImg = styled.div`
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 15vh);
-  border: 10px solid rgba(250, 250, 250, 0.5);
+  border: 10px solid rgba(250, 250, 250, 0.1);
   border-radius: 50%;
   overflow: hidden;
   img {
@@ -98,11 +88,5 @@ export const DivProfileImg = styled.div`
   }
   @media screen and ${device.laptopM} and (orientation: landscape) {
     border-width: 15px;
-  }
-  @media screen and ${device.desktop} and (orientation: landscape) {
-    border-width: 20px;
-  }
-  @media screen and ${device.desktopM} and (orientation: landscape) {
-    border-width: 20px;
   }
 `;

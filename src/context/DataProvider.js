@@ -41,6 +41,7 @@ export const DataProvider = (props) => {
   //Path name
 
   const [path, setPath] = useState("");
+  console.log(path);
 
   //Navigation
 

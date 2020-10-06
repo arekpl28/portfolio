@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import NavigationList from "../navigation/NavigationListItem";
 import SocialMedia from "../SocialMedia";
+import { DataContext } from "../../context/DataProvider";
 
 import { SOCIAL_MEDIA, ICONS } from "../../utils/constant";
 
@@ -25,11 +26,12 @@ import {
 } from "./Footer.css";
 
 export default function Footer() {
+  const { scrollTop } = useContext(DataContext);
   return (
     <>
       <Wrapper>
         <Div>
-          <LogoFooter exact to="/">
+          <LogoFooter onClick={scrollTop} exact to="/">
             Logo
           </LogoFooter>
           <Wrap>

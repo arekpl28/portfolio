@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { DataContext } from "../../../context/DataProvider";
 
 import img_clock from "../../img/clock.jpg";
@@ -26,7 +27,9 @@ export default function ProjectListPage(props) {
         <Container>
           <Box>
             <ImgBox>
-              <img src={img_clock} alt="" />
+              <Link to={`/project/clock`}>
+                <img src={img_clock} alt="" />
+              </Link>
             </ImgBox>
             <ContentBox>
               <h2>Clock</h2>
@@ -39,7 +42,9 @@ export default function ProjectListPage(props) {
           </Box>
           <Box>
             <ImgBox>
-              <img src={img_todo} alt="" />
+              <Link to={`/project/todo`}>
+                <img src={img_todo} alt="" />
+              </Link>
             </ImgBox>
             <ContentBox>
               <h2>Todo</h2>
@@ -52,7 +57,9 @@ export default function ProjectListPage(props) {
           </Box>
           <Box>
             <ImgBox>
-              <img src={img_calculator} alt="" />
+              <Link to={`/project/calculator`}>
+                <img src={img_calculator} alt="" />
+              </Link>
             </ImgBox>
             <ContentBox>
               <h2>Calculator</h2>

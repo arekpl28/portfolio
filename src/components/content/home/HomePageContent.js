@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+
+import { DataContext } from "../../../context/DataProvider";
 
 import { device } from "../../../utils/variables";
 
@@ -16,6 +18,7 @@ import {
   SiVisualstudiocode,
   SiYoutube,
 } from "react-icons/si";
+import { useEffect } from "react";
 
 const Wrapper = styled.div`
   display: grid;
@@ -23,7 +26,7 @@ const Wrapper = styled.div`
   justify-content: center;
   width: 100%;
   // height: 100vh;
-  padding: 25vh 5px 5vh;
+  padding: 25vh 15px 5vh;
   background-color: ${({ theme }) => theme.colors.bgc};
 `;
 
@@ -31,6 +34,9 @@ const H3Style = styled.h3`
   font-size: 1.5rem;
   text-align: center;
   padding-bottom: 5rem;
+  @media screen and ${device.tablet} and (min-height: 710px) {
+    font-size: 2rem;
+  }
 `;
 const MainStyle = styled.main`
   display: grid;
@@ -39,13 +45,29 @@ const MainStyle = styled.main`
   justify-content: center;
   gap: 2rem;
   @media screen and (orientation: landscape) and (max-height: 500px) {
-    grid-template-columns: 30vw 30vw;
+    grid-template-columns: 45vw 45vw;
+    gap: 2rem;
+  }
+  @media screen and ${device.surface} and (min-height: 540px) {
+    grid-template-columns: 45vw 45vw;
+  }
+  @media screen and ${device.tablet} and (orientation: portrait) {
+    grid-template-columns: 45vw 45vw;
+  }
+  @media screen and ${device.laptop} {
+    grid-template-columns: 35vw 35vw;
+  }
+  @media screen and ${device.laptopM} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and ${device.desktop} {
+    grid-template-columns: 400px 400px 400px;
   }
 `;
 const ArticleStyle = styled.article`
   display: grid;
   grid-template-columns: 30% 1fr;
-  height: 200px;
+  // height: 200px;
   justify-items: center;
   align-items: center;
   border: 1px solid rgba(77, 77, 77, 0.3);
@@ -57,6 +79,9 @@ const IconBox = styled.div`
   font-size: 4rem;
   display: grid;
   color: rgb(255, 199, 96);
+  @media screen and ${device.tablet} and (min-height: 710px) {
+    font-size: 4.8rem;
+  }
 `;
 const ContentBox = styled.div`
   display: grid;
@@ -65,12 +90,25 @@ const ContentBox = styled.div`
 const H5Title = styled.h5`
   font-size: 1.2rem;
   padding-bottom: 0.8rem;
-`;
-const Description = styled.p`
-  font-size: 0.8rem;
+  @media screen and ${device.tablet} and (min-height: 710px) {
+    font-size: 1.3rem;
+  }
 `;
 
-const HomePageContent = () => {
+const Description = styled.p`
+  font-size: 0.8rem;
+  @media screen and ${device.tablet} and (min-height: 710px) {
+    font-size: 1rem;
+  }
+`;
+
+const HomePageContent = (props) => {
+  const { setPath } = useContext(DataContext);
+
+  useEffect(() => {
+    setPath(props.match.path);
+  }, [props.match.path, setPath]);
+
   return (
     <>
       <Wrapper>
