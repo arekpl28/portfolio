@@ -1,10 +1,27 @@
 import React, { useContext, useEffect } from "react";
+
 import NavigationList from "./NavigationListItem";
 import ScrollTopArrow from "./ScrollTopArrow";
+import LanguageSelect from "./LanguageSelect";
+import Lang from "./Lang";
+
+import pl_icon from "../img/pl_icon.png";
+import en_icon from "../img/en_icon.png";
+import no_icon from "../img/no_icon.png";
 
 import { DataContext } from "../../context/DataProvider";
 
-import { DivDark, Nav, Burger, Line, NavUl } from "./Navigation.css";
+import { NavItem, NavItemLink } from "./NavigationListItem.css";
+
+import {
+  DivDark,
+  Nav,
+  Burger,
+  Line,
+  NavUl,
+  Language,
+  ImgStyle,
+} from "./Navigation.css";
 import { Logo } from "./Logo.css";
 
 export default function Navigation() {
@@ -14,6 +31,9 @@ export default function Navigation() {
     viewportWidth,
     path,
     scrollTop,
+    handleChangeLanguage,
+    setActiveLang,
+    activeLang,
   } = useContext(DataContext);
 
   useEffect(() => {
@@ -29,6 +49,7 @@ export default function Navigation() {
     if (!burgerActive) {
       setBurgerAcive(true);
     }
+    setActiveLang(false);
   };
 
   return (
@@ -38,7 +59,6 @@ export default function Navigation() {
           Logo
         </Logo>
         {burgerActive ? <DivDark onClick={handleClickBurger}></DivDark> : null}
-
         <Burger
           className={burgerActive ? "burgerActive" : ""}
           onClick={handleClickBurger}
@@ -52,7 +72,35 @@ export default function Navigation() {
             className={burgerActive ? "navLinkFade" : ""}
             handleClickBurger={burgerActive ? handleClickBurger : null}
           ></NavigationList>
+          <LanguageSelect
+            key="language"
+            className={burgerActive ? "navLinkFade" : ""}
+          ></LanguageSelect>
+          {activeLang ? <Lang></Lang> : null}
         </NavUl>
+        <Language>
+          <ImgStyle>
+            <img
+              onClick={() => handleChangeLanguage("pl")}
+              src={pl_icon}
+              alt=""
+            />
+          </ImgStyle>
+          <ImgStyle>
+            <img
+              onClick={() => handleChangeLanguage("en")}
+              src={en_icon}
+              alt=""
+            />
+          </ImgStyle>
+          <ImgStyle>
+            <img
+              onClick={() => handleChangeLanguage("no")}
+              src={no_icon}
+              alt=""
+            />
+          </ImgStyle>
+        </Language>
       </Nav>
       <ScrollTopArrow />
     </>

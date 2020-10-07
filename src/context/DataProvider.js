@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export const DataContext = createContext();
 
@@ -8,6 +9,10 @@ export const DataProvider = (props) => {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
+  const [activeLang, setActiveLang] = useState(false);
+
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
     switch (status) {
       case "completed":
@@ -24,27 +29,25 @@ export const DataProvider = (props) => {
         break;
     }
   }, [todos, status]);
+
   useEffect(() => {
     const todoStore = JSON.parse(localStorage.getItem("todoStore"));
     if (todoStore) {
       setTodos(todoStore);
     }
   }, []);
+
   useEffect(() => {
     localStorage.setItem("todoStore", JSON.stringify(todos));
   }, [todos]);
 
   //ProjectPage set Header project name
-
-  const [projectName, setProjectName] = useState("My projects");
+  const [projectName, setProjectName] = useState("projects");
 
   //Path name
-
   const [path, setPath] = useState("");
-  console.log(path);
 
   //Navigation
-
   const [navSticky, setNavSticky] = useState("");
   const [burgerActive, setBurgerAcive] = useState(false);
   const [viewportWidth, setViewportWidth] = useState();
@@ -55,12 +58,18 @@ export const DataProvider = (props) => {
 
   //Scroll top
   const [showScroll, setShowScroll] = useState(false);
+
   useEffect(() => {
     setViewportWidth(window.innerWidth);
   }, [setViewportWidth]);
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  //Translator
+  const handleChangeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
   };
 
   const defaultContext = {
@@ -85,6 +94,10 @@ export const DataProvider = (props) => {
     scrollTop,
     showScroll,
     setShowScroll,
+    handleChangeLanguage,
+    t,
+    activeLang,
+    setActiveLang,
   };
 
   // console.log(path);

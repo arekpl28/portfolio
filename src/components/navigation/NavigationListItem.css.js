@@ -30,6 +30,18 @@ export const NavItem = styled.li`
   &.navLinkFade:nth-child(4) a {
     animation: ${navLinkFade} 1.25s ease;
   }
+  &.navLinkFade:nth-child(5) div {
+    animation: ${navLinkFade} 1.5s ease;
+  }
+  &.langFade:nth-child(6) div {
+    animation: ${navLinkFade} 1s ease;
+  }
+  &.langFade:nth-child(7) div {
+    animation: ${navLinkFade} 1.25s ease;
+  }
+  &.langFade:nth-child(8) div {
+    animation: ${navLinkFade} 1.5s ease;
+  }
   @media screen and (min-width: 710px) {
     animation: none;
     border-bottom: none;
@@ -38,19 +50,26 @@ export const NavItem = styled.li`
   }
 `;
 export const NavItemLink = styled(NavLink)`
-  dispaly: block;
+  display: inline-block;
   width: 100%;
   line-height: 2.5;
   text-decoration: none;
   color: ${({ theme }) => theme.text.color};
   transition: 0.6s;
+  outline: 0;
   &.active {
     color: red;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
   }
   @media screen and (min-width: 710px) {
     margin: 0 15px;
     color: white;
     transition: 0.3s;
+    width: max-content;
     &:hover {
       color: green;
     }

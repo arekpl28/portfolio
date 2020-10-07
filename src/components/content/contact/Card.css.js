@@ -89,22 +89,16 @@ export const Description = styled.p`
   font-size: 0.8rem;
 `;
 export const DivLink = styled.div`
-  width: 150px;
+  width: max-content;
   margin-top: 20px;
 
-  @media screen and (max-width: 281px) {
-    width: 80%;
-  }
   @media screen and (orientation: landscape) {
-    width: 80%;
     align-self: end;
   }
   @media screen and ${device.surface} and (orientation: portrait) {
-    width: 80%;
     align-self: end;
   }
   @media screen and ${device.laptop} {
-    width: 50%;
   }
 `;
 export const LinkCard = styled(A)`

@@ -12,7 +12,7 @@ import {
 } from "./FormTodo.css";
 
 export default function FormTodo() {
-  const { todos, setTodos, inputText, setInputText, setStatus } = useContext(
+  const { todos, setTodos, inputText, setInputText, setStatus, t } = useContext(
     DataContext
   );
 
@@ -47,15 +47,15 @@ export default function FormTodo() {
             type="text"
           />
           <ButtonTodo onClick={handlerClickAddTodo} type="submit">
-            Create
+            {t("Create")}
           </ButtonTodo>
         </DivInput>
         <DivSelect>
-          <Label htmlFor="select">Select</Label>
+          <Label htmlFor="select">{t("Select")}</Label>
           <Select name="select" onChange={handlerSelect}>
-            <option value="all">All</option>
-            <option value="completed">Completed</option>
-            <option value="uncompleted">Uncompleted</option>
+            <option value="all">{t("All")}</option>
+            <option value="completed">{t("Completed")}</option>
+            <option value="uncompleted">{t("Uncompleted")}</option>
           </Select>
         </DivSelect>
       </Form>

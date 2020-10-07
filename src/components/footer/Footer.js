@@ -26,7 +26,7 @@ import {
 } from "./Footer.css";
 
 export default function Footer() {
-  const { scrollTop } = useContext(DataContext);
+  const { scrollTop, t } = useContext(DataContext);
   return (
     <>
       <Wrapper>
@@ -38,28 +38,28 @@ export default function Footer() {
             <Content>
               <DivContentWrapper>
                 <Contact>
-                  <H4>Contact Information</H4>
+                  <H4>{t("Contact_info")}</H4>
                   <Info
                     target="blank"
                     href="https://www.google.com/maps/place/Lillehammer/@61.1153437,10.4618682,15.75z/data=!4m5!3m4!1s0x466a62a7f7b5288d:0x32273ad34a5bed34!8m2!3d61.1152713!4d10.4662306"
                   >
                     <i className={ICONS.MAP}></i>
                     <div>
-                      <H5>Address</H5>
-                      <p>Norway</p>
+                      <H5>{t("Address")}</H5>
+                      <p>{t("Norway")}</p>
                     </div>
                   </Info>
                   <Info href={SOCIAL_MEDIA.TELEFON}>
                     <i className={ICONS.PHONE}></i>
                     <div>
-                      <H5>Phone</H5>
+                      <H5>{t("Phone")}</H5>
                       <p>+47 988 60 889</p>
                     </div>
                   </Info>
                   <Info href={SOCIAL_MEDIA.EMAIL}>
                     <i className={ICONS.EMAIL}></i>
                     <div>
-                      <H5>Email</H5>
+                      <H5>{t("Email")}</H5>
                       <p>arekpl28@wp.pl</p>
                     </div>
                   </Info>
@@ -75,9 +75,12 @@ export default function Footer() {
               </DivContentWrapper>
               <DivContentWrapper>
                 <Subscribe>
-                  <H4>Subscribe More Info</H4>
-                  <InputFooter placeholder="Enter your e-mail" type="email" />
-                  <ButtonFooter>Subscribe</ButtonFooter>
+                  <H4>{t("Subscribe_info")}</H4>
+                  <InputFooter
+                    placeholder={t("Enter_your_email")}
+                    type="email"
+                  />
+                  <ButtonFooter>{t("Subscribe")}</ButtonFooter>
                 </Subscribe>
               </DivContentWrapper>
             </Content>

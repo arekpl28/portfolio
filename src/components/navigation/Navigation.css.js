@@ -56,7 +56,7 @@ export const Nav = styled.nav`
   left: 0;
   width: 100%;
   height: 75px;
-  padding: 20px;
+  padding: 20px 40px 20px 20px;
   justify-content: space-between;
   align-items: center;
   transition: 0.6s;
@@ -77,7 +77,7 @@ export const Nav = styled.nav`
     height: unset;
   }
   @media screen and ${device.laptop} {
-    padding: 30px;
+    padding: 30px 40px 30px 30px;
   }
   @media screen and ${device.laptop} and (orientation: portrait) {
     padding: 30px 40px;
@@ -90,7 +90,7 @@ export const Nav = styled.nav`
   }
   &.sticky {
     height: 50px;
-    padding: 10px 20px;
+    padding: 10px 40px 10px 20px;
     background-color: #eee;
     box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
     @media screen and (max-width: 710px) {
@@ -167,7 +167,7 @@ export const NavUl = styled.ul`
   position: absolute;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 50px);
+  grid-template-rows: repeat(5, 50px) repeat(3, min-content);
   text-align: center;
   height: 100vh;
   width: 65vw;
@@ -180,6 +180,7 @@ export const NavUl = styled.ul`
   &.navActive {
     transition: 0.6s;
     transform: translateX(0);
+    overflow: scroll;
   }
   @media screen and (min-width: 710px) {
     display: flex;
@@ -191,5 +192,46 @@ export const NavUl = styled.ul`
     height: 100%;
     width: unset;
     padding-top: unset;
+    padding-right: 30px;
+  }
+`;
+export const Language = styled.div`
+  display: grid;
+  position: absolute;
+  grid-template-columns: min-content min-content min-content;
+  grid-template-rows: min-content;
+
+  @media screen and (min-width: 710px) {
+    display: grid;
+    position: absolute;
+    grid-template-columns: min-content;
+    grid-template-rows: min-content min-content min-content;
+    padding-top: 55px;
+    right: 20px;
+  }
+`;
+export const ImgStyle = styled.div`
+  display: block;
+  padding-right: 10px;
+  img {
+    width: 20px;
+  }
+  @media screen and (min-width: 710px) {
+    display: block;
+
+    &:nth-child(1) {
+      // display: none;
+    }
+    &:nth-child(2) {
+      // display: none;
+    }
+    &:nth-child(3) {
+      // display: none;
+    }
+    img {
+      width: 20px;
+      // margin-bottom: 10px;
+      cursor: pointer;
+    }
   }
 `;

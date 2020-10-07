@@ -37,6 +37,7 @@ export const A = styled.a`
   border-radius: 0.55rem;
   box-shadow: 2px 2px 5px #0c0c0c, -3px -3px 7px #303030;
   transition: 0.2s;
+  outline: 0;
   @media screen and ${device.laptopM} {
     cursor: pointer;
     &:hover {
@@ -58,6 +59,7 @@ export const NavA = styled(NavLink)`
   border-radius: 0.55rem;
   box-shadow: 2px 2px 5px #0c0c0c, -3px -3px 7px #303030;
   transition: 0.2s;
+  outline: 0;
   @media screen and ${device.laptopM} {
     cursor: pointer;
     &:hover {

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 
+import { DataContext } from "../../../context/DataProvider";
 import { SOCIAL_MEDIA, ICONS } from "../../../utils/constant";
 
 import {
@@ -20,6 +21,7 @@ import {
 } from "./ContactSection.css";
 
 export default function ContactSection() {
+  const { t } = useContext(DataContext);
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
@@ -32,7 +34,7 @@ export default function ContactSection() {
           <Form onSubmit={handleSubmit(onSubmit)}>
             <DivLabel>
               {/* {errors.name && <span>This field is required</span>} */}
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name">{t("Name")}</Label>
               <DivInput>
                 <InputContact
                   ref={register({ required: true })}
@@ -46,7 +48,7 @@ export default function ContactSection() {
               </DivInput>
             </DivLabel>
             <DivLabel>
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">{t("Email")}</Label>
               <DivInput>
                 <InputContact id="email" type="email" />
                 <DivIcon>
@@ -55,7 +57,7 @@ export default function ContactSection() {
               </DivInput>
             </DivLabel>
             <DivLabel>
-              <Label htmlFor="phone">Phone</Label>
+              <Label htmlFor="phone">{t("Phone")}</Label>
               <DivInput>
                 <InputContact id="phone" type="text" />
                 <DivIcon>
@@ -64,7 +66,7 @@ export default function ContactSection() {
               </DivInput>
             </DivLabel>
             <DivTextArea>
-              <Label htmlFor="message">Message</Label>
+              <Label htmlFor="message">{t("Message")}</Label>
               <DivInput>
                 <TextArea></TextArea>
                 <DivIcon>
@@ -72,7 +74,7 @@ export default function ContactSection() {
                 </DivIcon>
               </DivInput>
             </DivTextArea>
-            <BtnSubmit>Submit</BtnSubmit>
+            <BtnSubmit>{t("Submit")}</BtnSubmit>
           </Form>
         </DivContentWrapper>
       </Contact>

@@ -5,11 +5,12 @@ import { Wrapper, Name } from "./ProjectsContentHeader.css";
 import { DataContext } from "../../../context/DataProvider";
 
 export default function ProjectsContentHeader() {
-  const { projectName } = useContext(DataContext);
+  const { projectName, t } = useContext(DataContext);
+  console.log(projectName);
   return (
     <>
       <Wrapper>
-        <Name>{projectName}</Name>
+        <Name>{t(`${projectName}`)}</Name>
       </Wrapper>
     </>
   );

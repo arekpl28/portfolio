@@ -16,9 +16,9 @@ import {
 } from "./ProjectListPage.css";
 
 export default function ProjectListPage(props) {
-  const { setProjectName, setPath } = useContext(DataContext);
+  const { setProjectName, setPath, t } = useContext(DataContext);
   useEffect(() => {
-    setProjectName("My projects");
+    setProjectName("My_projects");
     setPath(props.match.path);
   }, [props.match.path, setPath, setProjectName]);
   return (
@@ -32,12 +32,9 @@ export default function ProjectListPage(props) {
               </Link>
             </ImgBox>
             <ContentBox>
-              <h2>Clock</h2>
-              <p>
-                A clock inspired by Neumorphism design, fully responsive with
-                the current time.
-              </p>
-              <LinkApp to={`/project/clock`}>See More</LinkApp>
+              <h2>{t("Clock")}</h2>
+              <p>{t("Description_project_card_clock")}</p>
+              <LinkApp to={`/project/clock`}>{t("See_more")}</LinkApp>
             </ContentBox>
           </Box>
           <Box>
@@ -47,12 +44,9 @@ export default function ProjectListPage(props) {
               </Link>
             </ImgBox>
             <ContentBox>
-              <h2>Todo</h2>
-              <p>
-                A clock inspired by Neumorphism design, fully responsive with
-                the current time.
-              </p>
-              <LinkApp to={`/project/todo`}>See More</LinkApp>
+              <h2>{t("Todo")}</h2>
+              <p>{t("Description_project_card_todo")}</p>
+              <LinkApp to={`/project/todo`}>{t("See_more")}</LinkApp>
             </ContentBox>
           </Box>
           <Box>
@@ -62,12 +56,9 @@ export default function ProjectListPage(props) {
               </Link>
             </ImgBox>
             <ContentBox>
-              <h2>Calculator</h2>
-              <p>
-                A clock inspired by Neumorphism design, fully responsive with
-                the current time.
-              </p>
-              <LinkApp to={`/project/calculator`}>See More</LinkApp>
+              <h2>{t("Calculator")}</h2>
+              <p>{t("Description_project_card_calculator")}</p>
+              <LinkApp to={`/project/calculator`}>{t("See_more")}</LinkApp>
             </ContentBox>
           </Box>
         </Container>

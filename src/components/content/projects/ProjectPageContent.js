@@ -17,7 +17,7 @@ import {
 } from "./ProjectPageContent.css";
 
 export default function ProjectPage(props) {
-  const { setProjectName } = useContext(DataContext);
+  const { setProjectName, t } = useContext(DataContext);
   const pathPage = props.match.params.id;
 
   useEffect(() => {
@@ -30,12 +30,12 @@ export default function ProjectPage(props) {
         <DivConetnt>
           <DivMenu>
             <LinkProjects exact to="/projects">
-              All projects
+              {t("All_projects")}
             </LinkProjects>
             <DivRest>
-              <LinkMenu to="/project/clock">Clock</LinkMenu>
-              <LinkMenu to="/project/todo">Todo</LinkMenu>
-              <LinkMenu to="/project/calculator">Calculator</LinkMenu>
+              <LinkMenu to="/project/clock">{t("Clock")}</LinkMenu>
+              <LinkMenu to="/project/todo">{t("Todo")}</LinkMenu>
+              <LinkMenu to="/project/calculator">{t("Calculator")}</LinkMenu>
             </DivRest>
           </DivMenu>
           <DivProject>
