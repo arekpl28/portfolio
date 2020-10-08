@@ -11,14 +11,14 @@ export const DivDark = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   filter: blur(20px);
   z-index: 0;
-  transition: 0.6s;
+  transition: 0.3s;
 `;
 
 export const Line = styled.div``;
 
 export const Burger = styled.div`
   cursor: pointer;
-  transition: 0.6s;
+  transition: 0.3s;
   z-index: 10;
   ${Line} {
     width: 25px;
@@ -26,7 +26,7 @@ export const Burger = styled.div`
     margin-bottom: 7px;
     transform-origin: center right;
     background-color: ${({ theme }) => theme.colors.bgcBurger};
-    transition: all 0.6s ease;
+    transition: all 0.3s ease;
     &.about {
       background-color: ${({ theme }) => theme.colors.bgcBurgerSticky};
     }
@@ -59,7 +59,7 @@ export const Language = styled.div`
   grid-template-rows: min-content min-content min-content;
   right: 30px;
   top: 29px;
-  transition: 0.6s;
+  transition: 0.3s;
 `;
 
 export const ImgStyle = styled.div`
@@ -227,9 +227,9 @@ export const NavUl = styled.ul`
   padding-top: 80px;
   background-color: rgb(30, 30, 30);
   transform: translateX(100%);
-  transition: 0.6s;
+  transition: 0.3s;
   &.navActive {
-    transition: 0.6s;
+    transition: 0.3s;
     transform: translateX(0);
     overflow: scroll;
   }

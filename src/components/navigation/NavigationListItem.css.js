@@ -55,7 +55,7 @@ export const NavItemLink = styled(NavLink)`
   line-height: 2.5;
   text-decoration: none;
   color: ${({ theme }) => theme.text.color};
-  transition: 0.6s;
+  // transition: 0.6s;
   outline: 0;
   &.active {
     color: red;
