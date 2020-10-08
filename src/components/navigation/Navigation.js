@@ -1,27 +1,14 @@
 import React, { useContext, useEffect } from "react";
 
+import { DataContext } from "../../context/DataProvider";
+
 import NavigationList from "./NavigationListItem";
 import ScrollTopArrow from "./ScrollTopArrow";
 import LanguageSelect from "./LanguageSelect";
 import Lang from "./Lang";
+import LanguageBurger from "./LanguageBurger";
 
-import pl_icon from "../img/pl_icon.png";
-import en_icon from "../img/en_icon.png";
-import no_icon from "../img/no_icon.png";
-
-import { DataContext } from "../../context/DataProvider";
-
-import { NavItem, NavItemLink } from "./NavigationListItem.css";
-
-import {
-  DivDark,
-  Nav,
-  Burger,
-  Line,
-  NavUl,
-  Language,
-  ImgStyle,
-} from "./Navigation.css";
+import { DivDark, Nav, Burger, Line, NavUl, Language } from "./Navigation.css";
 import { Logo } from "./Logo.css";
 
 export default function Navigation() {
@@ -31,7 +18,6 @@ export default function Navigation() {
     viewportWidth,
     path,
     scrollTop,
-    handleChangeLanguage,
     setActiveLang,
     activeLang,
   } = useContext(DataContext);
@@ -76,30 +62,12 @@ export default function Navigation() {
             key="language"
             className={burgerActive ? "navLinkFade" : ""}
           ></LanguageSelect>
-          {activeLang ? <Lang></Lang> : null}
+          {activeLang ? (
+            <Lang handleClickBurger={handleClickBurger}></Lang>
+          ) : null}
         </NavUl>
         <Language>
-          <ImgStyle>
-            <img
-              onClick={() => handleChangeLanguage("pl")}
-              src={pl_icon}
-              alt=""
-            />
-          </ImgStyle>
-          <ImgStyle>
-            <img
-              onClick={() => handleChangeLanguage("en")}
-              src={en_icon}
-              alt=""
-            />
-          </ImgStyle>
-          <ImgStyle>
-            <img
-              onClick={() => handleChangeLanguage("no")}
-              src={no_icon}
-              alt=""
-            />
-          </ImgStyle>
+          <LanguageBurger></LanguageBurger>
         </Language>
       </Nav>
       <ScrollTopArrow />

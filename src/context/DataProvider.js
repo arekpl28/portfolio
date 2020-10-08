@@ -10,8 +10,14 @@ export const DataProvider = (props) => {
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [activeLang, setActiveLang] = useState(false);
+  const [activeLangBurger, setActiveLangBurger] = useState(false);
+  const [languaeFirst, setLanguaeFirst] = useState("");
 
   const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    setLanguaeFirst(i18n.language);
+  }, [i18n.language]);
 
   useEffect(() => {
     switch (status) {
@@ -98,6 +104,9 @@ export const DataProvider = (props) => {
     t,
     activeLang,
     setActiveLang,
+    activeLangBurger,
+    setActiveLangBurger,
+    languaeFirst,
   };
 
   // console.log(path);

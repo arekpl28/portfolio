@@ -1,17 +1,27 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 import { DataContext } from "../../context/DataProvider";
 
 import { NavItem } from "./NavigationListItem.css";
 import { Lg } from "./Lang.css";
 
-export default function Lang({ className }) {
-  const { burgerActive, activeLang, setActiveLang } = useContext(DataContext);
+import pl_icon from "../img/pl_icon.png";
+import en_icon from "../img/en_icon.png";
+import no_icon from "../img/no_icon.png";
+
+export default function Lang({ handleClickBurger }) {
+  const {
+    scrollTop,
+    activeLang,
+    setActiveLang,
+    handleChangeLanguage,
+  } = useContext(DataContext);
 
   const languageSelect = () => {
     setActiveLang(false);
+    handleClickBurger();
+    scrollTop();
   };
-  console.log(activeLang);
 
   return (
     <>
@@ -20,21 +30,23 @@ export default function Lang({ className }) {
         key="pl"
         className={activeLang ? "langFade" : ""}
       >
-        <Lg>Polski</Lg>
-      </NavItem>
-      <NavItem
-        onClick={languageSelect}
-        key="en"
-        className={activeLang ? "langFade" : ""}
-      >
-        <Lg>Angielski</Lg>
-      </NavItem>
-      <NavItem
-        onClick={languageSelect}
-        key="no"
-        className={activeLang ? "langFade" : ""}
-      >
-        <Lg>Norweski</Lg>
+        <Lg>
+          <img
+            onClick={() => handleChangeLanguage("pl")}
+            src={pl_icon}
+            alt="Polski"
+          />
+          <img
+            onClick={() => handleChangeLanguage("en")}
+            src={en_icon}
+            alt="Angielski"
+          />
+          <img
+            onClick={() => handleChangeLanguage("no")}
+            src={no_icon}
+            alt="Norweski"
+          />
+        </Lg>
       </NavItem>
     </>
   );

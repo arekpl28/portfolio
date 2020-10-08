@@ -13,7 +13,9 @@ export const DivDark = styled.div`
   z-index: 0;
   transition: 0.6s;
 `;
+
 export const Line = styled.div``;
+
 export const Burger = styled.div`
   cursor: pointer;
   transition: 0.6s;
@@ -49,6 +51,44 @@ export const Burger = styled.div`
     display: none;
   }
 `;
+
+export const Language = styled.div`
+  display: grid;
+  position: fixed;
+  grid-template-columns: min-content;
+  grid-template-rows: min-content min-content min-content;
+  right: 30px;
+  top: 29px;
+  transition: 0.6s;
+`;
+
+export const ImgStyle = styled.div`
+  display: none;
+  @media screen and (min-width: 710px) {
+    display: none;
+    &:nth-child(1) {
+      display: none;
+      order: 2;
+    }
+    &:nth-child(2) {
+      display: none;
+      order: 2;
+    }
+    &:nth-child(3) {
+      display: none;
+      order: 2;
+    }
+    img {
+      width: 20px;
+      cursor: pointer;
+    }
+    &.visible {
+      order: 1;
+      display: block;
+    }
+  }
+`;
+
 export const Nav = styled.nav`
   display: flex;
   position: fixed;
@@ -78,6 +118,9 @@ export const Nav = styled.nav`
   }
   @media screen and ${device.laptop} {
     padding: 30px 40px 30px 30px;
+    ${Language} {
+      top: 30px;
+    }
   }
   @media screen and ${device.laptop} and (orientation: portrait) {
     padding: 30px 40px;
@@ -93,6 +136,9 @@ export const Nav = styled.nav`
     padding: 10px 40px 10px 20px;
     background-color: #eee;
     box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.2);
+    ${Language} {
+      top: 15px;
+    }
     @media screen and (max-width: 710px) {
       & ul {
         top: 50px;
@@ -123,6 +169,11 @@ export const Nav = styled.nav`
     }
     @media screen and ${device.tablet} and (orientation: portrait) {
       height: unset;
+    }
+    @media screen and ${device.laptop} {
+      ${Language} {
+        top: 20px;
+      }
     }
     @media screen and ${device.laptopM} {
       padding: 30px 40px;
@@ -193,45 +244,5 @@ export const NavUl = styled.ul`
     width: unset;
     padding-top: unset;
     padding-right: 30px;
-  }
-`;
-export const Language = styled.div`
-  display: grid;
-  position: absolute;
-  grid-template-columns: min-content min-content min-content;
-  grid-template-rows: min-content;
-
-  @media screen and (min-width: 710px) {
-    display: grid;
-    position: absolute;
-    grid-template-columns: min-content;
-    grid-template-rows: min-content min-content min-content;
-    padding-top: 55px;
-    right: 20px;
-  }
-`;
-export const ImgStyle = styled.div`
-  display: block;
-  padding-right: 10px;
-  img {
-    width: 20px;
-  }
-  @media screen and (min-width: 710px) {
-    display: block;
-
-    &:nth-child(1) {
-      // display: none;
-    }
-    &:nth-child(2) {
-      // display: none;
-    }
-    &:nth-child(3) {
-      // display: none;
-    }
-    img {
-      width: 20px;
-      // margin-bottom: 10px;
-      cursor: pointer;
-    }
   }
 `;

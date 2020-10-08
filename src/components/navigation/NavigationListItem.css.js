@@ -12,6 +12,7 @@ const navLinkFade = keyframes`
     transform: translateX(0px);
   }
 `;
+
 export const NavItem = styled.li`
   display: grid;
   width: 100%;
@@ -32,23 +33,22 @@ export const NavItem = styled.li`
   }
   &.navLinkFade:nth-child(5) div {
     animation: ${navLinkFade} 1.5s ease;
+    cursor: pointer;
   }
   &.langFade:nth-child(6) div {
     animation: ${navLinkFade} 1s ease;
-  }
-  &.langFade:nth-child(7) div {
-    animation: ${navLinkFade} 1.25s ease;
-  }
-  &.langFade:nth-child(8) div {
-    animation: ${navLinkFade} 1.5s ease;
   }
   @media screen and (min-width: 710px) {
     animation: none;
     border-bottom: none;
     display: block;
     align-content: unset;
+    &:nth-child(5) div {
+      display: none;
+    }
   }
 `;
+
 export const NavItemLink = styled(NavLink)`
   display: inline-block;
   width: 100%;
