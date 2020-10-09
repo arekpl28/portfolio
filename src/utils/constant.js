@@ -21,3 +21,7 @@ export const ICONS = {
   USER: "fas fa-user",
   PENCIL: "fas fa-pencil-alt",
 };
+
+export const DESCRIPTION = {
+  JUNIOR: "Junior Front-end web developmer",
+};

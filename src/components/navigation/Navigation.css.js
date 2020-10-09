@@ -59,7 +59,7 @@ export const Language = styled.div`
   grid-template-rows: min-content min-content min-content;
   right: 30px;
   top: 29px;
-  transition: 0.3s;
+  transition: 0.6s;
 `;
 
 export const ImgStyle = styled.div`
@@ -127,6 +127,9 @@ export const Nav = styled.nav`
   }
   @media screen and ${device.laptopM} {
     padding: 40px;
+    ${Language} {
+      top: 40px;
+    }
   }
   @media screen and ${device.desktop} {
     padding: 50px;

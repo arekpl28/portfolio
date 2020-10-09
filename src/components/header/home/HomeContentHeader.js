@@ -3,6 +3,8 @@ import React from "react";
 import SocialMedia from "../../SocialMedia";
 import arekImg from "../../img/arek.jpg";
 
+import { DESCRIPTION } from "../../../utils/constant";
+
 import {
   Wrapper,
   Name,
@@ -16,7 +18,7 @@ export default function HomeContentHeader() {
     <>
       <Wrapper>
         <Name>Arkadiusz Plumbaum</Name>
-        <Profession>Junior front-end Developer</Profession>
+        <Profession>{DESCRIPTION.JUNIOR}</Profession>
         <DivMedia>
           <SocialMedia></SocialMedia>
         </DivMedia>

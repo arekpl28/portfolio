@@ -5,6 +5,23 @@
     "projects": "Projects",
     "contact": "Contact"
   },
+  "Home_Page": {
+    "title": "What I learned while creating this website.",
+    "html5": "This is one of the first three things I've learned. I started a few years earlier, but now I'm serious about it.",
+    "css": "The first thing I learned about styles was CSS, then SCSS, then SASS and finally what I like is Styled Component.",
+    "java_script": "After Html5 and CSS, it was time to learn Javascript. Earlier, I took a classroom Java course and came to the conclusion that I am more fascinated by the Front-end.",
+    "react": "The Javascript library that I like the most is used to create user interfaces. I will definitely learn about React Native in the future.",
+    "mobile_first": "Mobile First is the inevitable future so it could not be missing from my website. Responsiveness is very important and I can't imagine a side without it.",
+    "github": "A very useful platform for storing, sharing and connecting your code with others as well. A useful tool for any developer.",
+    "multilingual": "At the moment it is a standard because our website may be interested in people from different countries.",
+    "udemy": "Internet platform where I found courses that I liked. I am a self-taught person, so for me it is very cool where I can find courses that interest me.",
+    "vsc": "Free code editor that I recommend. It makes writing code very easy, which makes programming fun.",
+    "youtube": "This is the second place for me after Udemy where I find important information on how to do something. I plan to use the documentation more often in the future.",
+    "hooks": "Hooks in React is something new that I've been learning for a month and I think it's better for me than using class components, quick, easy and fun.",
+    "website": "On my website I used many other things like: Themne, Variables, Constant, Global Style",
+    "update": "The website will be updated all the time, API and React Native will definitely be added. I am learning all the time, so as soon as I learn something, I will introduce it on my website."
+
+  },
   "Address": "Address",
   "All": "All",
   "All_projects": "All projects",
