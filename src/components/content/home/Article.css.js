@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { device } from "../../../utils/variables";
 
+import { A } from "../../Button.css";
+
 export const ArticleStyle = styled.article`
   display: grid;
   grid-template-columns: 30% 1fr;
@@ -35,4 +37,10 @@ export const Description = styled.p`
   @media screen and ${device.tablet} and (min-height: 710px) {
     font-size: 1rem;
   }
+`;
+export const LinkHomePage = styled(A)`
+  margin-top: 20px;
+  justify-self: right;
+  align-self: flex-end;
+  color: ${({ theme }) => theme.text.color};
 `;

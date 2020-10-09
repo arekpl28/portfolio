@@ -115,24 +115,33 @@ export const Nav = styled.nav`
   @media screen and ${device.tablet} and (orientation: portrait) {
     padding: 30px;
     height: unset;
+    ${Language} {
+      top: 44px;
+    }
   }
   @media screen and ${device.laptop} {
     padding: 30px 40px 30px 30px;
     ${Language} {
-      top: 30px;
+      top: 28px;
     }
   }
   @media screen and ${device.laptop} and (orientation: portrait) {
     padding: 30px 40px;
+    ${Language} {
+      top: 44px;
+    }
   }
   @media screen and ${device.laptopM} {
     padding: 40px;
     ${Language} {
-      top: 40px;
+      top: 30px;
     }
   }
   @media screen and ${device.desktop} {
     padding: 50px;
+    ${Language} {
+      top: 44px;
+    }
   }
   &.sticky {
     height: 50px;
@@ -175,11 +184,14 @@ export const Nav = styled.nav`
     }
     @media screen and ${device.laptop} {
       ${Language} {
-        top: 20px;
+        top: 14px;
       }
     }
     @media screen and ${device.laptopM} {
       padding: 30px 40px;
+      ${Language} {
+        top: 20px;
+      }
     }
 
     & ${Burger} ${Line} {
