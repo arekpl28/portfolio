@@ -20,7 +20,12 @@
     "hooks": "Hooks in React is something new that I've been learning for a month and I think it's better for me than using class components, quick, easy and fun.",
     "website": "On my website I used many other things like: Themne, Variables, Constant, Global Style",
     "update": "The website will be updated all the time, API and React Native will definitely be added. I am learning all the time, so as soon as I learn something, I will introduce it on my website."
-
+  },
+  "Form":{
+    "name":"Your name is required.",
+    "email_required":"Your email is required.",
+    "email_invalid":"Your email  is invalid.",
+    "message":"You forgot to write to me :-)"
   },
   "Address": "Address",
   "All": "All",

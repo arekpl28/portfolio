@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
-import { useForm } from "react-hook-form";
+
+import useForm from "../../useForm";
+import validateForm from "./validateForm";
 
 import { DataContext } from "../../../context/DataProvider";
 import { SOCIAL_MEDIA, ICONS } from "../../../utils/constant";
@@ -18,12 +20,14 @@ import {
   TextArea,
   DivTextArea,
   BtnSubmit,
+  AlertsStyle,
 } from "./ContactSection.css";
 
 export default function ContactSection() {
   const { t } = useContext(DataContext);
-  const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const { handleSubmit, handleChange, values, errors } = useForm(validateForm);
+
   return (
     <>
       <Contact>
@@ -31,16 +35,21 @@ export default function ContactSection() {
           <Map src={SOCIAL_MEDIA.MAP} title="google maps"></Map>
         </MapWrapper>
         <DivContentWrapper>
-          <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form id="form" onSubmit={handleSubmit} noValidate>
             <DivLabel>
-              {/* {errors.name && <span>This field is required</span>} */}
-              <Label htmlFor="name">{t("Name")}</Label>
+              <Label htmlFor="name">
+                {t("Name")}
+                {errors.name && (
+                  <AlertsStyle>{t("Form." + errors.name)}</AlertsStyle>
+                )}
+              </Label>
               <DivInput>
                 <InputContact
-                  ref={register({ required: true })}
+                  onChange={handleChange}
                   id="name"
                   name="name"
                   type="text"
+                  value={values.name}
                 />
                 <DivIcon>
                   <i className={ICONS.USER}></i>
@@ -48,33 +57,60 @@ export default function ContactSection() {
               </DivInput>
             </DivLabel>
             <DivLabel>
-              <Label htmlFor="email">{t("Email")}</Label>
+              <Label htmlFor="email">
+                {t("Email")}
+                {errors.email && (
+                  <AlertsStyle>{t("Form." + errors.email)}</AlertsStyle>
+                )}
+              </Label>
               <DivInput>
-                <InputContact id="email" type="email" />
+                <InputContact
+                  onChange={handleChange}
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={values.email}
+                />
                 <DivIcon>
                   <i className={ICONS.EMAIL}></i>
                 </DivIcon>
               </DivInput>
             </DivLabel>
             <DivLabel>
-              <Label htmlFor="phone">{t("Phone")}</Label>
+              <Label htmlFor="phone">{t("Phone")} </Label>
               <DivInput>
-                <InputContact id="phone" type="text" />
+                <InputContact
+                  onChange={handleChange}
+                  id="phone"
+                  name="phone"
+                  type="text"
+                  value={values.phone}
+                />
                 <DivIcon>
                   <i className={ICONS.PHONE}></i>
                 </DivIcon>
               </DivInput>
             </DivLabel>
             <DivTextArea>
-              <Label htmlFor="message">{t("Message")}</Label>
+              <Label htmlFor="message">
+                {t("Message")}
+                {errors.message && (
+                  <AlertsStyle>{t("Form." + errors.message)}</AlertsStyle>
+                )}
+              </Label>
               <DivInput>
-                <TextArea></TextArea>
+                <TextArea
+                  id="message"
+                  name="message"
+                  value={values.message}
+                  onChange={handleChange}
+                ></TextArea>
                 <DivIcon>
                   <i className={ICONS.PENCIL}></i>
                 </DivIcon>
               </DivInput>
             </DivTextArea>
-            <BtnSubmit>{t("Submit")}</BtnSubmit>
+            <BtnSubmit type="submit">{t("Submit")}</BtnSubmit>
           </Form>
         </DivContentWrapper>
       </Contact>

@@ -20,7 +20,12 @@
     "hooks": "Hooks in React er noe nytt jeg har lært i en måned, og jeg synes det er bedre for meg enn å bruke klassekomponenter, raskt, enkelt og morsomt.",
     "website": "På nettstedet mitt brukte jeg mange andre ting som: Themne, Variables, Constant, Global Style",
     "update": "Nettstedet vil oppdateres hele tiden, API og React Native vil definitivt legges til. Jeg lærer hele tiden, så så snart jeg lærer noe, vil jeg introdusere det på nettstedet mitt."
-
+  },
+  "Form":{
+    "name":"Navnet ditt er obligatorisk.",
+    "email_required":"Din e-postadresse er obligatorisk.",
+    "email_invalid":"Din e-postadresse er ugyldig.",
+    "message":"Du glemte å skrive til meg :-)"
   },
   "Address": "Adresse",
   "All": "Alle",

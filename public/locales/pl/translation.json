@@ -20,7 +20,12 @@
     "hooks": "Hooki w React to coś nowego które uczę się od miesiąca i uważam, że jest to jak dla mnie lepsze niż stosowanie componentów klasowych, szybkie łatwe i przyjemne.",
     "website": "Na mojej stronie internetowej użyłem wiele innym rzeczy takich jak: Themne, Variables, Constant, Global Style",
     "update": "Strona będzie cały czas uaktualniana, na pewno będzie dodane API oraz React Native. Cały czas się uczę, więc jak tylko się czegoć naucze to wprowadzę to na swojej stronie."
-
+  },
+  "Form":{
+    "name":"Twoje imię jest wymagane.",
+    "email_required":"Twój email jest wymagany.",
+    "email_invalid":"Twój email jest nieprawidłowy.",
+    "message":"Zapomniałeś coś napisać do mnie :-)"
   },
   "Address": "Adres",
   "All": "Wszystkie",

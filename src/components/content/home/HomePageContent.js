@@ -7,7 +7,7 @@ import Article from "./Article";
 import { Wrapper, H3Style, MainStyle } from "./HomePageContent.css";
 
 const HomePageContent = (props) => {
-  const { setPath, t } = useContext(DataContext);
+  const { setPath } = useContext(DataContext);
 
   useEffect(() => {
     setPath(props.match.path);

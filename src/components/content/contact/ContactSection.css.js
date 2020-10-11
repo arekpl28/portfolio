@@ -110,5 +110,10 @@ export const TextArea = styled.textarea`
 `;
 export const BtnSubmit = styled(Button)`
   margin-top: 10px;
+  cursor: poiter;
   color: ${({ theme }) => theme.text.color};
+`;
+export const AlertsStyle = styled.span`
+  padding-left: 5px;
+  color: ${({ theme }) => theme.text.color_hover};
 `;
