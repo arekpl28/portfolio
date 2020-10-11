@@ -22,10 +22,12 @@
     "update": "The website will be updated all the time, API and React Native will definitely be added. I am learning all the time, so as soon as I learn something, I will introduce it on my website."
   },
   "Form":{
-    "name":"Your name is required.",
-    "email_required":"Your email is required.",
-    "email_invalid":"Your email  is invalid.",
-    "message":"You forgot to write to me :-)"
+    "name": "Your name is required.",
+    "email_required": "Your email is required.",
+    "email_invalid": "Your email  is invalid.",
+    "message": "You forgot to write to me :-)",
+    "message_sent": "Message was sent",
+    "message_not_sent": "The message was not sent!!!"
   },
   "Address": "Address",
   "All": "All",

@@ -25,7 +25,9 @@
     "name":"Navnet ditt er obligatorisk.",
     "email_required":"Din e-postadresse er obligatorisk.",
     "email_invalid":"Din e-postadresse er ugyldig.",
-    "message":"Du glemte å skrive til meg :-)"
+    "message":"Du glemte å skrive til meg :-)",
+    "message_sent": "Meldingen ble sendt",
+    "message_not_sent": "Meldingen ble ikke sendt!!!"
   },
   "Address": "Adresse",
   "All": "Alle",

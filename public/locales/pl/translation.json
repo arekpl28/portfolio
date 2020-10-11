@@ -25,7 +25,9 @@
     "name":"Twoje imię jest wymagane.",
     "email_required":"Twój email jest wymagany.",
     "email_invalid":"Twój email jest nieprawidłowy.",
-    "message":"Zapomniałeś coś napisać do mnie :-)"
+    "message":"Zapomniałeś coś napisać do mnie :-)",
+    "message_sent": "Wiadomość wysłana",
+    "message_not_sent": "Wiadomość nie zostałą wysłana!!!"
   },
   "Address": "Adres",
   "All": "Wszystkie",

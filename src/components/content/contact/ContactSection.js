@@ -26,7 +26,14 @@ import {
 export default function ContactSection() {
   const { t } = useContext(DataContext);
 
-  const { handleSubmit, handleChange, values, errors } = useForm(validateForm);
+  const {
+    handleSubmit,
+    handleChange,
+    values,
+    errors,
+    messageSend,
+    messageNotSend,
+  } = useForm(validateForm);
 
   return (
     <>
@@ -35,7 +42,7 @@ export default function ContactSection() {
           <Map src={SOCIAL_MEDIA.MAP} title="google maps"></Map>
         </MapWrapper>
         <DivContentWrapper>
-          <Form id="form" onSubmit={handleSubmit} noValidate>
+          <Form onSubmit={handleSubmit} noValidate>
             <DivLabel>
               <Label htmlFor="name">
                 {t("Name")}
@@ -111,6 +118,10 @@ export default function ContactSection() {
               </DivInput>
             </DivTextArea>
             <BtnSubmit type="submit">{t("Submit")}</BtnSubmit>
+            {messageSend ? (
+              <AlertsStyle>{t("Form.message_sent")}</AlertsStyle>
+            ) : null}
+            {messageNotSend ? alert(t("Form.message_not_sent")) : null}
           </Form>
         </DivContentWrapper>
       </Contact>

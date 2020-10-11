@@ -114,6 +114,7 @@ export const BtnSubmit = styled(Button)`
   color: ${({ theme }) => theme.text.color};
 `;
 export const AlertsStyle = styled.span`
-  padding-left: 5px;
+  padding-left: 10px;
+  font-size: 1rem;
   color: ${({ theme }) => theme.text.color_hover};
 `;

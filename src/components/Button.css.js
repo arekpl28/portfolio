@@ -15,6 +15,7 @@ export const Button = styled.button`
   border: none;
   box-shadow: ${({ theme }) => theme.box_shadow_out.small};
   transition: 0.2s;
+  outline: 0;
   color: ${({ theme }) => theme.text.color_hover};
   @media screen and ${device.laptopM} {
     cursor: pointer;

@@ -14,7 +14,9 @@ const useForm = (validateForm) => {
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [e, setE] = useState({});
+  const [eventTarget, setEventTarget] = useState({});
+  const [messageSend, setMessageSend] = useState(false);
+  const [messageNotSend, setMessageNotSend] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -26,38 +28,48 @@ const useForm = (validateForm) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     setErrors(validateForm(values));
-
-    setE(event.target);
+    setEventTarget(event.target);
     setIsSubmitting(true);
   };
 
   const submit = useCallback(() => {
     emailjs
-      .sendForm("portfolio", "portfolio_arek", e, "user_20VM7KPv0s91xii1PcBJW")
+      .sendForm(
+        "portfolio",
+        "portfolio_arek",
+        eventTarget,
+        "user_20VM7KPv0s91xii1PcBJW"
+      )
       .then(
         (result) => {
-          console.log(result.text);
+          setValues({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+          setMessageSend(true);
+          setIsSubmitting(false);
+          setMessageNotSend(false);
+          setTimeout(() => {
+            setMessageSend(false);
+          }, 3000);
         },
         (error) => {
-          console.log(error.text);
+          setMessageNotSend(true);
+          setTimeout(() => {
+            setMessageNotSend(false);
+          }, 100);
         }
       );
-  }, [e]);
+  }, [eventTarget]);
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
       submit();
-      setValues({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-      setIsSubmitting(false);
     }
-  }, [e, errors, isSubmitting, submit]);
+  }, [errors, isSubmitting, submit]);
 
   return {
     handleSubmit,
@@ -65,7 +77,8 @@ const useForm = (validateForm) => {
     values,
     errors,
     t,
-    e,
+    messageSend,
+    messageNotSend,
   };
 };
 
