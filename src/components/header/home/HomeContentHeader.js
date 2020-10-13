@@ -1,7 +1,7 @@
 import React from "react";
 
 import SocialMedia from "../../SocialMedia";
-import arekImg from "../../img/arek.jpg";
+import arekImg from "../../../img/arek.jpg";
 
 import { DESCRIPTION } from "../../../utils/constant";
 

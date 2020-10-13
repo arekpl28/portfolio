@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 
 import ProjectsContentHeader from "./ProjectsContentHeader";
 
-import { SmallWrapperHeader } from "../../css/Wrapper.css";
-import { ProjectImage } from "../../css/HeaderImage.css";
+import { SmallWrapperHeader } from "../Wrapper.css";
+import { ProjectImage } from "../HeaderImage.css";
 
 export default function HeaderProjects() {
   useEffect(() => {

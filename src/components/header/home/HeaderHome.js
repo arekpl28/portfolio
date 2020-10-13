@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 
 import HomeContentHeader from "./HomeContentHeader";
 
-import { BigWrapperHeader } from "../../css/Wrapper.css";
-import { HomeImage } from "../../css/HeaderImage.css";
+import { BigWrapperHeader } from "../Wrapper.css";
+import { HomeImage } from "../HeaderImage.css";
 
 export default function HeaderHome() {
   useEffect(() => {

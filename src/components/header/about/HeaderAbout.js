@@ -2,15 +2,15 @@ import React, { useEffect } from "react";
 
 import AboutContentHeader from "./AboutContentHeader";
 
-import { BigWrapperHeaderAbout } from "../../css/Wrapper.css";
+import { BigWrapperHeaderAbout } from "../Wrapper.css";
 
-import { AboutImage, Clouds } from "../../css/HeaderImage.css";
+import { AboutImage, Clouds } from "../HeaderImage.css";
 
-import img1 from "./img/cloud1.png";
-import img2 from "./img/cloud2.png";
-import img3 from "./img/cloud3.png";
-import img4 from "./img/cloud4.png";
-import img5 from "./img/cloud5.png";
+import img1 from "../../../img/png/cloud1.png";
+import img2 from "../../../img/png/cloud2.png";
+import img3 from "../../../img/png/cloud3.png";
+import img4 from "../../../img/png/cloud4.png";
+import img5 from "../../../img/png/cloud5.png";
 
 export default function HeaderAbout() {
   useEffect(() => {

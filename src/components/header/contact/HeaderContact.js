@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 
 import ContactContentHeader from "./ContactContentHeader";
 
-import { SmallWrapperHeader } from "../../css/Wrapper.css";
+import { SmallWrapperHeader } from "../Wrapper.css";
 
-import { ContactImage } from "../../css/HeaderImage.css";
+import { ContactImage } from "../HeaderImage.css";
 
 export default function HeaderContact() {
   useEffect(() => {

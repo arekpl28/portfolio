@@ -4,9 +4,9 @@ import { DataContext } from "../../context/DataProvider";
 
 import { ImgStyle } from "./Navigation.css";
 
-import pl_icon from "../img/pl_icon.png";
-import en_icon from "../img/en_icon.png";
-import no_icon from "../img/no_icon.png";
+import pl_icon from "../../img/png/pl_icon.png";
+import en_icon from "../../img/png/en_icon.png";
+import no_icon from "../../img/png/no_icon.png";
 
 export default function LanguageBurger() {
   const [activBurgerLang, setActivBurgerLang] = useState(false);
