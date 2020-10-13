@@ -5,6 +5,7 @@ import img_home from "../../img/home.jpg";
 import img_about from "../../img/about.jpg";
 import img_project from "../../img/project.jpg";
 import img_contact from "../../img/contact.jpg";
+import img_error from "../../img/error.jpg";
 
 const Image = styled.div`
   position: fixed;
@@ -159,4 +160,14 @@ export const Clouds = styled.div`
       animation: ${Cloud6} 48s linear infinite;
     }
   }
+`;
+
+export const ErrorImage = styled(Image)`
+  margin-top: 10vh;
+  height: 90vh;
+  background-image: url("${img_error}");
+  background-attachment: initial;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
 `;

@@ -48,7 +48,7 @@ export const DataProvider = (props) => {
   }, [todos]);
 
   //ProjectPage set Header project name
-  const [projectName, setProjectName] = useState("projects");
+  const [projectName, setProjectName] = useState("My_projects");
 
   //Path name
   const [path, setPath] = useState("");

@@ -5,6 +5,7 @@ import HeaderHome from "./home/HeaderHome";
 import HeaderAbout from "./about/HeaderAbout";
 import HeaderProjects from "./project/HeaderProjects";
 import HeaderContact from "./contact/HeaderContact";
+import HeaderError from "./error/HeaderError";
 
 export default function Header() {
   return (
@@ -15,6 +16,7 @@ export default function Header() {
         <Route path="/projects" component={HeaderProjects}></Route>
         <Route path="/project/:id" component={HeaderProjects}></Route>
         <Route path="/contact" component={HeaderContact}></Route>
+        <Route component={HeaderError}></Route>
       </Switch>
     </>
   );
