@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { DataContext } from "../../../context/DataProvider";
 import Card from "./Card";
 
-import { SOCIAL_MEDIA, ICONS } from "../../../utils/constant";
+import { SOCIAL_MEDIA, ICONS, CONTACT } from "../../../utils/constant";
 
 import { CardContainer } from "./ContactCard.css";
 
@@ -12,7 +12,7 @@ const card = [
     id: 0,
     icon: ICONS.SMARTPHONE,
     title: "Phone",
-    description: "+47 988 60 889",
+    description: CONTACT.PHONE,
     linkTitle: "Call",
     href: SOCIAL_MEDIA.TELEFON,
   },
@@ -28,7 +28,7 @@ const card = [
     id: 2,
     icon: ICONS.EMAIL,
     title: "Email",
-    description: "arekpl28@wp.pl",
+    description: CONTACT.EMAIL,
     linkTitle: "Message",
     href: SOCIAL_MEDIA.EMAIL,
   },

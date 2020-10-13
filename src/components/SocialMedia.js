@@ -17,8 +17,8 @@ const social = [
   },
   {
     id: 2,
-    iconName: ICONS.TWITTER,
-    href: SOCIAL_MEDIA.TWITTER,
+    iconName: ICONS.GITHUB,
+    href: SOCIAL_MEDIA.GITHUB,
     target: "blank",
   },
   {

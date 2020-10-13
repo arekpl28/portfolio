@@ -4,7 +4,7 @@ import NavigationList from "../navigation/NavigationListItem";
 import SocialMedia from "../SocialMedia";
 import { DataContext } from "../../context/DataProvider";
 
-import { SOCIAL_MEDIA, ICONS } from "../../utils/constant";
+import { SOCIAL_MEDIA, ICONS, CONTACT } from "../../utils/constant";
 
 import {
   H4,
@@ -53,14 +53,14 @@ export default function Footer() {
                     <i className={ICONS.PHONE}></i>
                     <div>
                       <H5>{t("Phone")}</H5>
-                      <p>+47 988 60 889</p>
+                      <p>{CONTACT.PHONE}</p>
                     </div>
                   </Info>
                   <Info href={SOCIAL_MEDIA.EMAIL}>
                     <i className={ICONS.EMAIL}></i>
                     <div>
                       <H5>{t("Email")}</H5>
-                      <p>arekpl28@wp.pl</p>
+                      <p>{CONTACT.EMAIL}</p>
                     </div>
                   </Info>
                 </Contact>

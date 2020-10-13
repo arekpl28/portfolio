@@ -55,9 +55,9 @@ export default function Calculator() {
       } else if (operator === "-") {
         setValue((memory - parseFloat(memory * (num / 100))).toString());
       } else if (operator === "x") {
-        setValue((memory * parseFloat(memory * (num / 100))).toString());
+        setValue(parseFloat(memory * (num / 100)).toString());
       } else if (operator === "/") {
-        setValue((memory / parseFloat(memory * (num / 100))).toString());
+        setValue(parseFloat(memory / (num / 100)).toString());
       } else {
         setValue((num / 100).toString());
       }
