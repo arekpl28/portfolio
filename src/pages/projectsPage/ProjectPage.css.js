@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../utils/variables";
-import { NavA } from "../../components/Button.css";
+import { NavLinkA } from "../../components/NavLinkA.css";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -47,7 +47,7 @@ export const DivRest = styled.ul`
     gap: 0vw;
   }
 `;
-export const LinkProjects = styled(NavA)`
+export const LinkProjects = styled(NavLinkA)`
   width: 100%;
   text-align: center;
   color: ${({ theme }) => theme.text.color};

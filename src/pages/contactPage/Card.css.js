@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../utils/variables";
-import { A } from "../../components/Button.css";
+import { LinkA } from "../../components/LinkA.css";
 
 export const DivCard = styled.div`
   display: grid;
@@ -101,7 +101,7 @@ export const DivLink = styled.div`
   @media screen and ${device.laptop} {
   }
 `;
-export const LinkCard = styled(A)`
+export const LinkCard = styled(LinkA)`
   width: 100%;
   text-align: center;
   color: ${({ theme }) => theme.text.color};

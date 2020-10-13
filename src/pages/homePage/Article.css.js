@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device } from "../../utils/variables";
 
-import { A } from "../../components/Button.css";
+import { LinkA } from "../../components/LinkA.css";
 
 export const ArticleStyle = styled.article`
   display: grid;
@@ -38,7 +38,7 @@ export const Description = styled.p`
     font-size: 1rem;
   }
 `;
-export const LinkHomePage = styled(A)`
+export const LinkHomePage = styled(LinkA)`
   margin-top: 20px;
   justify-self: right;
   align-self: flex-end;

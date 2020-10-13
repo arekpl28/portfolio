@@ -1,9 +1,12 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 import { device } from "../utils/variables";
 
-export const Button = styled.button`
+export const NavLinkA = styled(NavLink)`
   font-family: "Nunito", sans-serif;
+  display: block;
+  width: min-content;
   font-size: 1rem;
   font-weight: 400;
   padding: 0.55rem 0.95rem;
@@ -11,11 +14,9 @@ export const Button = styled.button`
   text-decoration: none;
   background-color: transparent;
   border-radius: 0.55rem;
-  border: none;
-  box-shadow: ${({ theme }) => theme.box_shadow_out.small};
+  box-shadow: 2px 2px 5px #0c0c0c, -3px -3px 7px #303030;
   transition: 0.2s;
   outline: 0;
-  color: ${({ theme }) => theme.text.color_hover};
   @media screen and ${device.laptopM} {
     cursor: pointer;
     &:hover {
