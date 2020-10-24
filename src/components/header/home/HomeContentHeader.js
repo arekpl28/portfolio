@@ -22,10 +22,10 @@ export default function HomeContentHeader() {
         <DivMedia>
           <SocialMedia></SocialMedia>
         </DivMedia>
-        <DivProfileImg>
-          <img src={arekImg} alt="Pictuer of Arkadiusz Plumbaum" />
-        </DivProfileImg>
       </Wrapper>
+      <DivProfileImg>
+        <img src={arekImg} alt="Pictuer of Arkadiusz Plumbaum" />
+      </DivProfileImg>
     </>
   );
 }
