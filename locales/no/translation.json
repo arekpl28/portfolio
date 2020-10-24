@@ -13,13 +13,13 @@
     "react": "Javascript-biblioteket som jeg liker best brukes til å lage brukergrensesnitt. Jeg vil definitivt lære om React Native i fremtiden.",
     "mobile_first": "Mobile First er den uunngåelige fremtiden, så den kan ikke mangle på nettstedet mitt. Respons er veldig viktig, og jeg kan ikke forestille meg en side uten den.",
     "github": "En veldig nyttig plattform for å lagre, dele og koble koden din til andre også. Et nyttig verktøy for enhver utvikler.",
-    "multilingual": "For øyeblikket er det en standard fordi nettstedet vårt kan være interessert i mennesker fra forskjellige land.",
-    "udemy": "Internett-plattform hvor jeg fant kurs som jeg likte. Jeg er en selvlært person, så for meg er det veldig kult der jeg kan finne kurs som interesserer meg.",
-    "vsc": "Gratis kodeditor som jeg anbefaler. Det gjør det veldig enkelt å skrive kode, noe som gjør programmering morsom.",
-    "youtube": "Dette er andreplassen for meg etter Udemy hvor jeg finner viktig informasjon om hvordan jeg kan gjøre noe. Jeg planlegger å bruke dokumentasjonen oftere i fremtiden.",
-    "hooks": "Hooks in React er noe nytt jeg har lært i en måned, og jeg synes det er bedre for meg enn å bruke klassekomponenter, raskt, enkelt og morsomt.",
-    "website": "På nettstedet mitt brukte jeg mange andre ting som: Themne, Variables, Constant, Global Style",
-    "update": "Nettstedet vil oppdateres hele tiden, API og React Native vil definitivt legges til. Jeg lærer hele tiden, så så snart jeg lærer noe, vil jeg introdusere det på nettstedet mitt."
+    "multilingual": "Det er en standard nå, fordi folk fra forskjellige land kan være interessert i nettstedet mitt.",
+    "udemy": "Internett-plattform der jeg fant kurs som jeg likte veldig godt. Jeg er selvlært, så det er et interessant sted for meg hvor jeg kan finne kurs som interesserer meg.",
+    "vsc": "En gratis kodeditor som jeg anbefaler alle. Det gjør det veldig enkelt å skrive kode, noe som gjør programmering enkel og morsom.",
+    "youtube": "Dette er andreplassen for meg etter Udemy, hvor jeg finner viktig informasjon om hvordan jeg kan gjøre noe. Jeg planlegger å bruke dokumentasjonen oftere i fremtiden.",
+    "hooks": "Hooks in React er noe nytt jeg bare har lært i en måned. Jeg synes det er mer interessant for meg enn å bruke klassekomponenter - raskt, enkelt og morsomt.",
+    "website": "Jeg brukte mange andre ting på nettstedet mitt, for eksempel Theme, Variables, Constant, Global Style.",
+    "update": "Nettstedet vil bli oppdatert hele tiden. Jeg vil også kaste her en API og React Native. Jeg lærer hele tiden, så så snart jeg lærer noe, vil jeg introdusere det til nettstedet mitt"
   },
   "Form":{
     "name":"Navnet ditt er obligatorisk.",
@@ -29,6 +29,7 @@
     "message_sent": "Meldingen ble sendt",
     "message_not_sent": "Meldingen ble ikke sendt!!!"
   },
+  "About": "Om meg",
   "Address": "Adresse",
   "All": "Alle",
   "All_projects": "Alle prosjekter",
