@@ -5,7 +5,6 @@ import { DataContext } from "../../context/DataProvider";
 import Article from "./Article";
 
 import { Wrapper, H3Style, MainStyle } from "./HomePage.css";
-// } from "../../components/content/home/HomePageContent.css";
 
 const HomePageContent = (props) => {
   const { setPath } = useContext(DataContext);

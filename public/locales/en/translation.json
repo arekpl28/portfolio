@@ -13,13 +13,13 @@
     "react": "The Javascript library that I like the most is used to create user interfaces. I will definitely learn about React Native in the future.",
     "mobile_first": "Mobile First is the inevitable future so it could not be missing from my website. Responsiveness is very important and I can't imagine a side without it.",
     "github": "A very useful platform for storing, sharing and connecting your code with others as well. A useful tool for any developer.",
-    "multilingual": "At the moment it is a standard because our website may be interested in people from different countries.",
-    "udemy": "Internet platform where I found courses that I liked. I am a self-taught person, so for me it is very cool where I can find courses that interest me.",
-    "vsc": "Free code editor that I recommend. It makes writing code very easy, which makes programming fun.",
-    "youtube": "This is the second place for me after Udemy where I find important information on how to do something. I plan to use the documentation more often in the future.",
-    "hooks": "Hooks in React is something new that I've been learning for a month and I think it's better for me than using class components, quick, easy and fun.",
-    "website": "On my website I used many other things like: Themne, Variables, Constant, Global Style",
-    "update": "The website will be updated all the time, API and React Native will definitely be added. I am learning all the time, so as soon as I learn something, I will introduce it on my website."
+    "multilingual": "It is a standard now, because people from different countries may be interested in my website.",
+    "udemy": "Internet platform where I found courses that I liked very much. I am self-taught, so it is an interesting place for me, where I can find courses that interest me.",
+    "vsc": "A free code editor that I recommend to everyone. It makes writing code very easy, which makes programming simple and fun.",
+    "youtube": "This is the second place for me after Udemy, where I find important information about how to do something. I plan to use the documentation more often in the future.",
+    "hooks": "Hooks in React are something new that I've only been learning for a month. I find it more interesting to me than using class components - quick, easy and fun.",
+    "website": "I used many other things on my website such as Theme, Variables, Constant, Global Style.",
+    "update": "The website will be updated all the time. I will also throw here an API and React Native. I am learning all the time, so as soon as I learn something, I will introduce it to my website"
   },
   "Form":{
     "name": "Your name is required.",
@@ -29,6 +29,7 @@
     "message_sent": "Message was sent",
     "message_not_sent": "The message was not sent!!!"
   },
+  "About": "About me",
   "Address": "Address",
   "All": "All",
   "All_projects": "All projects",

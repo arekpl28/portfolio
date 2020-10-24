@@ -65,7 +65,7 @@ export const ButtonAll = styled.div`
   background-color: transparent;
   outline: none;
   font-size: 1rem;
-  &:focus {
+  &:active {
     box-shadow: ${({ theme }) => theme.box_shadow_in.small};
   }
   @media screen and ${device.surface} and (orientation: portrait) {

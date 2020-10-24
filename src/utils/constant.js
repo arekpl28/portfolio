@@ -23,7 +23,7 @@ export const ICONS = {
 };
 
 export const DESCRIPTION = {
-  JUNIOR: "Junior Front-end web developmer",
+  JUNIOR: "Junior Front-end developmer",
 };
 
 export const CONTACT = {

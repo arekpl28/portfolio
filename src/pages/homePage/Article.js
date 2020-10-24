@@ -133,7 +133,7 @@ const Article = () => {
         {item.href ? (
           <LinkHomePage
             target="blank"
-            to="https://www.udemy.com/certificate/UC-DSKKTAP6/"
+            href="https://www.udemy.com/certificate/UC-DSKKTAP6/"
           >
             {t("Certificate")}
           </LinkHomePage>

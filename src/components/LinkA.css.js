@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 import { device } from "../utils/variables";
 
-export const LinkA = styled(Link)`
+export const LinkA = styled.a`
   font-family: "Nunito", sans-serif;
   display: block;
   width: min-content;

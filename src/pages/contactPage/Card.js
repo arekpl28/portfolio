@@ -25,7 +25,7 @@ export default function Card({ icon, title, description, linkTitle, href }) {
             <Description>{description}</Description>
           </ContentBox>
           <DivLink>
-            <LinkCard to={href}>{linkTitle}</LinkCard>
+            <LinkCard href={href}>{linkTitle}</LinkCard>
           </DivLink>
         </DivBox>
       </DivCard>

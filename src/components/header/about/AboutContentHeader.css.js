@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   color: white;
   text-transform: uppercase;
   text-align: center;
-  // background-color: rgba(0, 0, 0, 0.2);
 `;
 
 export const Name = styled.h1`
