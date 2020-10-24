@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   grid-template-rows: min-content auto;
   justify-content: center;
   width: 100%;
-  padding: 25vh 15px 5vh;
+  padding: 15vh 15px 5vh;
   background-color: ${({ theme }) => theme.colors.bgc};
 `;
 export const H3Style = styled.h3`
@@ -23,6 +23,7 @@ export const MainStyle = styled.main`
   grid-template-rows: auto;
   justify-content: center;
   gap: 2rem;
+  overflow: hidden;
   @media screen and (orientation: landscape) and (max-height: 500px) {
     grid-template-columns: 45vw 45vw;
     gap: 2rem;

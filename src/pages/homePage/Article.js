@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 // import { DataContext } from "../../../context/DataProvider";
 import { DataContext } from "../../context/DataProvider";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { MdPhoneIphone, MdUpdate } from "react-icons/md";
 import { GiFishingHook } from "react-icons/gi";
 import { CgWebsite } from "react-icons/cg";
@@ -34,6 +35,8 @@ const homeList = [
     title: "Html 5",
     description: "Home_Page.html5",
     href: "https://www.udemy.com/certificate/UC-DSKKTAP6/",
+    aos1: "fade-right",
+    aos3: "fade-right",
   },
   {
     id: 1,
@@ -41,6 +44,8 @@ const homeList = [
     title: "Styled Component",
     description: "Home_Page.css",
     href: "https://www.udemy.com/certificate/UC-ZYMBG0CZ/",
+    aos1: "fade-left",
+    aos3: "fade-up",
   },
   {
     id: 2,
@@ -48,6 +53,8 @@ const homeList = [
     title: "Java Script",
     description: "Home_Page.java_script",
     href: "https://www.udemy.com/certificate/UC-8IOM9RG2/",
+    aos1: "fade-right",
+    aos3: "fade-left",
   },
   {
     id: 3,
@@ -55,6 +62,8 @@ const homeList = [
     title: "React",
     description: "Home_Page.react",
     href: "https://www.udemy.com/certificate/UC-KH050YQH/",
+    aos1: "fade-left",
+    aos3: "fade-right",
   },
   {
     id: 4,
@@ -62,6 +71,8 @@ const homeList = [
     title: "Mobile First",
     description: "Home_Page.mobile_first",
     href: null,
+    aos1: "fade-right",
+    aos3: "fade-up",
   },
   {
     id: 5,
@@ -69,6 +80,8 @@ const homeList = [
     title: "GitHub",
     description: "Home_Page.github",
     href: "https://www.udemy.com/certificate/UC-8AGMHZCW/",
+    aos1: "fade-left",
+    aos3: "fade-left",
   },
   {
     id: 6,
@@ -76,6 +89,8 @@ const homeList = [
     title: "Multilingual website",
     description: "Home_Page.multilingual",
     href: null,
+    aos1: "fade-right",
+    aos3: "fade-right",
   },
   {
     id: 7,
@@ -83,6 +98,8 @@ const homeList = [
     title: "Udemy",
     description: "Home_Page.udemy",
     href: null,
+    aos1: "fade-left",
+    aos3: "fade-up",
   },
   {
     id: 8,
@@ -90,6 +107,8 @@ const homeList = [
     title: "Visual Studio Code",
     description: "Home_Page.vsc",
     href: null,
+    aos1: "fade-right",
+    aos3: "fade-left",
   },
   {
     id: 9,
@@ -97,6 +116,8 @@ const homeList = [
     title: "YouTube",
     description: "Home_Page.youtube",
     href: null,
+    aos1: "fade-left",
+    aos3: "fade-right",
   },
   {
     id: 10,
@@ -104,6 +125,8 @@ const homeList = [
     title: "React Hooks",
     description: "Home_Page.hooks",
     href: null,
+    aos1: "fade-right",
+    aos3: "fade-up",
   },
   {
     id: 11,
@@ -111,6 +134,8 @@ const homeList = [
     title: "More in Website",
     description: "Home_Page.website",
     href: null,
+    aos1: "fade-left",
+    aos3: "fade-left",
   },
   {
     id: 12,
@@ -118,14 +143,23 @@ const homeList = [
     title: "Update on Website",
     description: "Home_Page.update",
     href: null,
+    aos1: "fade-right",
+    aos3: "fade-right",
   },
 ];
 
 const Article = () => {
-  const { t } = useContext(DataContext);
+  const { t, viewportWidth } = useContext(DataContext);
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+  console.log(viewportWidth);
 
   const listHome = homeList.map((item) => (
-    <ArticleStyle key={item.id}>
+    <ArticleStyle
+      data-aos={viewportWidth < 1279 ? item.aos1 : item.aos3}
+      key={item.id}
+    >
       <IconBox>{item.icon}</IconBox>
       <ContentBox>
         <H5Title>{item.title}</H5Title>

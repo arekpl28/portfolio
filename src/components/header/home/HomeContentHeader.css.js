@@ -30,7 +30,7 @@ export const Name = styled.h1`
   left: 0%;
   bottom: 40vh;
   font-size: 7.5vw;
-  animation: ${nameAnimation} 1s ease;
+  // animation: ${nameAnimation} 1s ease;
   @media screen and (max-height: 500px) and (orientation: landscape) {
     bottom: 40vh;
     font-size: 6vw;
@@ -62,7 +62,7 @@ export const Profession = styled.h2`
   left: 0%;
   font-size: 4vw;
   font-weight: 200;
-  animation: ${professionAnimation} 1s ease;
+  // animation: ${professionAnimation} 1s ease;
   @media screen and (max-height: 500px) and (orientation: landscape) {
     bottom: 35vh;
     font-size: 3vw;

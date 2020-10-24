@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import SocialMedia from "../../SocialMedia";
 import arekImg from "../../../img/arek.jpg";
@@ -14,11 +16,15 @@ import {
 } from "./HomeContentHeader.css";
 
 export default function HomeContentHeader() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <Wrapper>
-        <Name>Arkadiusz Plumbaum</Name>
-        <Profession>{DESCRIPTION.JUNIOR}</Profession>
+        <Name data-aos="fade-left">Arkadiusz Plumbaum</Name>
+        <Profession data-aos="fade-right">{DESCRIPTION.JUNIOR}</Profession>
         <DivMedia>
           <SocialMedia></SocialMedia>
         </DivMedia>
